@@ -123,45 +123,29 @@ header .navigation .navigation-items a:hover:before{
 }
 
 .homepage{
-    font-family: 'Synonym', sans-serif;
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex ;
-    justify-content: center;
+    display: flex;
     flex-direction: column;
-    background-color: #ffffff;
-    align-items: center;
+    justify-content: space-between;
     text-align: center;
-    
-} 
-
-.homepage:before{
-    z-index: 777;
-    content: "";
-    position: absolute;
-    background: rgb(0, 0, 0, 0.6);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
-.homepage .content{
-    z-index: 888;
-    width: 70%;
-    margin-top: 50px;
-}
-
-.homepage .content h1{
-    font-size: 7em;
-    color: aliceblue;
-    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 14px;
-    text-align: center;
-    line-height: 140px;
-    margin-bottom: 35px;
+    background-image: url(Image/homepage\ 3.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+}
+
+.homepage .content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
 }
 
 .homepage .content p{
@@ -174,8 +158,6 @@ header .navigation .navigation-items a:hover:before{
     text-transform: uppercase;
     
 }
-
-
 
 .homepage .content a{
     background: #D4AF37;
@@ -200,31 +182,9 @@ header .navigation .navigation-items a:hover:before{
     
 }
 
-.homepage video{
-    z-index: 000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 1s;
+main{
+    display: block;
 }
-
-.homepage img{
-    z-index: 000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit:fill;
-    transition: 1s;
-    
-}
-
-
-
 /*About section*/
 
 #about .abt-bg{
@@ -933,8 +893,10 @@ footer .footer_page .copright{
     }
 
     .homepage .content h1{
-        font-size: 3em;
+        font-size: 2.7em;
         line-height: 3cm;
+        color: aliceblue;
+        padding: 5px;
     }
 
     .homepage .content p{
@@ -947,6 +909,10 @@ footer .footer_page .copright{
 
     #about .abt-bg{
         margin-top:-3cm;
+        text-align: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #about .aboutpage{
@@ -955,32 +921,39 @@ footer .footer_page .copright{
         margin-left: -2cm;
     }
     #about .abt-bg .aboutpage img{
-        width:9cm;
-        height: 14cm;
+        width:100%;
+        height: 70vh;
         border-radius: 0%;
-        margin-top: 2cm;
+        margin-top: 1cm;
         align-items: center;
         justify-content: center;
     }
 
     #about .abt-bg .aboutpage h1{
         color: #063d45;
-        font-size: 2em;        
+        font-size: 1.2em;        
         text-align: center;
+        margin-left: 2cm;
     }
 
     #about .abt-bg .aboutpage h2{
-        margin-left: 1.7cm;
+        font-size: 10px;
+        margin-right: auto;
+        margin-left: 2cm;
+        text-align: center;
     }
 
     #about .aboutpage p{
-        margin-left: 2;
-        margin-right: 0;
         font-size: 13px;
+        margin-top: -1cm;
+        padding-left: 65px;
+        padding-right: 30px;
+        margin-right: auto;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         
     }
-
     /*About Section*/
 
     /*Restaurants*/
@@ -992,6 +965,8 @@ footer .footer_page .copright{
         height: 140vh;
         margin-top: -6cm;
         margin-bottom: -5cm;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #dine-in .dinein_info {
@@ -1017,27 +992,34 @@ footer .footer_page .copright{
         margin-left: 2.5cm;
         margin-top: 1cm;
         margin-bottom: 1cm;
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
     #dine-in .dinein_info p {
         text-align: center;
-        font-size: 25px;
+        font-size: 15px;
         margin-left: 1cm;
         margin-right: 1cm;
     }
 
     #dine-in img {
-        width: 9cm;
-        height: 13cm;
-        margin-left: 1cm;
+        width: 100%;
+        height: 80vh;
         margin-top: 1cm;
-        margin-right: 0cm;
+        margin-left: auto;
+        margin-right: auto;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
     /*Restaurants*/
 
     /*Private Beaches*/
+
+    #beach .beach-bg{
+        text-align: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     #beach .beach_container {
         display: flex;
@@ -1047,12 +1029,12 @@ footer .footer_page .copright{
     #beach .beach_container h1 {
         margin-left: 0cm;
         margin-bottom: 1cm;
-        font-size: 3.4em;
+        font-size: 3em;
         text-align: center;
     }
 
     #beach .beach_container p {
-        font-size: 20px;
+        font-size: 15px;
         text-align: center;
         margin-left: 1cm;
         margin-right: 1cm;
@@ -1061,12 +1043,14 @@ footer .footer_page .copright{
 
     #beach .beach_container ol li{
         text-align: center;
+        font-size: 15px;
     }
 
     #beach .beach_container img {
-        width: 9cm;
-        height: auto;
-        margin-left: 0.8cm;
+        width: 100%;
+        height: 70vh;
+        margin-left: auto;
+        margin-right: auto;
     }
     /*Private Beaches*/
 
@@ -1074,9 +1058,11 @@ footer .footer_page .copright{
 
     #spa .spa-bg {
         width: 100%;
-        height: 80vh;
+        height: 90vh;
         margin-top: -5cm;
         margin-bottom: 2cm;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #spa .spa_info {
@@ -1100,10 +1086,10 @@ footer .footer_page .copright{
     }
 
     #spa .spa_container img {
-        width: 10cm;
-        height: 6cm;
-        margin-left: 0.5cm;
-        margin-right: 0.5cm;
+        width: 100%;
+        height: 30vh;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 1cm;
     }
     /*spa*/
@@ -1111,7 +1097,9 @@ footer .footer_page .copright{
     /*Our facilities*/
     
     #bullets .bullet-bg{
-        margin-top: -6cm;
+        margin-top: -5cm;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     #bullets .bullets_list{
@@ -1120,17 +1108,17 @@ footer .footer_page .copright{
     }    
 
     #bullets .bullets_head h1{
-        font-size: 45px;
+        font-size: 35px;
     }
 
     #bullets .bullets_list ol li{
         margin-left: 1cm;
-        font-size: 35px;
+        font-size: 20px;
         margin-top: 1cm;
     }
 
     #bullets .bullets_list ul li{
-        font-size: 20px;
+        font-size: 15px;
         margin-bottom: 0cm;
     }    
 
@@ -1142,12 +1130,18 @@ footer .footer_page .copright{
     /*Footer*/
 
     footer .footer_page{
-        margin-right: -1cm;
+        width: 100%;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+
     }
 
     footer .footer_page .footer_allign {
         display: flex;
         flex-direction: column-reverse;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     footer .footer_page .footer_inf {
@@ -1173,9 +1167,8 @@ footer .footer_page .copright{
     
     footer .footer_page .footer_list h3 {
         padding-bottom: 27px;
-        text-align: start;
-        margin-left: -0.5cm;
         margin-top: 1cm;
+        text-align: center;
     }
 
     footer .footer_page .footer_list ul li{
