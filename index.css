@@ -889,7 +889,7 @@ footer .footer_page .copright{
 
 
     .homepage{
-        width:max-content;
+        width:100%;
     }
 
     .homepage .content h1{
@@ -919,16 +919,16 @@ footer .footer_page .copright{
     }
 
     #about .aboutpage img{
-        width:max-content;
-        height: 8.1cm;
+        width:100%;
+        height: auto;
         border-radius: 0%;
-        margin-left: -1cm;
         object-fit: fill;
         align-items: center;
         justify-content: center;
     }
 
     #about .aboutpage h1{
+        color: red;
         font-size: 2em;
         text-align: start;
     }
@@ -936,6 +936,7 @@ footer .footer_page .copright{
     #about .aboutpage p{
         margin-left: 0;
         margin-right: 0;
+        font-size: 13px;
         
     }
 } 
