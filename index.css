@@ -883,27 +883,27 @@ footer .footer_page .copright{
         height: 100vh;
     }
     
+    #about .abt-bg{
+        width: 80%;
+        margin: -1cm;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
 
     #about .aboutpage img{
         width:max-content;
         height:8.9cm;
         border-radius: 0;
-        margin-left: -1cm;
-        
     }
 
     #about .aboutpage #first_about h1{
         font-size: 38px;
-        margin-left: 0;
-        margin-right: -2.5cm;
         margin-bottom: 1cm;
-       
     }
 
     #about .aboutpage #first_about p{
        font-size: 20px;
-       margin-left: 0;
-       margin-right: -2cm;
        text-align:center;
     }
 
@@ -951,26 +951,42 @@ footer .footer_page .copright{
         margin-top: 1cm;
     }
 
-    #beach .beach_container{
-        display: flex;
-        flex-direction: column;
+    #beach .beach-bg{
+        width: 71%;
         margin-left: -1cm;
-        margin-right: -1cm;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #beach .beach_container{
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 
     #beach .beach_container img{
-        margin: 0;
-        border-radius:0;
-        width: 100%;
-        height: auto;
+        width:max-content;
+        height:18cm;
+        border-radius: 0;
+        margin-bottom: 1cm;
     }
 
     #beach .beach_container .beach_info h1{
-        font-size: 41px;
-        margin-top: 1cm;
         text-align: center;
-        margin-bottom: 0.5cm;
+        margin-right: 0;
+        margin-left: 0;
+        font-size: 44px;
+        margin-bottom: 1cm;
     }
+
+    #beach .beach_container p{
+        font-size: 20px;
+        text-align:center;
+    }
+
     
     #spa .spa_info{
         display: flex;
