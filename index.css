@@ -200,17 +200,6 @@ section{
     
 }
 
-.homepage video{
-    z-index: 000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 1s;
-}
-
 .homepage img{
     z-index: 000;
     position: absolute;
