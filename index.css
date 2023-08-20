@@ -222,6 +222,12 @@ header .navigation .navigation-items a:hover:before{
 
 /*About section*/
 
+#about .aboutpage{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1cm;
+}
+
 #about .aboutpage h1{
     font-family: 'General Sans', sans-serif;
     font-weight: 600;
@@ -249,16 +255,6 @@ header .navigation .navigation-items a:hover:before{
     transition: 0.3s;
     
 }
-
-
-#about .aboutpage{
-    display: flex;
-    flex-direction: row;
-    margin-top: 1cm;
-}
-
-
-
 
 /*Dine-In*/
 
@@ -735,6 +731,7 @@ footer .footer_page .copright{
 
 }
  
+/*Media start*/
 
 /*Media Section for About and below for mobile*/
 
@@ -875,12 +872,82 @@ footer .footer_page .copright{
     footer .footer_page .footer_image{
         display: none;
     }
+    
 }
 
-@media (max-width: 679px){
+@media (max-width: 480px){
+    
+    /*main page*/
+    header .logo-top img{
+        width: 2cm;
+        height: 2cm;
+    }
+
+    header .logo-top{
+        font-size: 12px;
+    }
+
+
     .homepage{
         width:max-content;
-        height: 100vh;
+    }
+
+    .homepage .content h1{
+        font-size: 3em;
+        line-height: 3cm;
+    }
+
+    .homepage .content p{
+        font-size: 15px;
+    }
+    /*main page*/
+
+    /*About section*/
+
+    #about .aboutpage{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    #about .abt-bg{
+        margin-top:-2cm;
+        max-width:fit-content;
+        text-align: center;
+        
+    }
+
+    #about .aboutpage img{
+        width:max-content;
+        height: 8.1cm;
+        border-radius: 0%;
+        margin-left: -1cm;
+        object-fit: fill;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #about .aboutpage h1{
+        font-size: 2em;
+        text-align: start;
+    }
+
+    #about .aboutpage p{
+        margin-left: 0;
+        margin-right: 0;
+        
+    }
+} 
+
+    /*About section*/
+    
+
+
+@media (min-width:481px) and (max-width: 679px){
+    
+    .homepage{
+        width: 130%;
     }
     
     #about .abt-bg{
@@ -968,10 +1035,11 @@ footer .footer_page .copright{
     }
 
     #beach .beach_container img{
-        width:max-content;
-        height:18cm;
-        border-radius: 0;
-        margin-bottom: 1cm;
+        
+       
+        width: 100%;
+        height: 100%;
+        object-fit:fill;
     }
 
     #beach .beach_container .beach_info h1{
@@ -1349,5 +1417,4 @@ footer .footer_page .copright{
         margin-left: -4cm;
     }
 
-    
 }
