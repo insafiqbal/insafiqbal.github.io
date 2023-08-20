@@ -200,6 +200,17 @@ section{
     
 }
 
+.homepage video{
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+
 .homepage img{
     z-index: 000;
     position: absolute;
@@ -869,11 +880,14 @@ footer .footer_page .copright{
 }
 
 @media (max-width: 678px){
+
+
     #about .aboutpage img{
         margin-top: 0;
-        width: 7cm;
+        width: 100%;
         height: auto;
         border-radius: 0;
+        
     }
 
     #about .aboutpage #first_about h1{
@@ -890,12 +904,17 @@ footer .footer_page .copright{
     #about .aboutpage{
         display:flex;
         flex-direction: column;
+        margin-left: -1cm;
+        margin-right: -1cm;
     }
 
     #dine-in .dinein_info{
         display: flex;
         flex-direction: column;
         margin-left: -1cm;
+        margin-right: -1cm;
+        margin-bottom: -4cm;
+        
     }
 
     #dine-in .dinein_info .restaurant h1{
@@ -905,28 +924,28 @@ footer .footer_page .copright{
 
     #dine-in .dinein_info .dinein_img img{
         border-radius: 0%;
-        width: 7cm;
+        width: 100%;
         height: auto;
         margin-top: 1cm;
-        margin-left: 1cm;
     }
 
     #beach .beach_container{
         display: flex;
         flex-direction: column;
+        margin-left: -1cm;
+        margin-right: -1cm;
     }
 
     #beach .beach_container img{
-        margin: auto;
-        margin-top:-4cm;
-        margin-bottom: 1cm;
-        border-radius: 0;
-        width: 8cm;
+        margin: 0;
+        border-radius:0;
+        width: 100%;
         height: auto;
     }
 
     #beach .beach_container .beach_info h1{
-        font-size: 31px;
+        font-size: 41px;
+        margin-top: 1cm;
         text-align: center;
         margin-bottom: 0.5cm;
     }
@@ -934,6 +953,9 @@ footer .footer_page .copright{
     #spa .spa_info{
         display: flex;
         flex-direction: column;
+        margin-left: -1cm;
+        margin-right: -1cm;
+        margin-top: -4cm;
     }
 
     #spa .spa_info h1{
@@ -943,14 +965,13 @@ footer .footer_page .copright{
     #spa .spa_info img{
         border-radius: 0;
         margin: 0;
-        margin-left: 1cm;
         margin-top: 1cm;
-        width:6cm;
+        width: 100%;
         height: auto;
     }
 
     #bullets .bullets_head h1{
-        margin-top: -3cm;
+        margin-top: -4cm;
         margin-bottom: -1cm;
         font-size: 50px;
     }
@@ -959,6 +980,8 @@ footer .footer_page .copright{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-left: -1cm;
+        margin-right: -1cm;
     }
 
     #bullets .bullets_list ol{
