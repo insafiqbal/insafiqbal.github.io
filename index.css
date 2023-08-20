@@ -13,7 +13,8 @@
 }
 
 html{
-    scroll-behavior:smooth;
+    scroll-behavior:smooth ;
+    
 }
 
 body{
@@ -96,8 +97,10 @@ header .navigation .navigation-items a{
 
 header .navigation .navigation-items .nav-bar_2{
     padding: 10px;
-    background: black;
-    transition: 0.6s ease;
+    background:transparent;
+    border-color: #D4AF37;
+    border-style:solid;
+    transition: 0.4s ease;
 }
 
 header .navigation .navigation-items .nav-bar_2:hover{
@@ -110,14 +113,13 @@ header .navigation .navigation-items .nav-bar::before{
     background: var(--colormetallicgold);
     width: 0;
     height: 3px;
+    border-radius: 50px;
     bottom: -4px;
-    left: 0;
     transition: 0.3s ease;
 }
 
 header .navigation .navigation-items a:hover:before{
-    width: 100%;
-    
+    width: 100%;   
 }
 
 .homepage{
@@ -138,7 +140,7 @@ header .navigation .navigation-items a:hover:before{
     z-index: 777;
     content: "";
     position: absolute;
-    background: rgb(0, 0, 0, 0.4);
+    background: rgb(0, 0, 0, 0.6);
     width: 100%;
     height: 100%;
     top: 0;
@@ -153,17 +155,18 @@ header .navigation .navigation-items a:hover:before{
 
 .homepage .content h1{
     font-size: 7em;
-    
-    font-weight: 700;
+    color: aliceblue;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 18px;
+    letter-spacing: 14px;
     text-align: center;
     line-height: 140px;
     margin-bottom: 35px;
 }
 
 .homepage .content p{
-    font-size: 20px;
+    font-size: 15px;
+    color: aliceblue;
     font-family: 'Synonym', sans-serif;
     font-weight: bolder;
     text-align: center;
@@ -175,22 +178,23 @@ header .navigation .navigation-items a:hover:before{
 
 
 .homepage .content a{
-    background: #060606;
+    background: #D4AF37;
     font-family: 'Synonym', sans-serif;
     padding: 15px 35px;
     border-radius: 25px;
     font-size: 1.1em;
     font-weight: 500;
     text-decoration: none;
-    color: #ffffff;
+    color: #063d45;
     transition: 0.4s;
     
     
 } 
 
 .homepage .content a:hover{
-    background-color: var(--colormetallicgold);
-    transition: 0.4s ease-out;
+    background-color: var(--color);
+    color: #D4AF37;
+    transition: 0.4s;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     
     
@@ -253,9 +257,9 @@ header .navigation .navigation-items a:hover:before{
     font-weight: 600;
     color: #063d45;
     text-transform: uppercase;
-    margin-bottom: 2cm;
+    margin-bottom: 1.5cm;
     font-size: 1em;
-    margin-left: 1.5cm;
+    margin-left: 1.2cm;
 }
 
 #about .aboutpage p{
@@ -269,7 +273,7 @@ header .navigation .navigation-items a:hover:before{
     height: 20cm;
     margin-left: 2cm;
     margin-bottom: 1cm;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.584) 0px 5px 15px;
     
 }
 
@@ -1407,7 +1411,7 @@ footer .footer_page .copright{
 
     #about .aboutpage h1{
         margin-top: 1cm;
-        font-size: 3.8em;
+        font-size: 3.1em;
     }
 
     
