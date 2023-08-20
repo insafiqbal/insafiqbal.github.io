@@ -18,6 +18,7 @@ html{
 
 body{
     overflow-x: hidden;
+    background-color: rgb(233, 238, 243);
 }
 
 #sidenav{
@@ -222,6 +223,14 @@ header .navigation .navigation-items a:hover:before{
 
 /*About section*/
 
+#about .abt-bg{
+    margin-top: 2cm;
+    margin-bottom: 2cm;
+    margin-left: 3cm;
+    margin-right: 2cm;
+
+}
+
 #about .aboutpage{
     display: flex;
     flex-direction: row;
@@ -233,26 +242,34 @@ header .navigation .navigation-items a:hover:before{
     font-weight: 600;
     color: #063d45;
     text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 10px;
+    margin-top: 2cm;
+    margin-bottom: 0.5cm;
     font-size: 3.9em;
     margin-left: 1cm;
 }
 
+#about .aboutpage h2{
+    font-family: 'General Sans', sans-serif;
+    font-weight: 600;
+    color: #063d45;
+    text-transform: uppercase;
+    margin-bottom: 2cm;
+    font-size: 1em;
+    margin-left: 1.5cm;
+}
+
 #about .aboutpage p{
-    font-size: 20px;
+    font-size: 25px;
     margin-left: 1cm;
     margin-right: 2cm;
 }
 
 #about .aboutpage img{
-    width: 17cm;
-    height: auto;
+    width: 25cm;
+    height: 20cm;
     margin-left: 2cm;
     margin-bottom: 1cm;
-    border-top-left-radius: 40px;
-    border-bottom-right-radius: 40px;
-    transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     
 }
 
@@ -263,31 +280,33 @@ header .navigation .navigation-items a:hover:before{
     font-family: 'General Sans', sans-serif;
     font-weight: 600;
     text-align: start;
-    margin-left: 1cm ;
+    margin-left: 4cm ;
+    margin-top: 2cm;
     text-transform: uppercase;
-    font-size: 3.9em;
+    font-size: 5em;
 }
 
 #dine-in .dinein_info p{
-    text-align: justify;
-    font-size: 20px;
-    margin-left: 1cm;
-    margin-right: 1cm;
+    font-size: 25px;
+    margin-left: 4cm;
+    margin-right: -3cm;
 }
 
 #dine-in img {
     width: 17cm;
-    height: 14cm;
+    height: 20cm;
+    margin-left: 11cm;
     margin-right: 2cm;
-    border-top-left-radius: 40px;
-    border-bottom-right-radius: 40px;
-    transition: 0.3s;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #dine-in .dine-bg{
     background-color: #D4AF37;
     background-image: linear-gradient(10deg, #D4AF37, rgba(255, 251, 251, 0.473));
+    width: 70%;
+    height: 10%;
+    margin-top: 2cm;
+    margin-bottom: 2cm;
 }
 
 #dine-in .dinein_info{
@@ -295,13 +314,11 @@ header .navigation .navigation-items a:hover:before{
    flex-direction: row;
    margin-top: 1cm;
    margin-bottom: 1cm;
-   
-   
    padding: 30px;
 }
 
 #dine-in .restaurant ul{
-    margin-left: 1.5cm;
+    margin-left: 4.5cm;
     margin-top: 1cm;
     margin-bottom: 1cm;
     font-size: 1.2em;
@@ -310,12 +327,15 @@ header .navigation .navigation-items a:hover:before{
 
 /*Start of private beach*/
 
+#beach .beach-bg{
+    margin-top: 2cm;
+    margin-bottom: 2cm;
+}
+
 #beach .beach_container img{
-    width: 12cm;
+    width: 15cm;
     height: auto;
     margin-left: 2cm;
-    border-top-left-radius: 40px;
-    border-bottom-right-radius: 40px;
     transition: 0.3s;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -327,7 +347,7 @@ header .navigation .navigation-items a:hover:before{
     text-align: start;
     margin-left: 1cm ;
     text-transform: uppercase;
-    font-size: 3.9em;
+    font-size: 4.5em;
 }
 
 #beach .beach_container p{
@@ -353,42 +373,48 @@ header .navigation .navigation-items a:hover:before{
 
 /*Start of SPA*/
 
-#spa .spa_container img{
-    width: 17cm;
-    height: auto;
-    margin-left: 2cm;
-    border-top-left-radius: 40px;
-    border-bottom-right-radius: 40px;
-    transition: 0.3s;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
 #spa .spa_info h1{
     color: #063d45;
     font-family: 'General Sans', sans-serif;
     font-weight: 600;
     text-align: start;
-    margin-left: 1cm ;
+    margin-left: 4cm ;
+    margin-top: 2cm;
     text-transform: uppercase;
-    font-size: 3.9em;
+    font-size: 5em;
 }
 
 #spa .spa_info p{
-    text-align: justify;
     font-size: 20px;
-    margin-left: 1cm;
-    margin-right: 1cm;
+    margin-left: 4cm;
+    margin-right: -10cm;
 }
 
+#spa .spa_container img{
+    width: 22cm;
+    height: auto;
+    margin-left: 17cm;
+    margin-right: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#spa .spa-bg{
+    background-color: #D4AF37;
+    background-image: linear-gradient(10deg, #D4AF37, rgba(255, 251, 251, 0.473));
+    width: 70%;
+    height: 10%;
+    margin-top: 2cm;
+    margin-bottom: 2cm;
+}
 
 #spa .spa_info{
     display: flex;
     flex-direction: row;
     margin-top: 1cm;
-    background-color: #D4AF37;
-    background-image: linear-gradient(10deg, #D4AF37, rgba(255, 251, 251, 0.473));
+    margin-bottom: 1cm;
     padding: 30px;
 }
+
 /*End of SPA*/
 
 /*start of Our Facility*/
@@ -906,9 +932,8 @@ footer .footer_page .copright{
 
     #about .aboutpage{
         display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding: 0;
+        flex-direction:column-reverse;
+        
     }
 
     #about .abt-bg{
@@ -928,9 +953,9 @@ footer .footer_page .copright{
     }
 
     #about .aboutpage h1{
-        color: red;
-        font-size: 2em;
-        text-align: start;
+        color: #063d45;
+        font-size: 2em;        
+        text-align: center;
     }
 
     #about .aboutpage p{
@@ -1324,6 +1349,39 @@ footer .footer_page .copright{
         height: 10cm;
     }
 
+    #dine-in .dinein_info h1{
+        margin-left: 2cm
+    }
+
+    #dine-in .dinein_info p{
+        margin-left: 2cm;
+    }
+
+    #dine-in .dinein_info ul li{
+        margin-left: -2cm;
+    }
+
+    #dine-in img {
+        width: auto;
+        height: 18cm;
+             
+    }
+    
+    #spa .spa_info h1{
+        margin-left: 1cm;
+    }
+
+    #spa .spa_info p{
+        margin-left: 1cm;
+    }
+
+    #spa .spa_container img{
+        width: 19cm;
+        height: auto;
+        margin-left: 11cm;
+        
+    }
+
     footer .footer_page .footer_inf{
         margin-left: 0;
     }
@@ -1339,6 +1397,31 @@ footer .footer_page .copright{
 }
 
 @media (max-width: 1668px){
+    
+    #about .aboutpage img{
+        width: 17cm;
+        height: 17cm;
+        margin-left: 0;
+
+    }
+
+    #about .aboutpage h1{
+        margin-top: 1cm;
+        font-size: 3.8em;
+    }
+
+    
+    #dine-in img {
+        margin-left: 7cm;
+        margin-right: 2cm;        
+    }
+    
+    #spa .spa_container img{
+        width: 19cm;
+        height: auto;
+        margin-left: 11cm;
+        
+    }
     #bullets .bullets_list ol li{
         font-size: 18px;
     }
