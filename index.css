@@ -246,9 +246,9 @@ header .navigation .navigation-items a:hover:before{
     font-weight: 600;
     color: #063d45;
     text-transform: uppercase;
-    margin-top: 2cm;
+    margin-top: 1cm;
     margin-bottom: 0.5cm;
-    font-size: 3.9em;
+    font-size: 3.1em;
     margin-left: 1cm;
 }
 
@@ -269,9 +269,9 @@ header .navigation .navigation-items a:hover:before{
 }
 
 #about .aboutpage img{
-    width: 25cm;
-    height: 20cm;
-    margin-left: 2cm;
+    width: 17cm;
+    height: 17cm;
+    margin-left: 0;
     margin-bottom: 1cm;
     box-shadow: rgba(0, 0, 0, 0.584) 0px 5px 15px;
     
@@ -287,7 +287,7 @@ header .navigation .navigation-items a:hover:before{
     margin-left: 4cm ;
     margin-top: 2cm;
     text-transform: uppercase;
-    font-size: 5em;
+    font-size: 55px;
 }
 
 #dine-in .dinein_info p{
@@ -299,7 +299,7 @@ header .navigation .navigation-items a:hover:before{
 #dine-in img {
     width: 17cm;
     height: 20cm;
-    margin-left: 11cm;
+    margin-left: 7cm;
     margin-right: 2cm;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -363,6 +363,7 @@ header .navigation .navigation-items a:hover:before{
 
 #beach .beach_container ol li{
     margin-left: 1.5cm;
+    margin-bottom: 1cm;
     font-size: 20px;
     line-height: 1cm;
     color: var(--color);
@@ -395,9 +396,9 @@ header .navigation .navigation-items a:hover:before{
 }
 
 #spa .spa_container img{
-    width: 22cm;
+    width: 19cm;
     height: auto;
-    margin-left: 17cm;
+    margin-left: 11cm;
     margin-right: 0;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -444,7 +445,7 @@ header .navigation .navigation-items a:hover:before{
 }
 
 #bullets .bullets_list ol li{
-    font-size: 27px;
+    font-size: 18px;
     color: #063d45;
     margin-left: 2cm;
     font-weight: bold;
@@ -460,10 +461,10 @@ header .navigation .navigation-items a:hover:before{
 
 
 #bullets .bullets_list .swimming{
-    margin-left: 2cm;
+    margin-left: 1cm;
     margin-top: 2cm;
     margin-bottom: 1cm;
-    width: 10cm;
+    width: 7cm;
     height: auto;
     transition: 0.4s ease;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -473,7 +474,7 @@ header .navigation .navigation-items a:hover:before{
     margin-left: 1cm;
     margin-top: 2cm;
     margin-bottom: 1cm;
-    width: 10cm;
+    width: 7cm;
     height: auto;
     transition: 0.4s ease;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -484,7 +485,7 @@ header .navigation .navigation-items a:hover:before{
     margin-left: 1cm;
     margin-top: 2cm;
     margin-bottom: 1cm;
-    width: 10cm;
+    width: 7cm;
     height: auto;
     transition: 0.4s ease;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -496,7 +497,7 @@ header .navigation .navigation-items a:hover:before{
     margin-left: 1cm;
     margin-top: 2cm;
     margin-bottom: 1cm;
-    width: 10cm;
+    width: 7cm;
     height: auto;
     transition: 0.4s ease;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -530,7 +531,7 @@ footer .footer_page .footer_inf {
 footer .footer_page .footer_inf a img{
     width: 7cm;
     height: auto;
-    margin-left: 2.3cm;
+    margin-left: 1.8cm;
 
 }
 
@@ -542,18 +543,19 @@ footer .footer_page .footer_inf h2{
 footer .footer_page .footer_inf h4{
     font-size: 20px;
     margin-top: 30px;
-    margin-left: 1cm;
+    margin-left: 2cm;
     color: aliceblue;
 }
 
 footer .footer_page .footer_inf h6{
     font-size: 15px;
     margin-top: 5px;
-    margin-left: 1cm;
+    margin-left: 2cm;
     color: #D4AF37;
 }
 
 footer .footer_page h3{
+    font-size: 20px;
     color: aliceblue;
     text-transform: uppercase;
     
@@ -570,6 +572,7 @@ footer .footer_page .footer_list h3{
     
 
 footer .footer_page .footer_list ul li{
+    font-size: 15px;
     padding-bottom: 25px;
     list-style: none;
 }
@@ -603,13 +606,14 @@ footer .footer_page a:hover{
 
 footer .footer_page .footer_contact h3{
     padding-bottom: 15px;
-    margin-left: 6cm;
+    margin-left: 2cm;
     text-transform: uppercase;
 }
 
 
 footer .footer_page .footer_contact ul li{
-    margin-left: 6cm;
+    margin-left: 2cm;
+    font-size: 15px;
     list-style: none;
     color: #f1c580;
     line-height: 50px;
@@ -630,8 +634,8 @@ footer .footer_page .footer_allign{
 }
 
 footer .footer_page .footer_social h3{
-    margin-left: 6cm;
-    margin-bottom: 0.6cm;
+    margin-left: 2cm;
+    margin-bottom: 1cm;
 }
 
 footer .footer_page .footer_social ul li{
@@ -648,8 +652,12 @@ footer .footer_page .footer_social ul li a img{
     padding: 10px;
     border-radius: 13px;
     margin-left: 1cm;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+}
+
+footer .footer_page .footer_social ul li a{
+        margin-left: -4cm;
 }
 
 footer .footer_page .footer_social ul li a img:hover{
@@ -672,8 +680,7 @@ footer .footer_page .copright{
 
 @media (max-width: 1190px){
     header {
-        padding: 12px 20px;
-        
+        padding: 10px 0px;   
     }
 
     section {
@@ -917,6 +924,9 @@ footer .footer_page .copright{
         font-size: 12px;
     }
 
+    section {
+        padding: 89px 0px;
+    }
 
     .homepage{
         width:100%;
@@ -932,45 +942,277 @@ footer .footer_page .copright{
     }
     /*main page*/
 
+    
     /*About section*/
+
+    #about .abt-bg{
+        margin-top:-3cm;
+    }
 
     #about .aboutpage{
         display: flex;
         flex-direction:column-reverse;
-        
+        margin-left: -2cm;
     }
-
-    #about .abt-bg{
-        margin-top:-2cm;
-        max-width:fit-content;
-        text-align: center;
-        
-    }
-
-    #about .aboutpage img{
-        width:100%;
-        height: auto;
+    #about .abt-bg .aboutpage img{
+        width:9cm;
+        height: 14cm;
         border-radius: 0%;
-        object-fit: fill;
+        margin-top: 2cm;
         align-items: center;
         justify-content: center;
     }
 
-    #about .aboutpage h1{
+    #about .abt-bg .aboutpage h1{
         color: #063d45;
         font-size: 2em;        
         text-align: center;
     }
 
+    #about .abt-bg .aboutpage h2{
+        margin-left: 1.7cm;
+    }
+
     #about .aboutpage p{
-        margin-left: 0;
+        margin-left: 2;
         margin-right: 0;
         font-size: 13px;
+        text-align: center;
         
     }
+
+    /*About Section*/
+
+    /*Restaurants*/
+    
+    #dine-in .dine-bg {
+        background-color: #D4AF37;
+        background-image: linear-gradient(10deg, #D4AF37, rgba(255, 251, 251, 0.473));
+        width: 100%;
+        height: 140vh;
+        margin-top: -6cm;
+        margin-bottom: -5cm;
+    }
+
+    #dine-in .dinein_info {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1cm;
+        margin-bottom: 1cm;
+        padding: 0px;
+    }
+
+    #dine-in .dinein_info h1 {
+        color: rgb(6, 61, 69);
+        font-family: "General Sans", sans-serif;
+        font-weight: 600;
+        text-align: center;
+        margin-left: 0cm;
+        margin-top: 2cm;
+        text-transform: uppercase;
+        font-size: 35px;
+    }
+
+    #dine-in .restaurant ul {
+        margin-left: 2.5cm;
+        margin-top: 1cm;
+        margin-bottom: 1cm;
+        font-size: 1.2em;
+    }
+
+    #dine-in .dinein_info p {
+        text-align: center;
+        font-size: 25px;
+        margin-left: 1cm;
+        margin-right: 1cm;
+    }
+
+    #dine-in img {
+        width: 9cm;
+        height: 13cm;
+        margin-left: 1cm;
+        margin-top: 1cm;
+        margin-right: 0cm;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    /*Restaurants*/
+
+    /*Private Beaches*/
+
+    #beach .beach_container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #beach .beach_container h1 {
+        margin-left: 0cm;
+        margin-bottom: 1cm;
+        font-size: 3.4em;
+        text-align: center;
+    }
+
+    #beach .beach_container p {
+        font-size: 20px;
+        text-align: center;
+        margin-left: 1cm;
+        margin-right: 1cm;
+        margin-bottom: 1cm;
+    }
+
+    #beach .beach_container ol li{
+        text-align: center;
+    }
+
+    #beach .beach_container img {
+        width: 9cm;
+        height: auto;
+        margin-left: 0.8cm;
+    }
+    /*Private Beaches*/
+
+    /*Spa*/
+
+    #spa .spa-bg {
+        width: 100%;
+        height: 80vh;
+        margin-top: -5cm;
+        margin-bottom: 2cm;
+    }
+
+    #spa .spa_info {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    #spa .spa_info h1 {
+        text-align: center;
+        margin-left: 0cm;
+        margin-top: 2cm;
+        font-size: 4em;
+    }
+
+    #spa .spa_info p {
+        font-size: 20px;
+        margin-left: 1cm;
+        margin-right: 1cm;
+        text-align: center;
+    }
+
+    #spa .spa_container img {
+        width: 10cm;
+        height: 6cm;
+        margin-left: 0.5cm;
+        margin-right: 0.5cm;
+        margin-top: 1cm;
+    }
+    /*spa*/
+
+    /*Our facilities*/
+    
+    #bullets .bullet-bg{
+        margin-top: -6cm;
+    }
+    
+    #bullets .bullets_list{
+        display: flex;
+        flex-direction: column;
+    }    
+
+    #bullets .bullets_head h1{
+        font-size: 45px;
+    }
+
+    #bullets .bullets_list ol li{
+        margin-left: 1cm;
+        font-size: 35px;
+        margin-top: 1cm;
+    }
+
+    #bullets .bullets_list ul li{
+        font-size: 20px;
+        margin-bottom: 0cm;
+    }    
+
+    #bullets .bullets_list ul{
+        margin-bottom: -1cm;
+    }
+    /*Our facilities*/
+
+    /*Footer*/
+
+    footer .footer_page{
+        margin-right: -1cm;
+    }
+
+    footer .footer_page .footer_allign {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    footer .footer_page .footer_inf {
+        display: none;
+        text-align: center;
+        font-size: 1em;
+        margin-left: 0cm;
+        margin-top: 2cm;
+        text-transform: uppercase;
+    }
+
+    footer .footer_page .footer_inf h4 {
+        font-size: 20px;
+        margin-top: 30px;
+        margin-left: 0cm;
+    }
+
+    footer .footer_page .footer_inf h6 {
+        font-size: 15px;
+        margin-top: 5px;
+        margin-left: 0cm;
+    }
+    
+    footer .footer_page .footer_list h3 {
+        padding-bottom: 27px;
+        text-align: start;
+        margin-left: -0.5cm;
+        margin-top: 1cm;
+    }
+
+    footer .footer_page .footer_list ul li{
+        font-size: 15px;
+        padding-bottom: 25px;
+        text-align: center;
+        margin-left: -4.5cm;
+    }
+
+    footer .footer_page .footer_contact h3 {
+        padding-bottom: 15px;
+        margin-left: 0cm;
+        margin-top: 1cm;
+        text-align: center;
+    }
+
+    footer .footer_page .footer_contact ul li{
+        text-align: center;
+        margin-left: 0.3cm;
+    }
+
+    footer .footer_page .footer_social h3 {
+        margin-left: 3.3cm;
+        margin-bottom: 1cm;
+    }
+
+    footer .footer_page .footer_social ul li a img{
+        margin-left: 3.5cm;
+    }    
+
+    footer .footer_page .copright{
+        font-size: 15px;
+    }    
+    /*Footer*/
 } 
 
-    /*About section*/
+    
     
 
 
@@ -999,7 +1241,7 @@ footer .footer_page .copright{
         margin-bottom: 1cm;
     }
 
-    #about .aboutpage #first_about p{
+    #about .aboutpage#first_about p{
        font-size: 20px;
        text-align:center;
     }
@@ -1396,113 +1638,6 @@ footer .footer_page .copright{
 
     footer .footer_page .footer_list ul li{
         margin-left: -2cm;
-    }
-
-}
-
-@media (max-width: 1668px){
-    
-    #about .aboutpage img{
-        width: 17cm;
-        height: 17cm;
-        margin-left: 0;
-
-    }
-
-    #about .aboutpage h1{
-        margin-top: 1cm;
-        font-size: 3.1em;
-    }
-
-    
-    #dine-in img {
-        margin-left: 7cm;
-        margin-right: 2cm;        
-    }
-    
-    #spa .spa_container img{
-        width: 19cm;
-        height: auto;
-        margin-left: 11cm;
-        
-    }
-    #bullets .bullets_list ol li{
-        font-size: 18px;
-    }
-
-    #bullets .bullets_list .swimming{
-        margin-left: 1cm;
-        width: 7cm;
-        height: auto;
-    }
-    
-    #bullets .bullets_list .jacuzzi{
-        margin-left: 1cm;
-        width: 7cm;
-        height: auto;
-    }
-    
-    #bullets .bullets_list .sauna{
-        margin-left: 1cm;
-        width: 7cm;
-        height: auto;
-    }
-
-    #bullets .bullets_list .gym{
-        margin-left: 1cm;
-        width: 7cm;
-        height: auto;
-    }
-
-    #dine-in .restaurant h1{
-        font-size: 55px;
-    }
-    
-
-    footer .footer_page .footer_inf h4 h6{
-        margin-left: 2cm;
-    }
-
-
-    footer .footer_page h3{
-        font-size: 20px;
-
-    }
-
-    footer .footer_page .footer_list ul li{
-        font-size: 15px;
-    }
-
-    footer .footer_page .footer_contact h3{
-        margin-left: 2cm;
-    }
-
-
-    footer .footer_page .footer_contact ul li{
-        margin-left: 2cm;
-        font-size: 15px;
-    }
-
-    footer .footer_page .footer_social h3{
-        margin-left: 2cm;
-        margin-bottom: 1cm;
-    }
-
-    footer .footer_page .footer_social ul li a img{
-        width: 40px;
-        height: 40px;
-        margin-left: 2cm;
-        
-    }
-
-    footer .footer_page .footer_inf a img{
-        margin-left: 1.8cm;
-        width: 7cm;
-        height: auto;
-    }
-
-    footer .footer_page .footer_social ul li a{
-        margin-left: -4cm;
     }
 
 }
