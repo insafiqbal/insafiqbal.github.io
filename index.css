@@ -50,7 +50,7 @@ header{
 }
 
 .branch{
-    background-color: rgb(0, 0, 0, 0.6);
+    background-color: #063d45;
     z-index: 999;
     position: absolute;
     top: 0;
@@ -117,11 +117,6 @@ header .navigation .navigation-items .nav-bar::before{
 header .navigation .navigation-items a:hover:before{
     width: 100%;
     
-}
-
-section{
-    width:auto;
-    align-items: center;
 }
 
 .homepage{
@@ -218,7 +213,7 @@ section{
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit:fill;
     transition: 1s;
     
 }
@@ -239,7 +234,6 @@ section{
 }
 
 #about .aboutpage p{
-    text-align: justify;
     font-size: 20px;
     margin-left: 1cm;
     margin-right: 2cm;
@@ -260,7 +254,7 @@ section{
 #about .aboutpage{
     display: flex;
     flex-direction: row;
-    margin-top: -2cm;
+    margin-top: 1cm;
 }
 
 
@@ -295,13 +289,18 @@ section{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+#dine-in .dine-bg{
+    background-color: #D4AF37;
+    background-image: linear-gradient(10deg, #D4AF37, rgba(255, 251, 251, 0.473));
+}
+
 #dine-in .dinein_info{
    display: flex;
    flex-direction: row;
    margin-top: 1cm;
    margin-bottom: 1cm;
-   background-color: #D4AF37 ;
-   background-image: linear-gradient(10deg, #D4AF37, rgba(255, 251, 251, 0.473));
+   
+   
    padding: 30px;
 }
 
@@ -313,7 +312,7 @@ section{
 }
 /*End of Dine-In/*
 
-/*Start of Our Merchandise*/
+/*Start of private beach*/
 
 #beach .beach_container img{
     width: 12cm;
@@ -336,7 +335,6 @@ section{
 }
 
 #beach .beach_container p{
-    text-align: justify;
     font-size: 20px;
     margin-left: 1cm;
     margin-right: 1cm;
@@ -879,52 +877,76 @@ footer .footer_page .copright{
     }
 }
 
-@media (max-width: 678px){
-
+@media (max-width: 679px){
+    .homepage{
+        width:max-content;
+        height: 100vh;
+    }
+    
 
     #about .aboutpage img{
-        margin-top: 0;
-        width: 100%;
-        height: auto;
+        width:max-content;
+        height:8.9cm;
         border-radius: 0;
+        margin-left: -1cm;
         
     }
 
     #about .aboutpage #first_about h1{
-        margin: 0;
-        font-size: 30px;
-        text-align: center;
+        font-size: 38px;
+        margin-left: 0;
+        margin-right: -2.5cm;
+        margin-bottom: 1cm;
+       
     }
 
     #about .aboutpage #first_about p{
-        margin: 1cm;
-        margin-bottom: -4cm;
+       font-size: 20px;
+       margin-left: 0;
+       margin-right: -2cm;
+       text-align:center;
     }
 
     #about .aboutpage{
         display:flex;
         flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+       
+    }
+
+    #dine-in .dine-bg{
+        margin-top: -4cm;
         margin-left: -1cm;
-        margin-right: -1cm;
+        margin-right: 0;
+        width: 13.35cm; ;
+        height: auto;
+        
     }
 
     #dine-in .dinein_info{
         display: flex;
         flex-direction: column;
-        margin-left: -1cm;
-        margin-right: -1cm;
+        margin-right:0 ;
         margin-bottom: -4cm;
-        
     }
 
     #dine-in .dinein_info .restaurant h1{
+        margin-right: 0;
         text-align: center;
         font-size: 40px;
     }
 
+    #dine-in .dinein_info p{
+        margin-right: 0;
+    }
+
     #dine-in .dinein_info .dinein_img img{
+        margin-right: 0cm;
+        margin-left: -0.4cm;
         border-radius: 0%;
-        width: 100%;
+        width: 110.2%;
         height: auto;
         margin-top: 1cm;
     }
