@@ -61,7 +61,7 @@ a{
     justify-content: space-evenly;
     width: 100%;
     height: 100vh;
-    background-image: url(/../Image/homepage3.png);
+    background-image:url(/../Image/homepage3.png);
     background-size: cover;
     background-position: center;
 }
@@ -90,9 +90,29 @@ a{
 }
 
 .navlink{
+    
     text-decoration: none;
     color: aliceblue;
-    font-weight: 600;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.booking{
+    border-style: solid;
+    border-color: #D4AF37;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.booking:hover{
+    background-color: #063d45;
+    border-color: #063d45;
+    color: #ffffff;
+}
+
+.navlink:hover{
+    color: #D4AF37;
+    transition: 0.3s;
 }
 
 .logo{
@@ -115,7 +135,7 @@ a{
 
 .hero-text{
     text-align: center;
-    margin-top: 10rem;
+    margin:4rem
     
 }
 
@@ -138,6 +158,13 @@ a{
     color: #D4AF37;
     font-size: 13px;
     padding: 12px 25px;
+    transition: 0.4s;
+}
+
+.hero-content a:hover{
+    background-color: #D4AF37;
+    color: #063d45;
+    transition: 0.4s;
 }
 
 
@@ -241,11 +268,22 @@ a{
     margin-top: 2rem;
     text-align: center;
     color: #063d45;
+    text-transform: uppercase;
 }
 
 .spa p{
     text-align: center;
     margin: 1rem;
+}
+
+.spa ul li{   
+    text-align: center;
+    margin: 3rem;
+    font-size: 13px;
+    font-weight: 400;
+    color: #063d45;
+    text-transform: uppercase;
+    line-height: 0;
 }
 /*Spa end*/
 
@@ -286,6 +324,7 @@ a{
     font-weight: 700;
     color: #D4AF37;
     margin-bottom: 2rem;
+    
 }
 
 .footer_col ul li{
@@ -418,20 +457,20 @@ a{
         font-size: 18x;
     }
 
-    .abt_img {
-        margin: 2rem;
+    .about{
+        align-items: center;
     }
 
-    .rest_img{
-        margin: 2rem;
+    .restaurant{
+        align-items: center;
     }
 
-    .beaches_img{
-        margin: 2rem;
+    .beaches{
+        align-items: center;
     }
 
-    .spa_img{
-        margin: 2rem;
+    .spa{
+        align-items: center;
     }
 
     .logoimg h4{
@@ -464,6 +503,7 @@ a{
 @media (min-width:856px){
     .navlinks{
         display:flex;
+        font-size: 13.4px;
     }
 
     .logo span{
@@ -485,19 +525,272 @@ a{
     .header_bar{
         display: none;
     }
+
+    .about {
+        align-items: center;
+    }
+
+    .abt_img img{
+        width: 35rem;
+        height: auto;
+    }
+
+    .restaurant{
+        align-items: center;
+    }
+
+    .rest_img img{
+        width: 35rem;
+        height: auto;
+    }
+
+    .beaches{
+        align-items: center;
+    }
+
+    .beaches_img img{
+        width: 35rem;
+        height: auto;
+    }
+
+    .spa{
+        align-items: center;
+    }
+
+    .spa_img img{
+        width: 35rem;
+        height: auto;
+    }
 }
 
 /* Large */
 @media (min-width:1024px){
     
-}
+    .navlink{
+        font-size: 18px;
+    }
+    
+    .about{
+        display: flex;
+        flex-direction: row;
 
+    }
+
+    .abt_content h1{
+        text-align: left;
+        font-size: 50px;
+        margin: 1rem;
+    }
+
+    .abt_content h4{
+        text-align: left;
+        font-size: 15px;
+        margin: 1rem;
+    }
+
+    .abt_content p{
+        text-align: left;
+        font-size: 18px;
+        margin: 1rem;
+    }
+
+    .abt_img{
+        margin: 3rem;
+    }
+
+    .abt_img img{
+        display: block;
+        width: 120rem;
+        height: auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .restaurant{
+        display: flex;
+        flex-direction: row-reverse;
+        
+    }
+
+    .restaurant ul li{
+        text-align: left;
+        margin: 3rem;
+        font-size: 15px;
+        line-height: 0;
+    }
+
+    .restaurant h1{
+        text-align: left;
+        margin: 2rem;
+        font-size: 40px;
+        
+    }
+
+    .restaurant p{
+        text-align: left;
+        font-size: 15px;
+        margin: 2rem;
+    }
+
+    .rest_img img{
+        display: block;
+        width: 40rem;
+        height: auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .beaches{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .beaches h1{
+        text-align: left;
+        font-size: 50px;
+        margin: 1rem;
+    }
+
+    .beaches p{
+        text-align: left;
+        font-size: 14px;
+        margin: 1rem;
+    }
+
+    .beaches ol li{
+        font-size: 13px;
+        line-height: 0;
+
+    }
+
+    .beaches_img{
+        margin: 3rem;
+    }
+
+    .beaches_img img{
+        display: block;
+        width: 100rem;
+        height: auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .spa{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .spa h1{
+        text-align: left;
+        margin: 2rem;
+        font-size: 50px;
+    }
+
+    .spa p{
+        text-align: left;
+        margin: 2rem;
+        font-size: 16px;
+    }
+
+    .spa_img img{
+        display: block;
+        width: 90rem;
+        height: auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .footer_row{
+        display:flex;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .footer_col h3{
+        font-size: 20px;
+    }
+
+    .footer_col ul li{
+        font-size: 15px;
+    }
+
+    .logoimg a img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .logoimg h4{
+        font-size: 15px;
+    }
+
+    .logoimg h6{
+        font-size: 10px;
+    }
+
+    .socials ul li a img{
+        width: 20px;
+        height: 20px;
+    }
+
+    
+}
 /* Extra Large */
 @media (min-width:1280px){
+    
+    .abt_content h1{
+        text-align: left;
+        font-size: 80px;
+        margin: 1rem;
+    }
 
+    .abt_content h4{
+        text-align: left;
+        font-size: 20px;
+        margin: 1rem;
+    }
+
+    .abt_content p{
+        text-align: left;
+        font-size: 22px;
+        margin: 1rem;
+    }
+
+    .restaurant h1{
+        text-align: left;
+        margin: 2rem;
+        font-size: 60px;
+    }
+
+    .restaurant ul li{
+        font-size: 19px;
+    }
+
+    .restaurant p{
+        font-size: 22px;
+    }
+
+    .beach_content h1{
+        font-size: 60px;
+    }
+
+    .beach_content p{
+        font-size: 17px;
+    }
+
+    .beach_content ol li{
+        font-size: 18px;
+    }
+
+    .spa_content h1{
+        font-size: 75px;
+    }
+
+    .spa_content p{
+        font-size: 19px;
+    }
+
+    .spa_content ul li{
+        font-size: 20px;
+    }
 }
 
 /* XX Large */
 @media (min-width:1536px){
-
+    
 }
