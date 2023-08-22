@@ -742,7 +742,7 @@ a{
     }
     
     .deep_img img{
-        width: 35rem;
+        width: 30rem;
         height: auto;
     }
 }
@@ -977,6 +977,12 @@ a{
 
     .deep_content ul li{
         font-size: 20px;
+        text-align: start;
+    }
+
+    .deep_img img{
+        width: 55rem;
+        height: auto;
     }
 }
 
