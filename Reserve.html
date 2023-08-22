@@ -76,7 +76,7 @@
 
                     <div class="input-box">
                         <span class="details">Check-In Date & time</span>
-                        <input type="datetime-local" required>
+                        <input type="datetime-local" placeholder="none" required>
                     </div>
                     
                     <div class="input-box">
@@ -86,19 +86,29 @@
 
                     <div class="input-box">
                         <span class="details">No. of Guests</span>
-                        <input type="text" placeholder="No. of Guests" required>
+                        <input type="number" placeholder="No. of Guests" required>
                     </div>
 
                     <div class="input-box">
                         <span class="details">No. of Rooms</span>
-                        <input type="text" placeholder="No. of Rooms" required>
+                        <input type="number" placeholder="No. of Rooms" required>
                     </div>
 
                     <div class="input-box">
                         <span class="details">Room Type</span>
-                        <input type="text" placeholder="Room Type" required>
+                        <select class="" name="List" size="1">
+                            <option>Ocean View</option>
+                            <option>Royal Suite</option>
+                            <option>Family Suite</option>
+                            <option>Dual Bed Comfort</option>
+                            <option>Single bed comfort</option>
+                        </select>
                     </div>
 
+                </div>
+
+                <div class="book_btn">
+                    <input type="submit" value="book" name="book">
                 </div>
             </form>
         </section>
