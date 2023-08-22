@@ -184,6 +184,8 @@ a{
     padding: 2px 20px;
 }
 
+
+/*Book Page*/
 .book_title{
     display: flex;
     text-align: center;
@@ -338,6 +340,8 @@ a{
     color: var(--colormetallicgold);
     transition: 0.4s;
 }
+
+/*Book Page End*/
 
 
 /*About Page*/
