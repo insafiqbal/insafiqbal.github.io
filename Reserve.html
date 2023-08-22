@@ -1,6 +1,106 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Reserve</title>
+        <title>THE LAVIANT BAY - BOOKING</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <meta name="description" content="Laviant Bay , The luxurious Beach Hotel">
+        <link rel="icon" href="Logo/logo white.png">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link href="https://api.fontshare.com/v2/css?f[]=general-sans@200,500,300,600,400,700&display=swap" rel="stylesheet">
+        <link href="https://api.fontshare.com/v2/css?f[]=synonym@400&display=swap" rel="stylesheet">
+        <link href="https://api.fontshare.com/v2/css?f[]=poppins@900,500,400,100,300,800,700,200,600&display=swap" rel="stylesheet">
     </head>
+
+    <body>
+        <header class="header_booking">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="Logo/logo white.png" alt="Logo"></a>
+                    <a href="index.html"><span>The Laviant Bay</span></a> 
+                </div>
+                          
+                <div class="navlinks">
+                    <a class="navlink" href="index.html">Home</a>
+                    <a class="navlink" href="Restaurant.html">Restaurants</a>
+                    <a class="navlink" href="Branches.html">Branches</a>
+                    <a class="navlink" href="Adventures.html">Adventures</a>
+                    <a class="navlink booking" href="Reserve.html" >Book Now</a>
+                </div>  
+                
+                <button class="header_bar">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+                      </svg>                    
+                </button>
+            </nav>
+        </header>
+
+        <section class="section_book">
+            <div class="book_title">Booking</div>
+            <form action="#">
+                <div class="book_personal">
+                    
+                    <h1>Personal Information</h1>
+
+                    <div class="input-box">
+                        <span class="details">First Name</span>
+                        <input type="text" placeholder="eg: Insaf" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <span class="details">Last Name</span>
+                        <input type="text" placeholder="eg: Iqbal" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">E-Mail</span>
+                        <input type="text" placeholder="eg: youremail@gmail.com" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Phone Number</span>
+                        <input type="number" placeholder="eg: 0502818879" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Country</span>
+                        <input type="text" placeholder="eg: Saudi Arabia" required>
+                    </div>
+
+                </div>
+
+                <div class="book_details">
+
+                    <h1>Booking Details</h1>
+
+                    <div class="input-box">
+                        <span class="details">Check-In Date & time</span>
+                        <input type="datetime-local" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <span class="details">Check-Out Date & time</span>
+                        <input type="datetime-local" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">No. of Guests</span>
+                        <input type="text" placeholder="No. of Guests" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">No. of Rooms</span>
+                        <input type="text" placeholder="No. of Rooms" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Room Type</span>
+                        <input type="text" placeholder="Room Type" required>
+                    </div>
+
+                </div>
+            </form>
+        </section>
+    </body>
 </html>
