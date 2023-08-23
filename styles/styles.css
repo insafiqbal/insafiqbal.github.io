@@ -164,12 +164,13 @@ a{
 .hero-content h1{
     color: #ffffff;
     font-size: 45px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .hero-content p{
     font-size: 11px;
     justify-content: space-around;
+    font-weight: 600;
     margin-bottom: 3rem;
     color: var(--colormetallicgold);
 }
@@ -179,6 +180,7 @@ a{
     background-color: #063d45;
     color: #D4AF37;
     font-size: 13px;
+    font-weight: 400;
     padding: 12px 25px;
     transition: 0.4s;
 }
@@ -194,302 +196,6 @@ a{
     width: 100%;
     padding: 2px 20px;
 }
-
-
-/*Book Page*/
-.book_title{
-    display: flex;
-    text-align: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    margin: 30px 0 ;
-    justify-content: center;
-    color: #063d45;
-    font-size: 50px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.book_title::before{
-    content: "";
-    position: absolute;
-    height: 5px;
-    width: 280px;
-    bottom: 0;
-    border-radius: 10px;
-    background-color: var(--colormetallicgold);
-}
-
-.book_personal{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    color: var(--colormetallicgold);
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    padding: 25px 30px;
-    margin-top: 7rem;
-    width: 100%;
-    border-radius: 5px;
-    background-color: var(--color);
-    background-image: var(--lineargreen);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-}
-
-.book_personal h1{
-    font-size: 25px;
-    text-align: center;
-    color: #ffffff;
-    transform: translateY(-60px);
-    border-radius: 10px;
-    padding: 10px 0px;
-    font-weight: 700;
-    background-color: #D4AF37;
-    text-transform: uppercase;
-    
-}
-
-.input-box{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: -5px 0 30px 0;
-}
-
-.input-box input{
-    height: 40px;
-    width: 100%;
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    padding-left: 15px;
-    font-size: 13px;
-    color: var(--color);
-    font-weight: 400;
-    background: aliceblue;
-    transition: 0.4s;
-}
-
-.input-box input:hover{
-
-    transform:translateX(1.5);
-    transition: 0.4s;
-    font-size: 14px;
-}
-
-.input-box .details{
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-}
-
-.book_details{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    color: var(--colormetallicgold);
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    padding: 25px 30px;
-    margin-top: 7rem;
-    width: 100%;
-    border-radius: 5px;
-    background-color: var(--color);
-    background-image: var(--lineargreen);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-}
-
-.book_details h1{
-    font-size: 25px;
-    text-align: center;
-    color: #ffffff;
-    transform: translateY(-60px);
-    border-radius: 10px;
-    padding: 25px 10px;
-    font-weight: 700;
-    background-color: #D4AF37;
-    text-transform: uppercase;
-}
-
-.book_details input{
-    font-size: 13px;
-}
-
-.input-box select{
-    height: 40px;
-    width: 100%;
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    padding-left: 15px;
-    font-size: 13px;
-    color: var(--color);
-    font-weight: 400;
-    background: aliceblue;
-    transition: 0.4s;
-}
-
-.book_btn{
-    margin: 40px 0 40px 0;
-    align-items: center;
-    text-align: center;
-}
-
-.book_btn input{
-    cursor:pointer;
-    color: var(--color);
-    padding: 10px 60px;
-    font-size: 20px;
-    text-transform: uppercase;
-    background-color: var(--colormetallicgold);
-    border: 0;
-    transition: 0.4s;
-    border-radius: 2px;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-}
-
-.book_btn input:hover{
-    background-color: var(--color);
-    color: var(--colormetallicgold);
-    transition: 0.4s;
-}
-
-/*Book Page End*/
-
-
-/*About Page*/
-.about{
-    display: flex;
-    flex-direction: column-reverse;
-}
-
-.about h1{
-    font-size: 30px;
-    margin-top: 4rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    color: #063d45;
-}
-
-.about h4{
-    font-size: 13px;
-    text-align: center;
-}
-
-.about p{
-    font-size: 13px;
-    text-align: center;
-    margin: 1rem;
-    margin-bottom: 40px;
-}
-/*About Page End*/
-
-/*Restaurant Page*/
-.restaurant{
-    display: flex;
-    flex-direction: column-reverse;
-    background-color: #D4AF37;
-    background-image: linear-gradient(10deg, #D4AF37, rgba(255, 251, 251, 0.473));
-    margin-top: 4rem;
-    
-}
-
-.restaurant h1{
-    font-size: 36px;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    text-transform: uppercase;
-    color: #063d45;
-}
-
-.restaurant ul li{
-    text-align: center;
-    font-size: 13px;
-    margin: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-}
-
-.restaurant p{
-    font-size: 13px;
-    text-align: center;
-    margin: 1rem;
-}
-/*Restaurant Page End*/
-
-/*Private Beaches*/
-
-.beaches{
-    display: flex;
-    flex-direction: column-reverse;
-    margin-top: 4rem;
-}
-
-.beaches h1{
-    font-size: 30px;
-    margin-top: 3rem;
-    text-align: center;
-    color: #063d45;
-}
-
-.beaches p{
-    font-size: 13px;
-    text-align: center;
-    margin: 1rem;
-}
-
-.beaches ol li{   
-    text-align: center;
-    margin: 2rem;
-    font-size: 12px;
-    font-weight: 400;
-    color: #063d45;
-    text-transform: uppercase;
-}
-/*Private Beaches End*/
-
-/*Deep Sea Diving*/
-.deep{
-    display: flex;
-    flex-direction: column-reverse;
-    background-color: #D4AF37;
-    background-image: linear-gradient(10deg, #D4AF37, rgba(255, 251, 251, 0.473));
-    margin-top: 4rem;
-}
-
-.deep h1{
-    font-size: 30px;
-    margin-top: 2rem;
-    text-align: center;
-    color: #063d45;
-    text-transform: uppercase;
-}
-
-.deep p{
-    font-size: 13px;
-    text-align: center;
-    margin: 1rem;
-}
-
-.deep ul li{   
-    text-align: center;
-    margin: 3rem;
-    font-size: 13px;
-    font-weight: 400;
-    color: #063d45;
-    text-transform: uppercase;
-    line-height: 0;
-}
-/*Deep Sea Diving End*/
 
 /*Footer*/
 
@@ -559,11 +265,6 @@ a{
     font-weight: 300;
 }
 
-.logoimg a img{
-    width: 170px;
-    height: 160px;
-}
-
 
 .logoimg h4{
     font-size: 20px;
@@ -591,9 +292,318 @@ a{
     margin-bottom: -2rem;
 }
 
-
-
 /*Footer End*/
+
+/*About Page*/
+.about{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.about h1{
+    font-size: 30px;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #063d45;
+}
+
+.about h4{
+    font-size: 13px;
+    text-align: center;
+}
+
+.about p{
+    font-size: 13px;
+    text-align: center;
+    margin: 1rem;
+    margin-bottom: 40px;
+}
+/*About Page End*/
+
+/*Restaurant Page*/
+.restaurant{
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #D4AF37;
+    background-image: linear-gradient(10deg, #D4AF37, rgba(255, 251, 251, 0.473));
+    margin-top: 4rem;
+    
+}
+
+.restaurant h1{
+    font-size: 36px;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #063d45;
+}
+
+.restaurant ul li{
+    text-align: center;
+    font-size: 13px;
+    color: #063d45;
+    margin: 30px 30px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-transform:uppercase;
+}
+
+.restaurant p{
+    font-size: 13px;
+    text-align: center;
+    margin: 1rem;
+}
+/*Restaurant Page End*/
+
+/*Private Beaches*/
+
+.beaches{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 4rem;
+}
+
+.beaches h1{
+    font-size: 30px;
+    text-align: center;
+    color: #063d45;
+}
+
+.beaches p{
+    font-size: 13px;
+    text-align: center;
+    margin: 1rem;
+}
+
+.beaches ol li{   
+    text-align: center;
+    margin: 2rem;
+    font-size: 12px;
+    font-weight: 400;
+    color: #063d45;
+    text-transform: uppercase;
+}
+/*Private Beaches End*/
+
+/*Deep Sea Diving*/
+.deep{
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #D4AF37;
+    background-image: linear-gradient(10deg, #D4AF37, rgba(255, 251, 251, 0.473));
+    margin-top: 4rem;
+}
+
+.deep h1{
+    font-size: 30px;
+    text-align: center;
+    color: #063d45;
+    text-transform: uppercase;
+}
+
+.deep p{
+    font-size: 13px;
+    text-align: center;
+    margin: 1rem;
+}
+
+.deep ul li{   
+    text-align: center;
+    margin: 3rem;
+    font-size: 13px;
+    font-weight: 400;
+    color: #063d45;
+    text-transform: uppercase;
+    line-height: 0;
+}
+/*Deep Sea Diving End*/
+
+/*Book Page*/
+.book_title{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 30px 0 ;
+    justify-content: center;
+    color: #063d45;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.book_title::before{
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 280px;
+    bottom: 0;
+    border-radius: 10px;
+    background-color: var(--colormetallicgold);
+}
+
+.book_personal{
+    color: var(--colormetallicgold);
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin-top: 5rem;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--color);
+    background-image: var(--lineargreen);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.book_personal fieldset{
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 25px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.book_personal legend{
+    background-color: #D4AF37;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 10px 20px;
+    color: white;
+    text-transform: uppercase;
+    transform: translateY(-23px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: -5px 0 30px 0;
+}
+
+.input-box input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 13px;
+    color: var(--color);
+    font-weight: 400;
+    background: aliceblue;
+    transition: 0.4s;
+}
+
+.input-box input:hover{
+
+    transform:translateX(1.5);
+    transition: 0.4s;
+    font-size: 14px;
+}
+
+.input-box .details{
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.book_details{
+    color: var(--colormetallicgold);
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin-top: 5rem;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--color);
+    background-image: var(--lineargreen);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.book_details fieldset{
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 25px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.book_details legend{
+    background-color: #D4AF37;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 10px 20px;
+    color: white;
+    text-transform: uppercase;
+    transform: translateY(-25px);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.book_details input{
+    font-size: 13px;
+}
+
+.input-box select{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 13px;
+    color: var(--color);
+    font-weight: 400;
+    background: aliceblue;
+    transition: 0.4s;
+}
+
+.book_btn{
+    margin: 40px 0 40px 0;
+    align-items: center;
+    text-align: center;
+}
+
+.book_btn input{
+    cursor:pointer;
+    color: var(--color);
+    padding: 10px 60px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: var(--colormetallicgold);
+    border: 0;
+    transition: 0.4s;
+    border-radius: 2px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.book_btn input:hover{
+    background-color: var(--color);
+    color: var(--colormetallicgold);
+    transition: 0.4s;
+}
+
+/*Book Page End*/
+
+
 
 /*Media Section for Header Mobile*/
 
@@ -765,11 +775,41 @@ a{
         width: 30rem;
         height: auto;
     }
+
+    .input-box{
+        width: 40%;
+    }
+
+    .book_personal{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .book_personal legend{
+        font-size: 35px;
+    }
+
+    .book_details legend{
+        font-size: 35px;
+    }
+
+    .input-box .details{
+        font-size: 18px;
+    }
+
+    .input-box input{
+        font-size: 15px;
+        height: 50px;
+    }
 }
 
 /* Large */
 @media (min-width:1024px){
     
+    .section{
+        margin-top: 5rem;
+    }
+
     .navlink{
         font-size: 18px;
     }
@@ -1003,6 +1043,19 @@ a{
     .deep_img img{
         width: 55rem;
         height: auto;
+    }
+
+    .logoimg a img{
+        width: 210px;
+        height: 210px;
+    }
+
+    .logoimg h4{
+        font-size: 25px;
+    }
+
+    .logoimg h6{
+        font-size: 15px;
     }
 }
 
