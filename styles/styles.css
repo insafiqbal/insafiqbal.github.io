@@ -289,6 +289,10 @@ a{
     height: 30px;
 }
 
+.socials ul li a img:hover{
+    transform: scale(1.3);
+}
+
 .copright{
     font-size: 14px;
     text-align: center;
@@ -605,10 +609,21 @@ a{
     color: var(--colormetallicgold);
     transition: 0.4s;
 }
-
 /*Book Page End*/
 
+@keyframes fadeIn{
+    from{
+        transform: scale(0.7);
+    }
 
+    to{
+        transform:translateX(0)
+    }
+}
+
+.fadeIn{
+    animation: fadeIn 1s ease;
+}
 
 /*Media Section for Header Mobile*/
 
