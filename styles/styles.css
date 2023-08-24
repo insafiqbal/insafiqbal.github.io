@@ -653,7 +653,9 @@ hr{
 .surf_content h1{
     text-align: center;
     font-size: 28px;
-    color: #063d45
+    color: #063d45;
+    text-transform: uppercase;
+    
 }
 
 .surf_content p{
@@ -662,12 +664,17 @@ hr{
     padding: 15px;
 }
 
+.surf_img{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 iframe{
     border-radius: 10px;
 }
 
 .surf_location{
     padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .sun_container{
@@ -680,6 +687,7 @@ iframe{
     color: var(--color);
     font-size: 25px;
     text-align: center;
+    text-transform: uppercase
 }
 
 .sun_content p{
@@ -690,6 +698,11 @@ iframe{
 
 .sun_location{
     padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.sun_img{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .culture_container{
@@ -702,6 +715,7 @@ iframe{
     font-size: 25px;
     text-align: center;
     color: #063d45;
+    text-transform: uppercase
 }
 
 .culture_content p{
@@ -713,10 +727,12 @@ iframe{
 
 .culture_location{
     padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .culture_img img{
     width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .sport_container{
@@ -743,10 +759,16 @@ iframe{
     display: flex;
     flex-direction: column;
     padding: 30px;
+    font-weight: 600;
 }
 
 .sport_img{
     margin: 30px 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.sport_img img{
+    width: 100%;
 }
 
 
@@ -968,6 +990,62 @@ iframe{
         font-size: 15px;
         height: 50px;
     }
+
+    .adventure_title{
+        font-size: 55px;
+    }
+
+    .surf_container{
+        padding: 40px 100px;
+    }
+    
+    .surf_content h1{
+        font-size: 40px;
+    }
+
+    .surf_content p{
+        padding: 15px 85px;
+        font-size: 16px;
+    }
+
+    .sun_container{
+        padding: 40px 100px;
+    }
+    
+    .sun_content h1{
+        font-size: 40px;
+    }
+
+    .sun_content p{
+        padding: 15px 85px;
+        font-size: 16px;
+    }
+
+    .culture_container{
+        padding: 40px 100px;
+    }
+    
+    .culture_content h1{
+        font-size: 40px;
+    }
+
+    .culture_content p{
+        padding: 15px 85px;
+        font-size: 16px;
+    }
+
+    .sport_container{
+        padding: 40px 100px;
+    }
+    
+    .sport_content h1{
+        font-size: 60px;
+    }
+
+    .sport_content p{
+        padding: 15px 85px;
+        font-size: 16px;
+    }
 }
 
 /* Large */
@@ -1032,7 +1110,7 @@ iframe{
     .restaurant h1{
         text-align: left;
         margin: 2rem;
-        font-size: 40px;
+        font-size: 60px;
     }
 
     .restaurant p{
@@ -1138,6 +1216,99 @@ iframe{
         height: 20px;
     }
 
+    .surf_container{
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 0 0;
+        margin-top: 140px;
+    }
+
+    .surf_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .surf_content h1{
+        font-size: 80px;
+    }
+
+    .sun_container{
+        display: flex;
+        flex-direction: row;
+        padding: 0 0;
+        margin: 110px 0;
+    }
+
+    .sun_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sun_content h1{
+        font-size: 60px;
+    }
+
+    .culture_container{
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 0 0;
+    }
+
+    .culture_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .culture_content h1{
+        font-size: 60px;
+    }
+
+    .sport_container{
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 0 0;
+        background: none;
+        margin: 50px 0;
+    }
+
+    .sport_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sport_content h1{
+        font-size: 60px;
+    }
+
+    .sport_content p{
+        padding: 0 35px;
+    }
+
+    .sport_content ul{
+        padding: 20px 100px;
+        color: #063d45;
+    }
+
+    .sport_img img{
+        width: 100%;
+    }
+
+    .adventure_title{
+        font-size: 90px;
+    }
+
+    .adventure_title::before{
+        width: 600px;
+        height: 10px;
+    }
+
+
+
+
     
 }
 /* Extra Large */
@@ -1222,9 +1393,101 @@ iframe{
     .logoimg h6{
         font-size: 15px;
     }
+
+    .surf_content h1{
+        font-size: 110px;
+    }
+
+    .surf_content p{
+        font-size: 20px;
+    }
+
+    .sun_content h1{
+        font-size: 95px;
+    }
+
+    .sun_content p{
+        font-size: 20px;
+    }
+
+    .culture_content h1{
+        font-size: 83px;
+    }
+
+    .culture_content p{
+        font-size: 18px;
+    }
+
+    .sport_content h1{
+        font-size: 90px;
+    }
+
+    .sport_content p{
+        font-size: 25px;
+    }
+
+    .sport_content ul{
+        font-size: 20px;
+    }
+
+    .adventure_title{
+        font-size: 100px;
+    }
+
+    .adventure_title::before{
+        width: 700px;
+        height: 10px;
+    }
 }
+
+
 
 /* XX Large */
 @media (min-width:1536px){
-    
+
+    .surf_content h1{
+        font-size: 130px;
+    }
+
+    .surf_content p{
+        font-size: 25px;
+    }
+
+    .sun_content h1{
+        font-size: 110px;
+    }
+
+    .sun_content p{
+        font-size: 23px;
+    }
+
+    .culture_content h1{
+        font-size: 110px;
+    }
+
+    .culture_content p{
+        font-size: 20px;
+    }
+
+    .sport_content h1{
+        font-size: 130px;
+    }
+
+    .sport_content p{
+        font-size: 25px;
+    }
+
+    .sport_content ul{
+        font-size: 20px;
+    }
+
+    .adventure_title{
+        font-size: 130px;
+    }
+
+    .adventure_title::before{
+        width: 900px;
+        height: 10px;
+    }
 }
+
