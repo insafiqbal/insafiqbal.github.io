@@ -715,6 +715,10 @@ iframe{
     padding: 30px;
 }
 
+.culture_img img{
+    width: 100%;
+}
+
 .sport_container{
     display: flex;
     flex-direction: column-reverse;
@@ -738,7 +742,7 @@ iframe{
 .sport_content ul{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    padding: 30px;
 }
 
 .sport_img{
