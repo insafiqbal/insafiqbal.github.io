@@ -659,7 +659,6 @@ hr{
 .surf_content p{
     text-align: center;
     font-size: 13px;
-    margin: 30px 10px;
 }
 
 iframe{
@@ -667,7 +666,7 @@ iframe{
 }
 
 .surf_location{
-    margin: 30px 30px;
+
 }
 
 .sun_container{
@@ -685,11 +684,10 @@ iframe{
 .sun_content p{
     text-align: center;
     font-size: 13px;
-    margin: 30px 10px;
 }
 
 .sun_location{
-    margin: 30px 30px;
+    
 }
 
 .culture_container{
@@ -707,11 +705,11 @@ iframe{
 .culture_content p{
     text-align: center;
     font-size: 13px;
-    margin: 30px 10px
+    
 }
 
 .culture_location{
-    margin: 30px 30px;
+    
 }
 
 .sport_container{
@@ -731,7 +729,6 @@ iframe{
 .sport_content p{
     font-size: 15px;
     text-align: center;
-    margin: 30px 10px;
 }
 
 .sport_content ul{
