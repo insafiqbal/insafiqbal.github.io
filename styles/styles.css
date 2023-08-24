@@ -659,6 +659,7 @@ hr{
 .surf_content p{
     text-align: center;
     font-size: 13px;
+    padding: 15px;
 }
 
 iframe{
@@ -666,7 +667,7 @@ iframe{
 }
 
 .surf_location{
-
+    padding: 30px;
 }
 
 .sun_container{
@@ -684,10 +685,11 @@ iframe{
 .sun_content p{
     text-align: center;
     font-size: 13px;
+    padding: 15px;
 }
 
 .sun_location{
-    
+    padding: 30px;
 }
 
 .culture_container{
@@ -705,11 +707,12 @@ iframe{
 .culture_content p{
     text-align: center;
     font-size: 13px;
+    padding: 15px;
     
 }
 
 .culture_location{
-    
+    padding: 30px;
 }
 
 .sport_container{
@@ -729,18 +732,20 @@ iframe{
 .sport_content p{
     font-size: 15px;
     text-align: center;
+    padding: 15px;
 }
 
 .sport_content ul{
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-left: 2rem;
 }
 
 .sport_img{
-    margin: 30px 0px;
+    margin: 30px 0;
 }
+
+
 
 /*Adventures Page End*/
 
