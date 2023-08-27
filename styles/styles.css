@@ -1566,6 +1566,11 @@ iframe{
 
     .sl_body{
         width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
     }
 
     .sl_location{
@@ -1586,6 +1591,11 @@ iframe{
 
     .saudi_body{
         width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
     }
 
     .saudi_location{
@@ -1606,6 +1616,11 @@ iframe{
 
     .maldives_body{
         width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
     }
 
     .maldives_location{
