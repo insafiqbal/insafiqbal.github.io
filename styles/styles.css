@@ -855,7 +855,7 @@ iframe{
     padding: 20px 20px;
 }
 
-.sl_content iframe{
+.sl_location iframe{
     padding: 0 30px;
 }
 
@@ -972,7 +972,19 @@ iframe{
 
 /* Extra Small */
 @media (min-width:530px){
-
+    .branch_title{
+        font-size: 45px;
+    }
+    
+    .branch_title::before{
+        content: "";
+        position: absolute;
+        height: 5px;
+        width: 435px;
+        bottom: -10px;
+        border-radius: 10px;
+        background-color: #D4AF37;
+    }
 }
 
 /* Small */
@@ -1031,7 +1043,7 @@ iframe{
     }
 
     .deep p{
-        font-size: 18x;
+        font-size: 18px;
     }
 
     .about{
@@ -1237,6 +1249,52 @@ iframe{
         padding: 15px 85px;
         font-size: 16px;
     }
+
+    .branch_title{
+        font-size: 70px;
+    }
+
+    .branch_title::before{
+        width: 690px;
+    }
+    
+    .sl_text{
+        font-size: 60px;
+    }
+
+    .sl_content h1{
+        font-size: 30px;
+    }
+
+    .sl_content p{
+        font-size: 19px;
+    }
+
+    .saudi_text{
+        font-size: 60px;
+    }
+
+    .saudi_content h1{
+        font-size: 30px;
+    }
+
+    .saudi_content p{
+        font-size: 19px;
+    }
+
+    .maldives_text{
+        font-size: 60px;
+    }
+
+    .maldives_content h1{
+        font-size: 30px;
+    }
+
+    .maldives_content p{
+        font-size: 19px;
+    }
+
+
 }
 
 /* Large */
@@ -1500,6 +1558,66 @@ iframe{
         width: 600px;
         height: 10px;
     }
+
+    .sl_content{
+        display: flex;
+        flex-direction: row
+    }
+
+    .sl_body{
+        width: 60%;
+    }
+
+    .sl_location{
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sl_location iframe{
+        height: 40vh;
+    }
+
+    .saudi_content{
+        display: flex;
+        flex-direction: row
+    }
+
+    .saudi_body{
+        width: 60%;
+    }
+
+    .saudi_location{
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .saudi_location iframe{
+        height: 40vh;
+    }
+
+    .maldives_content{
+        display: flex;
+        flex-direction: row
+    }
+
+    .maldives_body{
+        width: 60%;
+    }
+
+    .maldives_location{
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .maldives_location iframe{
+        height: 40vh;
+    }
 }
 /* Extra Large */
 @media (min-width:1280px){
@@ -1630,6 +1748,25 @@ iframe{
         width: 700px;
         height: 10px;
     }
+
+    .branch_container{
+        padding: 0 80px;
+        margin: 200px 0;
+    }
+
+    .sl_text{
+        font-size: 70px;
+    }
+
+    .saudi_text{
+        font-size: 70px;
+    }
+
+    .maldives_text{
+        font-size: 70px;
+    }
+
+    
 }
 
 
@@ -1680,6 +1817,70 @@ iframe{
     .adventure_title::before{
         width: 900px;
         height: 10px;
+    }
+
+    .branch_title{
+        font-size: 100px;
+    }
+
+    .sl_text{
+        font-size: 85px;
+    }
+
+    .saudi_text{
+        font-size: 85px;
+    }
+
+    .maldives_text{
+        font-size: 85px;
+    }
+
+    .branch_sl_img img{
+        display: flex;
+        text-align: center;
+        align-items: center;justify-content: center;
+        width: 100%;
+        height: 90vh;
+    }
+
+    .sl_content h1{
+        font-size: 45px;
+    }
+
+    .sl_content p{
+        font-size: 20px;
+    }
+
+    .saudi_content h1{
+        font-size: 45px;
+    }
+
+    .branch_saudi_img img{
+        display: flex;
+        text-align: center;
+        align-items: center;justify-content: center;
+        width: 100%;
+        height: 90vh;
+    }
+
+    .saudi_content p{
+        font-size: 20px;
+    }
+
+    .branch_maldives_img img{
+        display: flex;
+        text-align: center;
+        align-items: center;justify-content: center;
+        width: 100%;
+        height: 90vh;
+    }
+
+    .maldives_content h1{
+        font-size: 45px;
+    }
+
+    .maldives_content p{
+        font-size: 20px;
     }
 }
 
