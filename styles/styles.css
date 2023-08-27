@@ -1823,6 +1823,10 @@ iframe{
         font-size: 100px;
     }
 
+    .branch_title::before{
+        width: 958px;
+    }
+
     .sl_text{
         font-size: 85px;
     }
