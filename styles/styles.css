@@ -73,6 +73,13 @@ a{
 }
 
 .header_new_page{
+    text-align: center;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header_new_page{
     background-color:#063d45;
     background-image: linear-gradient(35deg, #063d45, rgba(255, 251, 251, 0.188));
 }
@@ -98,6 +105,7 @@ a{
     display: none;
     align-items: baseline;
     gap: 3em;
+ 
 }
 
 .navlink{
@@ -987,6 +995,241 @@ iframe{
 }
 /*Branches Page end*/
 
+/*Restaurant Page*/
+
+
+.navbar_events{
+    display: flex;
+    width: 100%;
+    text-align: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.navevents a{
+    letter-spacing: 5px;
+}
+
+.navevents p{
+    font-size: 20px;
+    margin: 0px 20px;
+    color: #D4AF37;
+    word-spacing: 20px;
+    letter-spacing: 5px;
+}
+
+.restaurant_title{
+    display: flex;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: #063d45;
+    text-transform: uppercase;
+    margin: 30px 0;
+}
+
+.restaurant_title::before{
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 300px;
+    bottom: -10px;
+    border-radius: 10px;
+    background-color: #D4AF37;
+}
+
+.restaurant_container{
+    margin: 110px 20px;
+}
+
+.indian_img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: 60px;
+}
+
+.indian_img img{
+    object-fit: cover;
+    filter: brightness(0.5);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.indian_text{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    text-transform: uppercase;
+    font-family: 'Synonym', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    color: whitesmoke;
+}
+
+.indian_content p{
+    text-align: center;
+    margin: 30px 10px
+    
+}
+
+.indian_content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.indian_content input{
+    text-align: center;
+    width: 65%;
+    margin-top: 30px;
+    border: none;
+    pointer-events: none;
+    font-size: 20px;
+    background-color: #D4AF37;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.arabian_img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: 60px;
+}
+
+.arabian_img img{
+    object-fit: cover;
+    filter: brightness(0.7);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.arabian_text{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    text-transform: uppercase;
+    font-family: 'Synonym', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    color: whitesmoke;
+}
+
+.arabian_content p{
+    text-align: center;
+    margin: 30px 10px
+    
+}
+
+.arabian_content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.arabian_content input{
+    text-align: center;
+    width: 65%;
+    margin-top: 30px;
+    border: none;
+    pointer-events: none;
+    font-size: 20px;
+    background-color: #D4AF37;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.mexican_img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: 60px;
+}
+
+.mexican_img img{
+    object-fit: cover;
+    filter: brightness(0.5);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.mexican_text{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    text-transform: uppercase;
+    font-family: 'Synonym', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    color: whitesmoke;
+}
+
+.mexican_content p{
+    text-align: center;
+    margin: 30px 10px
+    
+}
+
+.mexican_content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.mexican_content input{
+    text-align: center;
+    width: 65%;
+    margin-top: 30px;
+    border: none;
+    pointer-events: none;
+    font-size: 20px;
+    background-color: #D4AF37;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+/*Restaurant Page End*/
+
+
+
+
 @keyframes fadeIn{
     from{
         transform: scale(0.7);
@@ -1027,7 +1270,15 @@ iframe{
     .table tbody tr td{
         padding: 10px;
         font-size: 15px;
-    }    
+    }   
+    
+    .restaurant_title{
+        font-size: 54px;
+    }
+
+    .restaurant_title::before{
+        width: 399px;
+    }
 }
 
 /* Small */
@@ -1139,6 +1390,14 @@ iframe{
         padding: 15px;
         font-size: 18px;
     } 
+
+    .restaurant_title{
+        font-size: 70px;
+    }
+
+    .restaurant_title::before{
+        width: 515px;
+    }
 }
 
 /* Medium */
@@ -1368,9 +1627,49 @@ iframe{
         font-size: 18px;
     }
 
-    
+    .restaurant_title{
+        font-size: 80px;
+    }
 
+    .restaurant_title::before{
+        width: 590px;
+    }
 
+    .indian_text{
+        font-size: 65px;
+    }
+
+    .indian_content input{
+        font-size: 30px;
+    }
+
+    .indian_content p{
+        font-size: 20px;
+    }
+
+    .arabian_text{
+        font-size: 65px;
+    }
+
+    .arabian_content input{
+        font-size: 30px;
+    }
+
+    .arabian_content p{
+        font-size: 20px;
+    }
+
+    .mexican_text{
+        font-size: 65px;
+    }
+
+    .mexican_content input{
+        font-size: 30px;
+    }
+
+    .mexican_content p{
+        font-size: 20px;
+    }
 }
 
 /* Large */
@@ -1383,7 +1682,7 @@ iframe{
     .navlink{
         font-size: 18px;
     }
-    
+
     .about{
         display: flex;
         flex-direction: row;
@@ -1857,10 +2156,42 @@ iframe{
         font-size: 70px;
     }
 
-    
+    .restaurant_title{
+        font-size: 110px;
+    }
+
+    .restaurant_title::before{
+        width: 815px;
+    }
+
+    .indian_container{
+        padding: 0 150px ;
+    }
+
+    .indian_img img{
+        width: 100%;
+        height: 50vh;
+    }
+
+    .arabian_container{
+        padding: 0 150px ;
+    }
+
+    .arabian_img img{
+        width: 100%;
+        height: 50vh;
+    }
+
+    .mexican_container{
+        padding: 0 150px ;
+    }
+
+    .mexican_img img{
+        width: 100%;
+        height: 50vh;
+    }
+
 }
-
-
 
 /* XX Large */
 @media (min-width:1536px){
@@ -1997,5 +2328,18 @@ iframe{
         font-size: 15px;
         text-transform: uppercase;
     }
+
+    .indian_content p{
+        font-size: 26px;
+    }
+
+    .arabian_content p{
+        font-size: 26px;
+    }
+
+    .mexican_content p{
+        font-size: 26px;
+    }
+
 }
 
