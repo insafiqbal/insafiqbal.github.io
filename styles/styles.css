@@ -464,7 +464,7 @@ a{
     content: "";
     position: absolute;
     height: 5px;
-    width: 280px;
+    width: 240px;
     bottom: 0;
     border-radius: 10px;
     background-color: var(--colormetallicgold);
@@ -653,10 +653,10 @@ hr{
 .adventure_title::before{
     content: "";
     position: absolute;
-    height: 5px;
+    height: 4px;
     width: 260px;
     bottom: 0;
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: #D4AF37;
 }
 
@@ -1043,7 +1043,15 @@ iframe{
     background-color: #D4AF37;
 }
 
-.restaurant_container{
+.restaurant_container_indian{
+    margin: 110px 20px;
+}
+
+.restaurant_container_arabian{
+    margin: 110px 20px;
+}
+
+.restaurant_container_mexican{
     margin: 110px 20px;
 }
 
@@ -1091,16 +1099,16 @@ iframe{
     justify-content: center;
 }
 
-.indian_content input{
+.rest_menu{
     text-align: center;
     width: 65%;
     margin-top: 30px;
     border: none;
-    pointer-events: none;
     font-size: 20px;
     background-color: #D4AF37;
     padding: 10px 0;
     text-transform: uppercase;
+    color: black;
     font-weight: 700;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -1150,21 +1158,6 @@ iframe{
     justify-content: center;
 }
 
-.arabian_content input{
-    text-align: center;
-    width: 65%;
-    margin-top: 30px;
-    border: none;
-    pointer-events: none;
-    font-size: 20px;
-    background-color: #D4AF37;
-    padding: 10px 0;
-    text-transform: uppercase;
-    font-weight: 700;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
 .mexican_img{
     width: 100%;
     height: 100%;
@@ -1208,23 +1201,6 @@ iframe{
     align-items: center;
     justify-content: center;
 }
-
-.mexican_content input{
-    text-align: center;
-    width: 65%;
-    margin-top: 30px;
-    border: none;
-    pointer-events: none;
-    font-size: 20px;
-    background-color: #D4AF37;
-    padding: 10px 0;
-    text-transform: uppercase;
-    font-weight: 700;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-
 /*Restaurant Page End*/
 
 
@@ -1483,6 +1459,11 @@ iframe{
         font-size: 90px;
     }
 
+    .book_title::before{
+        width: 420px;
+        height: 15px;
+    }
+
     .book_personal{
         display: flex;
         flex-wrap: wrap;
@@ -1639,10 +1620,6 @@ iframe{
         font-size: 65px;
     }
 
-    .indian_content input{
-        font-size: 30px;
-    }
-
     .indian_content p{
         font-size: 20px;
     }
@@ -1651,7 +1628,7 @@ iframe{
         font-size: 65px;
     }
 
-    .arabian_content input{
+    .rest_menu{
         font-size: 30px;
     }
 
@@ -1661,14 +1638,6 @@ iframe{
 
     .mexican_text{
         font-size: 65px;
-    }
-
-    .mexican_content input{
-        font-size: 30px;
-    }
-
-    .mexican_content p{
-        font-size: 20px;
     }
 }
 
@@ -2008,6 +1977,10 @@ iframe{
     .maldives_location iframe{
         height: 40vh;
     }
+
+    .rest_menu{
+        width: 25%;
+    }
 }
 /* Extra Large */
 @media (min-width:1280px){
@@ -2162,6 +2135,7 @@ iframe{
 
     .restaurant_title::before{
         width: 815px;
+        height: 15px;
     }
 
     .indian_container{
@@ -2191,6 +2165,16 @@ iframe{
         height: 50vh;
     }
 
+    .rest_menu{
+        transition: 0.4s;
+    }
+
+    .rest_menu:hover{
+        background-color: var(--color);
+        color: var(--colormetallicgold);
+        transition: 0.4s;
+        transform: scale(1.05);
+    }
 }
 
 /* XX Large */
@@ -2238,7 +2222,7 @@ iframe{
 
     .adventure_title::before{
         width: 900px;
-        height: 10px;
+        height: 15px;
     }
 
     .branch_title{
@@ -2247,6 +2231,7 @@ iframe{
 
     .branch_title::before{
         width: 958px;
+        height: 15px;
     }
 
     .sl_text{
@@ -2330,15 +2315,15 @@ iframe{
     }
 
     .indian_content p{
-        font-size: 26px;
+        font-size: 20px;
     }
 
     .arabian_content p{
-        font-size: 26px;
+        font-size: 20px;
     }
 
     .mexican_content p{
-        font-size: 26px;
+        font-size: 20px;
     }
 
 }
