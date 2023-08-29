@@ -1,0 +1,82 @@
+root{
+    --color: #063d45;
+    --colorwhite: #ffffff;
+    --colorlight: rgba(15, 111, 120,);
+    --colorgold: #f1c580;
+    --colormetallicgold: #D4AF37;
+    --lineargreen: linear-gradient(-10deg, #063d45, rgba(255, 251, 251, 0.188));
+    --lineargold: linear-gradient(180deg, #D4AF37, rgba(255, 251, 251, 0.351));
+    --weddingpink: #50104f;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
+
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior:smooth ;
+    
+}
+
+body{
+    background-color: rgb(233, 238, 243);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    user-select: none;
+}
+
+.header{
+    background-color:#50104f;
+    background-image: linear-gradient(120deg, #50104f, rgba(255, 251, 251, 0.321));
+    text-align: center;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+}
+
+.logo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+}
+
+.logo img{
+    height: 15vh;
+}
+
+.logo .logo_text{
+    text-decoration: none;
+    color: #D4AF37;
+    font-weight: 600;
+}
+
+.navlink{
+    display: none;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 12px;
+}
+
