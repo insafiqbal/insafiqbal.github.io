@@ -131,6 +131,7 @@ svg {
 
 .wedding_main{
     margin-top: 50px;
+ 
 }
 
 .wedding_title{
@@ -139,14 +140,19 @@ svg {
     position: relative;
     text-align: center;
     justify-content: center;
-    font-size: 48px;
+    font-size: 25px;
     font-weight: 700;
     color: white;
-    /* background-image: url(../Image/Events/weddingevent.webp); */
-    background-color: rgb(49, 49, 51);
-    background-image: linear-gradient(35deg, rgb(49, 49, 51), rgba(255, 251, 251, 0.119));
     text-transform: uppercase;
     margin: 10px 0;
+    margin-bottom: 100px;
+}
+
+.wedding_title h1{
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(49, 49, 51);
+    background-image: linear-gradient(35deg, rgb(49, 49, 51), rgba(255, 251, 251, 0.119));
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -183,6 +189,7 @@ hr{
     color: #5c155a;
     justify-content: space-between;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    margin-top: 100px;
 }
 
 .wedding_sub h4{
@@ -195,7 +202,7 @@ hr{
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 100px;
     margin-bottom: 50px;
     font-size: 40px;
     font-weight: 600;
@@ -245,7 +252,8 @@ hr{
 /*Footer*/
 
 .footer{
-    background: rgb(153, 154, 156);
+    background-color: rgb(49, 49, 51);
+    background-image: linear-gradient(30deg, rgb(49, 49, 51), rgba(255, 251, 251, 0.119));
     padding: 60px 0 40px;
     align-items: center;
     text-align: center;
@@ -276,7 +284,8 @@ hr{
 .footer_col h3{
     font-size: 20px;
     font-weight: 700;
-    color: #5c155a;
+    text-transform: uppercase;
+    color: #ba1eb4;
     margin-bottom: 2rem;
     
 }
@@ -288,11 +297,11 @@ hr{
 }
 
 .ftrlinks ul li a:hover{
-    color: #5c155a;
+    color: #ba1eb4;
 }
 
 .socials ul li:hover{
-    background-color: #5c155a;
+    background-color: #ba1eb4;
     padding: 8px; 
     border-radius: 10px;
     transition: 0.4s;
@@ -318,7 +327,7 @@ hr{
 
 .logoimg h4{
     font-size: 20px;
-    color: #5c155a;
+    color: #ba1eb4;
     margin-top: 1rem;
     text-transform: uppercase;
 }
@@ -342,7 +351,7 @@ hr{
 .copright{
     font-size: 14px;
     text-align: center;
-    color:#5c155a;
+    color:#ba1eb4;
     padding-top: 30px;
     margin-bottom: -2rem;
 }
@@ -364,6 +373,29 @@ hr{
 }
 
 @media (min-width:856px){
+
+    .wedding_title{
+        display: flex;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        justify-content: center;
+        font-size: 48px;
+        font-weight: 700;
+        color: white;
+        text-transform: uppercase;
+        margin: 10px 0;
+        margin-bottom: 100px;
+    }
+    
+    .wedding_title h1{
+        width: 50%;
+        padding: 20px;
+        background-color: rgb(49, 49, 51);
+        background-image: linear-gradient(35deg, rgb(49, 49, 51), rgba(255, 251, 251, 0.119));
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
     .navigation{
         display: block;
     }
@@ -373,7 +405,7 @@ hr{
     }
 
     .wedding_content p{
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .wedding_planning_title{
@@ -393,6 +425,24 @@ hr{
         display:flex;
         flex-wrap: nowrap;
         width: 100%;
+    }
+
+    .wedding_planning{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .wedding_planning img{
+        width: 70%;
+        height: 70vh;
+    }
+
+    .wedding_planning p{
+        margin-top: 30px;
     }
 }
 
@@ -416,13 +466,13 @@ hr{
 
     .wedding_content p{
         text-align: center;
-        font-size: 20px;
+        font-size: 22px;
         margin: 0;
     }
 
     .wedding_planning_title{
-        font-size: 50px;
-        font-weight: 700;
+        font-size: 70px;
+        font-weight: 800;
     }
 
     .wedding_sub{
@@ -439,10 +489,10 @@ hr{
     }
 
     .wedding_planning p{
-        font-size: 20px;
+        font-size: 25px;
     }
     
     .wedding_plan{
-        font-size: 20px;
+        font-size: 25px;
     }
 }
