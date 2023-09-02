@@ -34,6 +34,18 @@
             </nav>
         </header>
 
+        <!-- Mobile Menu -->
+        <div class="menu_slide">
+            <div class="navlinks_menu fadeIn">
+                <a class="menu_navlink" href="index.html">Home</a>
+                <a class="menu_navlink" href="Restaurant.html">Restaurants</a>
+                <a class="menu_navlink" href="Branches.html">Branches</a>
+                <a class="menu_navlink" href="Adventures.html">Adventures</a>
+                <a class="menu_navlink booking_home" href="Reserve.html" >Book Now</a>
+            </div>  
+        </div>
+        <!-- Mobile Menu End-->
+
         <div class="branch_title fadeIn">Our Destinations</div>
         <div class="branch_container">
             
@@ -147,9 +159,7 @@
                     <tfoot>
                         <tr>
                             <tr>
-                                <td>Where Luxury</td>
-                                <td>meets</td>
-                                <td>the shores</td>
+                                <td colspan="3">Where Luxury meets the shores</td>
                             </tr>
                         </tr>
                     </tfoot>
@@ -206,5 +216,22 @@
             Bali : 
             -->
         </footer>
+
+        <script>
+            const menu_bar = document.querySelector('.header_bar');
+            const menu_list = document.querySelector('.menu_slide');
+
+            let isMenu_ListOpen = false;
+
+            menu_bar.addEventListener('click',() => {
+                isMenu_ListOpen = !isMenu_ListOpen;
+                if (isMenu_ListOpen) {
+                    menu_list.style.display = 'flex';
+                } else {
+                    menu_list.style.display = 'none';
+                }
+            });
+            
+        </script>
     </body>
 </html>
