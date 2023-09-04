@@ -111,7 +111,6 @@ a{
 }
 
 .navlink{
-    
     text-decoration: none;
     color: aliceblue;
     font-weight: 400;
@@ -119,7 +118,7 @@ a{
 }
 
 .navigation{
-    z-index: 9;
+    z-index: 99999;
 }
 
 /* Mobile Menu */
@@ -135,6 +134,8 @@ a{
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 9;
+    
 }
 
 .navlinks_menu{
@@ -143,6 +144,7 @@ a{
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    
 }
 
 /* Mobile Menu End */
@@ -2120,7 +2122,7 @@ iframe{
 
     .abt_content p{
         text-align: left;
-        font-size: 22px;
+        font-size: 17px;
         margin: 1rem;
     }
 
@@ -2134,7 +2136,7 @@ iframe{
     }
 
     .restaurant p{
-        font-size: 22px;
+        font-size: 17px;
     }
 
    
@@ -2147,7 +2149,7 @@ iframe{
     }
 
     .beach_content p{
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .beach_content ol li{
@@ -2161,11 +2163,11 @@ iframe{
     }
 
     .deep_content p{
-        font-size: 19px;
+        font-size: 17px;
     }
 
     .deep_content ul li{
-        font-size: 20px;
+        font-size: 17px;
         text-align: start;
     }
 
@@ -2305,7 +2307,7 @@ iframe{
     }
 
     .surf_content p{
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .sun_content h1{
@@ -2313,7 +2315,7 @@ iframe{
     }
 
     .sun_content p{
-        font-size: 23px;
+        font-size: 20px;
     }
 
     .culture_content h1{
@@ -2329,7 +2331,7 @@ iframe{
     }
 
     .sport_content p{
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .sport_content ul{

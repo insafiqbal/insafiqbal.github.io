@@ -17,8 +17,10 @@
             <nav class="navbar">
                 <div class="logo">
                     <a class="fadeIn" href="index.html"><img src="Logo/logo white.png" alt="Logo"></a>
-                    <!-- <a class="logo_text fadeIn" href="index.html">The Laviant Bay</a>  -->
                 </div>
+                <button class="header_bar">
+                    <img src="Image/menu_mobile.svg">
+                </button>
             </nav>
 
             <div class="navigation">
@@ -39,9 +41,23 @@
                         <a class="navlink navlink_2" href="Meetings.html">Meetings</a>
                     </div>
                 </nav>
+
+                
             </div>
         </header>
 
+        <div class="menu_slide">
+            <div class="navlinks_menu fadeIn">
+                <a class="menu_navlink" href="index.html">Home</a>
+                <a class="menu_navlink" href="Restaurant.html">Restaurants</a>
+                <a class="menu_navlink" href="Branches.html">Branches</a>
+                <a class="menu_navlink" href="Adventures.html">Adventures</a>
+                <a class="menu_navlink booking_home" href="Reserve.html" >Book Now</a>
+                <h4>EVENTS</h4>
+                <a class="menu_navlink" href="Weddings.html">Weddings</a>
+                <a class="menu_navlink" href="Meetings.html">Meetings</a>
+            </div>  
+        </div>
         
 
         <main>
@@ -130,10 +146,27 @@
                 <span>&copy 2023 The Laviant Bay by Insaf Iqbal, All rights reserved. </span>
             </div>
 
-            <!-- Header: https://www.pexels.com/photo/selective-focus-photo-of-rose-bouquet-2306275/
-            Main image: https://www.pexels.com/photo/man-in-gray-dress-suit-jacket-embraces-woman-wearing-wedding-gown-931796/
-            Wedding Planning: https://www.shangri-la.com/colombo/shangrila/weddings-celebrations/ -->
+            <!-- Header: Adderley, C. (2019) Selective focus photo of Rose Bouquet · Free Stock photo, Pexels. Available at: https://www.pexels.com/photo/selective-focus-photo-of-rose-bouquet-2306275/.
+            Main image: Trinh, N. (2018) Man in gray dress suit jacket embraces woman wearing wedding gown · Free Stock photo, Pexels. Available at: https://www.pexels.com/photo/man-in-gray-dress-suit-jacket-embraces-woman-wearing-wedding-gown-931796/.
+            Wedding Planning: Wedding in Colombo: Venue & room | Shangri-La Colombo (no date). Available at: https://www.shangri-la.com/colombo/shangrila/weddings-celebrations/.
+        -->
 
         </footer>
+        <script>
+            const menu_bar = document.querySelector('.header_bar');
+            const menu_list = document.querySelector('.menu_slide');
+
+            let isMenu_ListOpen = false;
+
+            menu_bar.addEventListener('click',() => {
+                isMenu_ListOpen = !isMenu_ListOpen;
+                if (isMenu_ListOpen) {
+                    menu_list.style.display = 'flex';
+                } else {
+                    menu_list.style.display = 'none';
+                }
+            });
+            
+        </script>
     </body>
 </html>

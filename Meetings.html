@@ -17,8 +17,12 @@
             <nav class="navbar">
                 <div class="logo">
                     <a class="fadeIn" href="index.html"><img src="Logo/logo white.png" alt="Logo"></a>
-                    <!-- <a class="logo_text fadeIn" href="index.html">The Laviant Bay</a>  -->
                 </div>
+
+                <button class="header_bar">
+                    <img src="Image/menu_mobile.svg">
+                </button>
+
             </nav>
 
             <div class="navigation">
@@ -39,9 +43,24 @@
                         <a class="navlink navlink_2" href="Meetings.html">Meetings</a>
                     </div>
                 </nav>
+
+                
             </div>
+            
         </header>
 
+        <div class="menu_slide">
+            <div class="navlinks_menu fadeIn">
+                <a class="menu_navlink" href="index.html">Home</a>
+                <a class="menu_navlink" href="Restaurant.html">Restaurants</a>
+                <a class="menu_navlink" href="Branches.html">Branches</a>
+                <a class="menu_navlink" href="Adventures.html">Adventures</a>
+                <a class="menu_navlink booking_home" href="Reserve.html" >Book Now</a>
+                <h4>EVENTS</h4>
+                <a class="menu_navlink" href="Weddings.html">Weddings</a>
+                <a class="menu_navlink" href="Meetings.html">Meetings</a>
+            </div>  
+        </div>
         
 
         <main>
@@ -136,10 +155,27 @@
                 <span>&copy 2023 The Laviant Bay by Insaf Iqbal, All rights reserved. </span>
             </div>
 
-            <!-- Header: https://www.shangri-la.com/colombo/shangrila/meetings-events/
-            Main image: https://www.pinterest.com/pin/706291154075329910/
-            Meeting spaces:  https://www.pexels.com/photo/gray-candelabra-on-top-of-table-265947/
-
+            <!-- Header: Meeting in Colombo: Venue & Room | Shangri-La Colombo (no date). Available at: https://www.shangri-la.com/colombo/shangrila/meetings-events/ (Accessed: September 3, 2023).
+            Main image: Jackson, M. (2022) “The Conference Room,” Pinterest. Available at: https://www.pinterest.com/pin/706291154075329910/ (Accessed: September 3, 2023).
+            Meeting spaces:  Pixabay (2017b) Gray Candelabra on top of table · Free stock photo, Pexels. Available at: https://www.pexels.com/photo/gray-candelabra-on-top-of-table-265947/.
+            -->
         </footer>
+
+        <script>
+            const menu_bar = document.querySelector('.header_bar');
+            const menu_list = document.querySelector('.menu_slide');
+
+            let isMenu_ListOpen = false;
+
+            menu_bar.addEventListener('click',() => {
+                isMenu_ListOpen = !isMenu_ListOpen;
+                if (isMenu_ListOpen) {
+                    menu_list.style.display = 'flex';
+                } else {
+                    menu_list.style.display = 'none';
+                }
+            });
+            
+        </script>
     </body>
 </html>
