@@ -373,7 +373,7 @@ a{
 }
 /*About Page End*/
 
-/*Restaurant Page*/
+/*Dining Page*/
 .restaurant{
     display: flex;
     flex-direction: column-reverse;
@@ -408,7 +408,7 @@ a{
     text-align: center;
     margin: 1rem;
 }
-/*Restaurant Page End*/
+/*Dining Page End*/
 
 /*Private Beaches*/
 
@@ -467,6 +467,7 @@ a{
     margin: 3rem;
     font-size: 13px;
     font-weight: 400;
+    list-style: none;
     color: #063d45;
     text-transform: uppercase;
     line-height: 0;
@@ -849,7 +850,7 @@ iframe{
     content: "";
     position: absolute;
     height: 5px;
-    width: 255px;
+    width: 200px;
     bottom: -10px;
     border-radius: 10px;
     background-color: #D4AF37;
@@ -1234,7 +1235,7 @@ iframe{
 
 .mexican_content p{
     text-align: center;
-    margin: 30px 10px
+    margin: 10px 10px
     
 }
 
@@ -1319,7 +1320,7 @@ iframe{
         content: "";
         position: absolute;
         height: 5px;
-        width: 435px;
+        width: 255px;
         bottom: -10px;
         border-radius: 10px;
         background-color: #D4AF37;
@@ -1644,7 +1645,7 @@ iframe{
     }
 
     .branch_title::before{
-        width: 690px;
+        width: 390px;
     }
     
     .sl_text{
@@ -2122,7 +2123,7 @@ iframe{
 
     .abt_content p{
         text-align: left;
-        font-size: 17px;
+        font-size: 20px;
         margin: 1rem;
     }
 
@@ -2149,7 +2150,7 @@ iframe{
     }
 
     .beach_content p{
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .beach_content ol li{
@@ -2352,8 +2353,8 @@ iframe{
     }
 
     .branch_title::before{
-        width: 958px;
-        height: 15px;
+        width: 550px;
+        height: 12px;
     }
 
     .sl_text{
