@@ -1,7 +1,7 @@
 :root{
     --color: #063d45;
     --colorwhite: #ffffff;
-    --colorlight: rgba(15, 111, 120,);
+    --colorlight: rgba(15, 111, 120);
     --colorgold: #f1c580;
     --colormetallicgold: #D4AF37;
     --lineargreen: linear-gradient(-10deg, #063d45, rgba(255, 251, 251, 0.188));
@@ -567,7 +567,7 @@ a{
 
 .input-box input:hover{
 
-    transform:translateX(1.5);
+    transform:translateX(1.5px);
     transition: 0.4s;
     font-size: 14px;
 }
@@ -1040,7 +1040,7 @@ iframe{
 .navbar_events{
     display: flex;
     width: 100%;
-    text-align: 100%;
+    text-align: center;
     align-items: center;
     justify-content: center;
     padding: 20px 10px;
