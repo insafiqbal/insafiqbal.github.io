@@ -400,6 +400,7 @@ hr{
 .wedding_plan a{
     text-decoration: none;
     padding: 10px;
+    color: #5c155a;
     text-transform: uppercase;
     border: 1px solid #5c155a;
     transition: 0.4s;
