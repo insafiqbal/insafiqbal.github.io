@@ -253,9 +253,13 @@ svg {
     color: #ffffff;
 }
 
-.logoimg img{
+.logoimg{
     width: 100%;
-    height: 100%;
+}
+
+.logoimg img{
+    width: 250px;
+    height: auto;
 }
 
 .logoimg h4{
