@@ -417,10 +417,11 @@ hr{
 }
 
 
+/* Animation */
 
-@keyframes fadeIn{
+@keyframes zoomIn{
     from{
-        transform: scale(0.7);
+        transform: scale(0.9);
     }
 
     to{
@@ -428,8 +429,49 @@ hr{
     }
 }
 
+.zoomIn{
+    animation: zoomIn 1s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
 .fadeIn{
-    animation: fadeIn 1s ease;
+    animation: fadeIn ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0.9)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+
+.growDown{
+    animation: growDown ease 1.5s;
+}
+
+@keyframes growDownmenu {
+    0% {
+        transform: scaleY(0.95)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+
+.growDownmenu{
+    animation: growDownmenu ease 1.5s;
 }
 
 @media (min-width:856px){

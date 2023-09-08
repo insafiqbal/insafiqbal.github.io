@@ -855,7 +855,7 @@ iframe{
     position: absolute;
     height: 5px;
     width: 200px;
-    bottom: -10px;
+    bottom: -2px;
     border-radius: 10px;
     background-color: #D4AF37;
     z-index: -99;
@@ -1296,11 +1296,11 @@ iframe{
 /*Restaurant Page End*/
 
 
+/* Animations */
 
-
-@keyframes fadeIn{
+@keyframes zoomIn{
     from{
-        transform: scale(0.7);
+        transform: scale(0.9);
     }
 
     to{
@@ -1308,8 +1308,36 @@ iframe{
     }
 }
 
+.zoomIn{
+    animation: zoomIn 1s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
 .fadeIn{
-    animation: fadeIn 1s ease;
+    animation: fadeIn ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0.9)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+
+.growDown{
+    animation: growDown ease 1s;
 }
 
 /*Media Section for Header Mobile*/
@@ -1325,7 +1353,7 @@ iframe{
         position: absolute;
         height: 5px;
         width: 255px;
-        bottom: -10px;
+        bottom: -2px;
         border-radius: 10px;
         background-color: #D4AF37;
     }
@@ -1446,7 +1474,7 @@ iframe{
     }
 
     .copright{
-        font-size: 20px;
+        font-size: 15px;
     } 
 
     .table thead tr th{
@@ -2344,11 +2372,11 @@ iframe{
     }
 
     .adventure_title{
-        font-size: 130px;
+        font-size: 115px;
     }
 
     .adventure_title::before{
-        width: 900px;
+        width: 770px;
         height: 15px;
     }
 
