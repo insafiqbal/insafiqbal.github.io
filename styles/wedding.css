@@ -152,6 +152,9 @@ svg {
 
 .navlink:hover{
     color: #a21f9e;
+    /* transform: scale(1.1);
+    letter-spacing: 1px; */
+    transform: translateY(-0.5rem);
 }
 
 .navevents{
@@ -176,7 +179,13 @@ svg {
 }
 
 .logo img{
-    height: 15vh;
+    height: 110px;
+    transition: 0.7s ease;
+}
+
+.logo img:hover{
+    transform: translateY(-0.5rem);
+    transition: 0.7s ease;
 }
 
 .logo .logo_text{
