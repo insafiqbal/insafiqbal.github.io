@@ -104,10 +104,15 @@
                     </div>
 
                     <div class="input-box">
-                        <span class="details">No. of Guests</span>
-                        <input type="number" placeholder="No. of Guests" required>
+                        <span class="details">No. of Adults</span>
+                        <input type="number" placeholder="No. of Adults" required>
                     </div>
 
+                    <div class="input-box">
+                        <span class="details">No. of Children</span>
+                        <input type="number" placeholder="No. of Children" required>
+                    </div>
+                    
                     <div class="input-box">
                         <span class="details">No. of Rooms</span>
                         <input type="number" placeholder="No. of Rooms" required>
@@ -116,12 +121,24 @@
                     <div class="input-box">
                         <span class="details">Room Type</span>
                         <select class="" name="List" size="1">
-                            <option>Ocean View</option>
-                            <option>Royal Suite</option>
-                            <option>Family Suite</option>
-                            <option>Dual Bed Comfort</option>
-                            <option>Single bed comfort</option>
+                            <option>Single</option>
+                            <option>Double</option>
+                            <option>Triple</option>
                         </select>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Extra Add-Ons</span>
+                        <div class="bookcheck">
+                            <label class="">WIFI</label> 
+                            <input type="checkbox" id="wifi" class="bookingcheckbox">
+
+                            <label class="">Pool View</label> 
+                            <input type="checkbox" id="pool" class="bookingcheckbox">
+
+                            <label class="">Garden View</label> 
+                            <input type="checkbox" id="garden" class="bookingcheckbox">
+                        </div>
                     </div>
 
                     <div class="input-box">
@@ -136,10 +153,17 @@
                     </div>
                 
                 </fieldset>
+                
                 </div>
+                <div class="book_buttons">
+                    <div class="book_adv_btn">
+                        <input type="submit" value="book adventures" name="book">
+                    </div>
+                    
+                    <div class="book_btn">
+                        <input type="submit" value="book" name="book">
+                    </div>
 
-                <div class="book_btn">
-                    <input type="submit" value="book" name="book">
                 </div>
             </form>
         </section>
