@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>LAVIANT - BOOKING</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <meta name="description" content="Laviant Bay , The luxurious Beach Hotel">
+        <link rel="stylesheet" href="styles/styles.css">
+        <script src="booking.js"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="Image/appimages/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="Image/appimages/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="Image/appimages/favicon-16x16.png">
+        <link rel="manifest" href="manifest.json">
+        <link rel="mask-icon" href="Image/appimages/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="Image/appimages/favicon.ico">
+        <meta name="msapplication-TileColor" content="#00aba9">
+        <meta name="msapplication-config" content="Image/appimages/browserconfig.xml">
+        <meta name="theme-color" content="#000000">
+
+    </head>
+
+    <body>
+        <header class="header_new_page">
+            <nav class="navbar">
+                <div class="logo">
+                    <a class="fadeIn" href="index.html"><img src="Logo/logowhite.png" alt="Logo"></a>
+                    <a class="fadeIn" href="index.html"><span>The Laviant Bay</span></a> 
+                </div>
+                          
+                <div class="navlinks fadeIn">
+                    <a class="navlink" href="index.html">Home</a>
+                    <a class="navlink" href="Restaurant.html">Restaurants</a>
+                    <a class="navlink" href="Branches.html">Branches</a>
+                    <a class="navlink" href="Adventures.html">Adventures</a>
+                    <a class="navlink booking_home" href="Reserve.html" >Book Now</a>
+                </div>  
+                
+                <button class="header_bar">
+                    <img src="Image/icons8-menu.svg" alt="Menu">
+                </button>
+            </nav>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div class="menu_slide">
+            <div class="navlinks_menu fadeIn">
+                <a class="menu_navlink" href="index.html">Home</a>
+                <a class="menu_navlink" href="Restaurant.html">Restaurants</a>
+                <a class="menu_navlink" href="Branches.html">Branches</a>
+                <a class="menu_navlink" href="Adventures.html">Adventures</a>
+                <a class="menu_navlink booking_home" href="Reserve.html" >Book Now</a>
+            </div>  
+        </div>
+        <!-- Mobile Menu End-->
+
+        <!-- Booking Heading -->
+        <section class="section_book fadeIn">
+            <div class="book_title fadeIn">Booking</div>
+            <form action="#">
+                <div class="book_personal">
+                    
+                    <!-- Personal Details -->
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    <div class="input-box">
+                        <span class="details">First Name</span>
+                        <input type="text" placeholder="eg: Insaf" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <span class="details">Last Name</span>
+                        <input type="text" placeholder="eg: Iqbal" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">E-Mail</span>
+                        <input type="text" placeholder="eg: youremail@gmail.com" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Phone Number</span>
+                        <input type="number" placeholder="eg: 0502818879" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Country</span>
+                        <input type="text" placeholder="eg: Saudi Arabia" required>
+                    </div>
+                </fieldset>
+                </div>
+
+                <div class="book_details">
+
+                <fieldset>
+
+                    <!-- Booking Details -->
+                    <legend>Booking details</legend>
+                    <div class="input-box">
+                        <span class="details">Check-In Date & time</span>
+                        <input type="datetime-local" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <span class="details">Check-Out Date & time</span>
+                        <input type="datetime-local" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">No. of Adults</span>
+                        <input type="number" placeholder="No. of Adults" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">No. of Children</span>
+                        <input type="number" placeholder="No. of Children" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <span class="details">No. of Rooms</span>
+                        <input type="number" placeholder="No. of Rooms" required>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Room Type</span>
+                        <select class="" name="List" size="1">
+                            <option>Single</option>
+                            <option>Double</option>
+                            <option>Triple</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Extra Add-Ons</span>
+                        <div class="bookcheck">
+                            <label class="">WIFI</label> 
+                            <input type="checkbox" id="wifi" class="bookingcheckbox">
+
+                            <label class="">Pool View</label> 
+                            <input type="checkbox" id="pool" class="bookingcheckbox">
+
+                            <label class="">Garden View</label> 
+                            <input type="checkbox" id="garden" class="bookingcheckbox">
+                        </div>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Adventures</span>
+                        <select class="" name="List" size="1">
+                            <option>None</option>
+                            <option>Skyview Cruises</option>
+                            <option>Exploring cultures</option>
+                            <option>Surfing</option>
+                            <option>Deep Sea Diving</option>
+                        </select>
+                    </div>
+                
+                </fieldset>
+                
+                </div>
+                <div class="book_buttons">
+                    <div class="book_adv_btn">
+                        <input type="submit" value="book adventures" name="book">
+                    </div>
+                    
+                    <div class="book_btn">
+                        <input type="submit" value="book" name="book">
+                    </div>
+
+                </div>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer_row">
+                <div class="footer_col logoimg">
+                    <a href="#" id="home"><img src="Logo/logowhite.png" alt="Logo"></a>
+                    <h4>The Laviant Bay</h4>
+                    <h6>since 1966</h6>
+                </div>
+
+                <div class="footer_col ftrlinks">
+                    <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Restaurant.html">Restaurant</a></li>
+                            <li><a href="Branches.html">Branches</a></li>
+                            <li><a href="Adventures.html">Adventures</a></li>
+                            <li><a href="Reserve.html">Reservation</a></li>
+                        </ul>
+                </div>
+
+                <div class="footer_col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="" id="number">+94 114608240</a></li>
+                        <li><a href="gmail.com" id="email">thelaviantbay@org.com</a></li>
+                        <li><a href="https://www.google.com/maps/place/Galle+Face+Beach/@6.9252686,79.8412741,17z/data=!3m1!4b1!4m6!3m5!1s0x3ae2593bcace8c17:0xe6b567a8d83fb7ce!8m2!3d6.925777!4d79.8437234!16s%2Fg%2F11bbrkppwl?entry=ttu" id="address" target="_blank">Galle Face Beach, Colombo</a></li>
+                        <li><a href="#" id="pobox">PO BOX 12222</a></li>
+                    </ul>
+                </div>
+            
+                <div class="footer_col socials">
+                    <h3>Connect with Us</h3>
+                    <ul>
+                        <li><a href="https://www.instagram.com/insaf_._iqbal/?hl=en" target="_blank"><img src="Image/instagram.png" alt="Instagram"></a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank"><img src="Image/Facebook.png" alt="Facebook"></a></li>
+                        <li><a href="https://twitter.com/?lang=en" target="_blank"><img src="Image/Twitter.png" alt="Twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copright">
+                <span>&copy; 2023 The Laviant Bay by Insaf Iqbal, All rights reserved. </span>
+            </div>
+        </footer>
+
+        <script>
+            const menu_bar = document.querySelector('.header_bar');
+            const menu_list = document.querySelector('.menu_slide');
+
+            let isMenu_ListOpen = false;
+
+            menu_bar.addEventListener('click',() => {
+                isMenu_ListOpen = !isMenu_ListOpen;
+                if (isMenu_ListOpen) {
+                    menu_list.style.display = 'flex';
+                } else {
+                    menu_list.style.display = 'none';
+                }
+            });
+            
+        </script>
+    </body>
+</html>

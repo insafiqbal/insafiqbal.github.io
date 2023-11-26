@@ -563,6 +563,11 @@ a{
     margin: -5px 0 30px 0;
 }
 
+.input-box .bookcheck{
+    display: flex;
+    flex-direction: column;
+}
+
 .input-box input{
     height: 40px;
     width: 100%;
@@ -582,6 +587,11 @@ a{
     transform:translateX(1.5px);
     transition: 0.4s;
     font-size: 14px;
+}
+
+.input-box .bookingcheckbox{
+    width: 10%;
+    
 }
 
 .input-box .details{
@@ -656,6 +666,31 @@ a{
     text-align: center;
 }
 
+.book_adv_btn{
+    margin: 40px 0 40px 0;
+    align-items: center;
+    text-align: center;
+}
+
+.book_adv_btn input{
+    cursor:pointer;
+    color: var(--colormetallicgold);
+    padding: 5px 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: var(--color);
+    border: 0;
+    transition: 0.4s;
+    border-radius: 2px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.book_adv_btn input:hover{
+    background-color: var(--colormetallicgold);
+    color: var(--color);
+    transition: 0.4s;
+}
+
 .book_btn input{
     cursor:pointer;
     color: var(--color);
@@ -674,6 +709,9 @@ a{
     color: var(--colormetallicgold);
     transition: 0.4s;
 }
+
+
+
 /*Book Page End*/
 
 /*Adventures Page*/
@@ -1410,6 +1448,10 @@ iframe{
     .restaurant_title::before{
         width: 399px;
     }
+
+    .input-box .bookingcheckbox{
+        width: 5%;
+    }
 }
 
 /* Small */
@@ -1533,6 +1575,9 @@ iframe{
 
 /* Medium */
 @media (min-width:856px){
+
+    
+
     .navlinks{
         display:flex;
         font-size: 13.4px;
@@ -1619,6 +1664,14 @@ iframe{
         width: 40%;
     }
 
+    .input-box .bookcheck{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+    }
+
     .book_title{
         font-size: 90px;
     }
@@ -1649,6 +1702,20 @@ iframe{
     .input-box input{
         font-size: 15px;
         height: 50px;
+    }
+
+    .book_buttons{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+
+    .book_adv_btn input{
+        padding: 10px 40px;
     }
 
     .adventure_title{
