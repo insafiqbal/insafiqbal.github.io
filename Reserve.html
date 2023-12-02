@@ -64,27 +64,27 @@
                     <legend>Personal Details</legend>
                     <div class="input-box">
                         <span class="details">First Name</span>
-                        <input type="text" placeholder="eg: Insaf" required>
+                        <input type="text" placeholder="eg: Insaf" id="firstName" required>
                     </div>
                     
                     <div class="input-box">
                         <span class="details">Last Name</span>
-                        <input type="text" placeholder="eg: Iqbal" required>
+                        <input type="text" placeholder="eg: Iqbal" id="lastName" required>
                     </div>
 
                     <div class="input-box">
                         <span class="details">E-Mail</span>
-                        <input type="text" placeholder="eg: youremail@gmail.com" required>
+                        <input type="text" placeholder="eg: youremail@gmail.com" id="email" required>
                     </div>
 
                     <div class="input-box">
                         <span class="details">Phone Number</span>
-                        <input type="number" placeholder="eg: 0502818879" required>
+                        <input type="number" placeholder="eg: 0502818879" id="phoneNumber" required>
                     </div>
 
                     <div class="input-box">
                         <span class="details">Country</span>
-                        <input type="text" placeholder="eg: Saudi Arabia" required>
+                        <input type="text" placeholder="eg: Saudi Arabia" id="country" required>
                     </div>
                 </fieldset>
                 </div>
@@ -97,35 +97,35 @@
                     <legend>Booking details</legend>
                     <div class="input-box">
                         <span class="details">Check-In Date & time</span>
-                        <input type="datetime-local" required>
+                        <input type="datetime-local" id="checkin" required>
                     </div>
                     
                     <div class="input-box">
                         <span class="details">Check-Out Date & time</span>
-                        <input type="datetime-local" required>
+                        <input type="datetime-local" id="checkout" required>
                     </div>
 
                     <div class="input-box">
                         <span class="details">No. of Adults</span>
-                        <input type="number" placeholder="No. of Adults" required>
+                        <input type="number" placeholder="No. of Adults" id="noAdults" required>
                     </div>
 
                     <div class="input-box">
                         <span class="details">No. of Children</span>
-                        <input type="number" placeholder="No. of Children" required>
+                        <input type="number" placeholder="No. of Children" id="noChildren" required>
                     </div>
                     
                     <div class="input-box">
                         <span class="details">No. of Rooms</span>
-                        <input type="number" placeholder="No. of Rooms" required>
+                        <input type="number" placeholder="No. of Rooms" id="noRooms" required>
                     </div>
 
                     <div class="input-box">
                         <span class="details">Room Type</span>
-                        <select class="" name="List" size="1">
-                            <option>Single</option>
-                            <option>Double</option>
-                            <option>Triple</option>
+                        <select class="roomDrop" name="List" size="1">
+                            <option value="Single" id="single">Single</option>
+                            <option value="Double" id="double">Double</option>
+                            <option value="Triple" id="triple">Triple</option>
                         </select>
                     </div>
 
@@ -145,25 +145,37 @@
 
                     <div class="input-box">
                         <span class="details">Adventures</span>
-                        <select class="" name="List" size="1">
-                            <option>None</option>
-                            <option>Skyview Cruises</option>
-                            <option>Exploring cultures</option>
-                            <option>Surfing</option>
-                            <option>Deep Sea Diving</option>
+                        <select class="dropDown" name="List" size="1">
+                            <option value="AdvNone" id="advNone">None</option>
+                            <option value="AdvSky" id="advSky">Skyview Cruises</option>
+                            <option value="AdvCul" id="advCul">Exploring cultures</option>
+                            <option value="AdvSurf"  id="advSurf">Surfing</option>
+                            <option id="advSea">Deep Sea Diving</option>
                         </select>
                     </div>
                 
+                    <div class="input-box-2">
+                            <span class="promo">Enter Promo Code</span>
+                            <input type="text" id="promocode">
+                    </div>
+    
+                        <div class="input-box-2">
+                            <span class="promo">Loyalty Points</span>
+                            <input type="text" id="loyalpoints">
+                        </div>
+                    </div>
+
                 </fieldset>
                 
+
                 </div>
                 <div class="book_buttons">
                     <div class="book_adv_btn">
-                        <input type="submit" value="book adventures" name="book">
+                        <input type="submit" id="book_adv_btn" value="book adventures" name="book">
                     </div>
                     
                     <div class="book_btn">
-                        <input type="submit" value="book" name="book">
+                        <input type="submit" id="book_btn" value="book" name="book">
                     </div>
 
                 </div>
