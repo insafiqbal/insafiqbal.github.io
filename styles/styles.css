@@ -637,6 +637,24 @@ a{
     flex-direction: column;
 }
 
+.dive-select{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dive-adult{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dive-kids{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .input-box-2{ 
     display: flex;
     flex-direction: column;
@@ -798,7 +816,7 @@ a{
 }
 
 .book_adv_btn{
-    margin: 40px 0 40px 0;
+    margin: 20px 0 20px 0;
     align-items: center;
     text-align: center;
 }
@@ -841,11 +859,11 @@ a{
 
 .book_adv_btn input{
     cursor:pointer;
-    color: var(--colormetallicgold);
+    color: var(--color);
     padding: 5px 20px;
     font-size: 20px;
     text-transform: uppercase;
-    background-color: var(--color);
+    background-color: var(--colormetallicgold);
     border: 0;
     transition: 0.4s;
     border-radius: 2px;
@@ -872,7 +890,7 @@ a{
 }
 
 .book_adv_btn input:hover{
-    background-color: var(--colormetallicgold);
+    background-color: aliceblue;
     color: var(--color);
     transition: 0.4s;
 }

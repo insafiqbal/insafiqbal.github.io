@@ -11,6 +11,8 @@ const checkout = document.getElementById("checkout")
 const noAdults = document.getElementById("noAdults")
 const noChildren = document.getElementById("noChildren")
 const noRooms = document.getElementById("noRooms")
+const extraBeds = document.getElementById("extraBeds")
+
 
 //Room Type
 const single = document.getElementById("single")
@@ -28,6 +30,12 @@ const advSky = document.getElementById("advSky")
 const advCul = document.getElementById("advCul")
 const advSurf = document.getElementById("advSurf")
 const advSea = document.getElementById("advSea")
+const localAdults = document.getElementById("localadults")
+const localKids = document.getElementById("localkids")
+const foreignAdults = document.getElementById("foreignadults")
+const foreignKids = document.getElementById("foreignkids")
+const diveAdults = document.getElementById("diveAdults")
+const diveKids = document.getElementById("diveKids")
 
 //Code
 const promocode = document.getElementById("promocode")

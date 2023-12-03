@@ -60,36 +60,100 @@
                 <div class="book_personal">
                     
                     <!-- Personal Details -->
-                <fieldset>
-                    <legend>Personal Details</legend>
-                    <div class="input-box">
-                        <span class="details">First Name</span>
-                        <input type="text" placeholder="eg: Insaf" id="firstName" required>
-                    </div>
+                    <fieldset>
+                        <legend>Personal Details</legend>
+                        <div class="input-box">
+                            <span class="details">First Name</span>
+                            <input type="text" placeholder="eg: Insaf" id="firstName" required>
+                        </div>
+                        
+                        <div class="input-box">
+                            <span class="details">Last Name</span>
+                            <input type="text" placeholder="eg: Iqbal" id="lastName" required>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="details">E-Mail</span>
+                            <input type="text" placeholder="eg: youremail@gmail.com" id="email" required>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="details">Phone Number</span>
+                            <input type="number" placeholder="eg: 0502818879" id="phoneNumber" required>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="details">Country</span>
+                            <input type="text" placeholder="eg: Saudi Arabia" id="country" required>
+                        </div>
+
+                        
                     
-                    <div class="input-box">
-                        <span class="details">Last Name</span>
-                        <input type="text" placeholder="eg: Iqbal" id="lastName" required>
-                    </div>
+                    </fieldset>
+                </div>
 
-                    <div class="input-box">
-                        <span class="details">E-Mail</span>
-                        <input type="text" placeholder="eg: youremail@gmail.com" id="email" required>
-                    </div>
 
-                    <div class="input-box">
-                        <span class="details">Phone Number</span>
-                        <input type="number" placeholder="eg: 0502818879" id="phoneNumber" required>
-                    </div>
-
-                    <div class="input-box">
-                        <span class="details">Country</span>
-                        <input type="text" placeholder="eg: Saudi Arabia" id="country" required>
-                    </div>
-
+                <div class="book_personal">
                     
-                   
-                </fieldset>
+                    <!-- Adventure Details -->
+                    <fieldset>
+                        <legend>Adventure Booking</legend>
+
+                        <div class="input-box">
+                            <span class="details">Adventures</span>
+                            <select class="dropDown" name="List" size="1">
+                                <option value="AdvNone" id="advNone">None</option>
+                                <option value="AdvSky" id="advSky">Skyview Cruises</option>
+                                <option value="AdvCul" id="advCul">Exploring cultures</option>
+                                <option value="AdvSurf" id="advSurf">Surfing</option>
+                                <option value="AdvSea"  id="advSea">Deep Sea Diving</option>
+                            </select>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="details">No. of Local Adults</span>
+                            <input type="number" id="localadults" placeholder="No. of Local Adults" required>
+                        </div>
+                        
+                        <div class="input-box">
+                            <span class="details">No. of Local Kids</span>
+                            <input type="number" id="localkids" placeholder="No. of Local Kids" required>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="details">No. of Foreign Adults</span>
+                            <input type="text" id="foreignadults" placeholder="No. of Foreign Adults" required>
+                        </div>
+
+                        <div class="input-box">
+                            <span class="details">No. of Foreign Kids</span>
+                            <input type="number" id="foreignkids" placeholder="No. of Foreign Kids">
+                        </div>
+
+                        <div class="input-box">
+                            <span class="details">guide for diving</span> 
+                            
+                            <div class="dive-select">
+                                <div class="dive-adult">
+                                    <label class="">Adults</label>
+                                    <input type="checkbox" id="diveAdults" class="bookingcheckbox">
+                                </div>
+
+                                <div class="dive-kids">
+                                    <label class="">Kids</label>
+                                    <input type="checkbox" id="diveKids" class="bookingcheckbox">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="book_buttons">
+
+                            <div class="book_adv_btn">
+                                <input type="submit" id="book_adv_btn" value="book adventures" name="book">
+                            </div>
+                        </div>
+
+                    </fieldset>
                 </div>
 
 
@@ -125,6 +189,11 @@
                     </div>
 
                     <div class="input-box">
+                        <span class="details">No. of Extra Beds</span>
+                        <input type="number" placeholder="No. of Extra Beds" id="extraBeds" required>
+                    </div>
+
+                    <div class="input-box">
                         <span class="details">Room Type</span>
                         <select class="roomDrop" name="List" size="1">
                             <option>Type</option>
@@ -148,17 +217,7 @@
                         </div>
                     </div>
 
-                    <div class="input-box">
-                        <span class="details">Adventures</span>
-                        <select class="dropDown" name="List" size="1">
-                            <option value="AdvNone" id="advNone">None</option>
-                            <option value="AdvSky" id="advSky">Skyview Cruises</option>
-                            <option value="AdvCul" id="advCul">Exploring cultures</option>
-                            <option value="AdvSurf ii98p
-                            56+"  id="advSurf">Surfing</option>
-                            <option id="advSea">Deep Sea Diving</option>
-                        </select>
-                    </div>
+                    
                 
                     <div class="input-box-2">
                             <span class="promo">Enter Promo Code</span>
@@ -175,16 +234,12 @@
                             
                         </div>
                     </div>
-
+                    
                 </fieldset>
                 
 
                 </div>
                 <div class="book_buttons">
-
-                    <div class="book_adv_btn">
-                        <input type="submit" id="book_adv_btn" value="book adventures" name="book">
-                    </div>
 
                     <div class="book_fav_btn">
                         <input type="submit" id="book_fav_btn" value="Add to favourites" name="book">
