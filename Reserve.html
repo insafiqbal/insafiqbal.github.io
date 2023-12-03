@@ -149,7 +149,7 @@
                         <div class="book_buttons">
 
                             <div class="book_adv_btn">
-                                <input type="submit" id="book_adv_btn" value="book adventures" name="book">
+                                <input type="submit" id="book_adv_btn" value="book adventure" name="book">
                             </div>
                         </div>
 
@@ -163,6 +163,18 @@
 
                     <!-- Booking Details -->
                     <legend>Booking details</legend>
+
+                    <div class="input-box">
+                        <span class="details">Branch</span>
+                        <select class="branchDrop" name="List" size="1">
+                            <option>Branch</option>
+                            <option value="Arugam" id="arugam">Arugam Bay</option>
+                            <option value="Umluj" id="umluj">Umluj</option>
+                            <option value="Hulhumale" id="hulhumale">Hulhumale</option>
+                        </select>
+                    </div>
+                    
+
                     <div class="input-box">
                         <span class="details">Check-In Date & time</span>
                         <input type="datetime-local" id="checkin" required>
@@ -186,11 +198,6 @@
                     <div class="input-box">
                         <span class="details">No. of Rooms</span>
                         <input type="number" placeholder="No. of Rooms" id="noRooms" required>
-                    </div>
-
-                    <div class="input-box">
-                        <span class="details">No. of Extra Beds</span>
-                        <input type="number" placeholder="No. of Extra Beds" id="extraBeds" required>
                     </div>
 
                     <div class="input-box">

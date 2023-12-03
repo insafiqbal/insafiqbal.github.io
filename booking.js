@@ -11,7 +11,6 @@ const checkout = document.getElementById("checkout")
 const noAdults = document.getElementById("noAdults")
 const noChildren = document.getElementById("noChildren")
 const noRooms = document.getElementById("noRooms")
-const extraBeds = document.getElementById("extraBeds")
 
 
 //Room Type
