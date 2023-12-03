@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width initial-scale=1.0">
         <meta name="description" content="Laviant Bay , The luxurious Beach Hotel">
         <link rel="stylesheet" href="styles/styles.css">
-        <script src="booking.js"></script>
+        <script src="booking.js" defer></script>
         <link rel="apple-touch-icon" sizes="180x180" href="Image/appimages/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="Image/appimages/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="Image/appimages/favicon-16x16.png">
@@ -86,8 +86,12 @@
                         <span class="details">Country</span>
                         <input type="text" placeholder="eg: Saudi Arabia" id="country" required>
                     </div>
+
+                    
+                   
                 </fieldset>
                 </div>
+
 
                 <div class="book_details">
 
@@ -123,6 +127,7 @@
                     <div class="input-box">
                         <span class="details">Room Type</span>
                         <select class="roomDrop" name="List" size="1">
+                            <option>Type</option>
                             <option value="Single" id="single">Single</option>
                             <option value="Double" id="double">Double</option>
                             <option value="Triple" id="triple">Triple</option>
@@ -149,7 +154,8 @@
                             <option value="AdvNone" id="advNone">None</option>
                             <option value="AdvSky" id="advSky">Skyview Cruises</option>
                             <option value="AdvCul" id="advCul">Exploring cultures</option>
-                            <option value="AdvSurf"  id="advSurf">Surfing</option>
+                            <option value="AdvSurf ii98p
+                            56+"  id="advSurf">Surfing</option>
                             <option id="advSea">Deep Sea Diving</option>
                         </select>
                     </div>
@@ -162,6 +168,11 @@
                         <div class="input-box-2">
                             <span class="promo">Loyalty Points</span>
                             <input type="text" id="loyalpoints">
+
+                            <div class="book_loyal_btn">
+                                <input type="submit" id="book_fav_btn" value="Check Loyalty" name="book">
+                            </div>
+                            
                         </div>
                     </div>
 
@@ -170,8 +181,13 @@
 
                 </div>
                 <div class="book_buttons">
+
                     <div class="book_adv_btn">
                         <input type="submit" id="book_adv_btn" value="book adventures" name="book">
+                    </div>
+
+                    <div class="book_fav_btn">
+                        <input type="submit" id="book_fav_btn" value="Add to favourites" name="book">
                     </div>
                     
                     <div class="book_btn">
@@ -180,6 +196,26 @@
 
                 </div>
             </form>
+
+            <div class="output">
+                    <div class="output_align">
+                        
+                        <div class="guestOutput">
+                            <h1>Guest Details</h1>
+                            <p id="output"></p>
+                        </div>
+
+                        <div class="bookOutput">
+                            <h1>Booking Information</h1>
+                            <p id="bookingOutput"></p>
+                        </div>
+
+                        <div class="advOutput">     
+                            <h1>adventure Booking</h1>
+                            <p id="advbookingOutput"></p>
+                        </div>
+                    </div>
+            </div>
         </section>
 
         <!-- Footer -->

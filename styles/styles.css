@@ -31,6 +31,75 @@ html{
     scroll-behavior:smooth ;
     
 }
+#output{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--colormetallicgold);
+    min-height: 15rem;
+    border: 5px solid var(--color); 
+    width: 95%;
+}
+
+#bookingOutput{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--colormetallicgold);
+    min-height: 15rem;
+    border: 5px solid var(--color); 
+    width: 95%;
+}
+
+#advbookingOutput{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--colormetallicgold);
+    min-height: 15rem;
+    border: 5px solid var(--color); 
+    width: 95%;
+}
+
+.guestOutput{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.bookOutput{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.advOutput{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.output h1{
+    text-transform: uppercase;
+    margin-top: 50px ;
+    margin-bottom: 20px;
+}
+
+.output{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
 
 body{
     background-color: aliceblue;
@@ -734,6 +803,42 @@ a{
     text-align: center;
 }
 
+.book_fav_btn{
+    margin: 40px 0 40px 0;
+    align-items: center;
+    text-align: center;
+}
+
+.book_fav_btn input{
+    cursor:pointer;
+    color: var(--color);
+    padding: 5px 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: aliceblue;
+    border-color: #063d45;
+    border: 0;
+    transition: 0.4s;
+    border-radius: 2px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+
+.book_loyal_btn input{
+    cursor:pointer;
+    color: var(--color);
+    padding: 2px 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: aliceblue;
+    border-color: #063d45;
+    border: 0;
+    transition: 0.4s;
+    border-radius: 5px;
+    margin-top: 1rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
 .book_adv_btn input{
     cursor:pointer;
     color: var(--colormetallicgold);
@@ -745,12 +850,6 @@ a{
     transition: 0.4s;
     border-radius: 2px;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-}
-
-.book_adv_btn input:hover{
-    background-color: var(--colormetallicgold);
-    color: var(--color);
-    transition: 0.4s;
 }
 
 .book_btn input{
@@ -766,10 +865,26 @@ a{
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
+.book_fav_btn input:hover{
+    background-color: #063d45;
+    color: var(--colormetallicgold);
+    transition: 0.4s;
+}
+
+.book_adv_btn input:hover{
+    background-color: var(--colormetallicgold);
+    color: var(--color);
+    transition: 0.4s;
+}
+
 .book_btn input:hover{
     background-color: var(--color);
     color: var(--colormetallicgold);
     transition: 0.4s;
+}
+
+.book_loyal_btn input:hover{
+    color: var(--colormetallicgold);
 }
 
 
@@ -1638,7 +1753,11 @@ iframe{
 /* Medium */
 @media (min-width:856px){
 
-    
+    .output_align{
+        width: 100%;
+        display: flex;
+    }
+
 
     .navlinks{
         display:flex;
