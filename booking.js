@@ -132,6 +132,7 @@ function bookingdetails(){
     //Promo Code Value
     let promocode = promocodeInput.value;
     
+    
     //Check in and out values
     let checkin = new Date(checkinInput.value);
     let checkout = new Date(checkoutInput.value);
@@ -142,16 +143,20 @@ function bookingdetails(){
 
     let totalbookingCost = ( (singleroom * Sroom) + (doubleroom * Droom) + (tripleroom * Troom) + (kidsmealvalue * kidsMeal) ) * numberofdays;
 
+    //Extra Bed checking
     if (extrabedCheck.checked){
         totalbookingCost += 8000;
     }
     
+    //Promo code 
+    let discountedvalue = totalbookingCost * 0.05;
 
     if (promocode == "Promo123"){
-        totalbookingCost -= 3000
+
+        totalbookingCost -= discountedvalue;
     }
 
-
+    //Output
     bookOutput.innerText = `LKR ${totalbookingCost}`;
 
 }
