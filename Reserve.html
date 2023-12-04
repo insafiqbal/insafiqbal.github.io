@@ -57,40 +57,37 @@
         <section class="section_book fadeIn">
             <div class="book_title fadeIn">Booking</div>
             <form action="#">
-                <div class="book_personal">
-                    
-                    <!-- Personal Details -->
-                    <fieldset>
-                        <legend>Personal Details</legend>
-                        <div class="input-box">
-                            <span class="details">First Name</span>
-                            <input type="text" placeholder="eg: Insaf" id="firstName" required>
-                        </div>
+                    <div class="book_personal"> 
+                        <!-- Personal Details -->
+                        <fieldset>
+                            <legend>Personal Details</legend>
+                            <div class="input-box">
+                                <span class="details">First Name</span>
+                                <input type="text" placeholder="eg: Insaf" id="firstName" required>
+                            </div>
+                            
+                            <div class="input-box">
+                                <span class="details">Last Name</span>
+                                <input type="text" placeholder="eg: Iqbal" id="lastName" required>
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">E-Mail</span>
+                                <input type="text" placeholder="eg: youremail@gmail.com" id="email" required>
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">Phone Number</span>
+                                <input type="number" placeholder="eg: 0502818879" id="phoneNumber" required>
+                            </div>
+
+                            <div class="input-box">
+                                <span class="details">Country</span>
+                                <input type="text" placeholder="eg: Saudi Arabia" id="country" required>
+                            </div>
                         
-                        <div class="input-box">
-                            <span class="details">Last Name</span>
-                            <input type="text" placeholder="eg: Iqbal" id="lastName" required>
-                        </div>
-
-                        <div class="input-box">
-                            <span class="details">E-Mail</span>
-                            <input type="text" placeholder="eg: youremail@gmail.com" id="email" required>
-                        </div>
-
-                        <div class="input-box">
-                            <span class="details">Phone Number</span>
-                            <input type="number" placeholder="eg: 0502818879" id="phoneNumber" required>
-                        </div>
-
-                        <div class="input-box">
-                            <span class="details">Country</span>
-                            <input type="text" placeholder="eg: Saudi Arabia" id="country" required>
-                        </div>
-
-                        
-                    
-                    </fieldset>
-                </div>
+                        </fieldset>
+                    </div>
 
 
                 <div class="book_personal">
@@ -109,6 +106,7 @@
                                 <option value="AdvSea"  id="advSea">Deep Sea Diving</option>
                             </select>
                         </div>
+
 
                         <div class="input-box">
                             <span class="details">No. of Local Adults</span>
@@ -130,18 +128,22 @@
                             <input type="number" id="foreignkids" placeholder="No. of Foreign Kids">
                         </div>
 
-                        <div class="input-box">
+                        <div class="input-box-3">
                             <span class="details">guide for diving</span> 
                             
                             <div class="dive-select">
                                 <div class="dive-adult">
-                                    <label class="">Adults</label>
-                                    <input type="checkbox" id="diveAdults" class="bookingcheckbox">
+                                    <label>
+                                        <input type="checkbox" id="diveAdults">
+                                        <span>Adults</span>
+                                    </label>
                                 </div>
 
                                 <div class="dive-kids">
-                                    <label class="">Kids</label>
-                                    <input type="checkbox" id="diveKids" class="bookingcheckbox">
+                                    <label>
+                                        <input type="checkbox" id="diveKids">
+                                        <span>Kids</span>
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -163,26 +165,16 @@
 
                     <!-- Booking Details -->
                     <legend>Booking details</legend>
-
-                    <div class="input-box">
-                        <span class="details">Branch</span>
-                        <select class="branchDrop" name="List" size="1">
-                            <option>Branch</option>
-                            <option value="Arugam" id="arugam">Arugam Bay</option>
-                            <option value="Umluj" id="umluj">Umluj</option>
-                            <option value="Hulhumale" id="hulhumale">Hulhumale</option>
-                        </select>
-                    </div>
                     
 
                     <div class="input-box">
-                        <span class="details">Check-In Date & time</span>
-                        <input type="datetime-local" id="checkin" required>
+                        <span class="details">Check-In Date </span>
+                        <input type="date" id="checkin" required>
                     </div>
                     
                     <div class="input-box">
-                        <span class="details">Check-Out Date & time</span>
-                        <input type="datetime-local" id="checkout" required>
+                        <span class="details">Check-Out Date</span>
+                        <input type="date" id="checkout" required>
                     </div>
 
                     <div class="input-box">
@@ -194,33 +186,61 @@
                         <span class="details">No. of Children</span>
                         <input type="number" placeholder="No. of Children" id="noChildren" required>
                     </div>
+
+                    <div class="input-box">
+                        <span class="details">Meal - Kids above 5 years</span>
+                        <input type="number" placeholder="Kids above 5 years" id="kidsMeal" required>
+                    </div>
                     
                     <div class="input-box">
-                        <span class="details">No. of Rooms</span>
-                        <input type="number" placeholder="No. of Rooms" id="noRooms" required>
+                        <span class="details">No. of Rooms - Single Room</span>
+                        <input type="number" placeholder="Single Room" id="single" max="10" required>
                     </div>
 
                     <div class="input-box">
-                        <span class="details">Room Type</span>
-                        <select class="roomDrop" name="List" size="1">
-                            <option>Type</option>
-                            <option value="Single" id="single">Single</option>
-                            <option value="Double" id="double">Double</option>
-                            <option value="Triple" id="triple">Triple</option>
-                        </select>
+                        <span class="details">No. of Rooms - Double Room</span>
+                        <input type="number" placeholder="Double Room" id="double" max="10" required>
                     </div>
 
                     <div class="input-box">
+                        <span class="details">No. of Rooms - Triple Room</span>
+                        <input type="number" placeholder="Triple Room" id="triple" max="10" required>
+                    </div>
+                    
+                    
+
+                    <div class="input-box-4">
                         <span class="details">Extra Add-Ons</span>
-                        <div class="bookcheck">
-                            <label class="">WIFI</label> 
-                            <input type="checkbox" id="wifi" class="bookingcheckbox">
+                        
+                        <div class="addonsChecks">
+                            
+                            <div class="addons-check">
+                                <label>
+                                    <input type="checkbox" id="wifi">
+                                    <span>WI-FI</span>
+                                </label>
+                            </div>
 
-                            <label class="">Pool View</label> 
-                            <input type="checkbox" id="pool" class="bookingcheckbox">
+                            <div class="addons-check">
+                                <label>
+                                    <input type="checkbox" id="pool">
+                                    <span>Pool</span>
+                                </label>
+                            </div>
 
-                            <label class="">Garden View</label> 
-                            <input type="checkbox" id="garden" class="bookingcheckbox">
+                            <div class="addons-check">
+                                <label> 
+                                    <input type="checkbox" id="garden">
+                                    <span>Garden</span>
+                                </label>
+                            </div>
+
+                            <div class="addons-check">
+                                <label> 
+                                    <input type="checkbox" id="extrabed">
+                                    <span>Extra Bed</span>
+                                </label>
+                            </div>
                         </div>
                     </div>
 
@@ -259,7 +279,7 @@
                 </div>
             </form>
 
-            <div class="output">
+            <!-- <div class="output">
                     <div class="output_align">
                         
                         <div class="guestOutput">
@@ -277,7 +297,19 @@
                             <p id="advbookingOutput"></p>
                         </div>
                     </div>
-            </div>
+            </div> -->
+
+
+            <!-- Ouptut -->
+            <section class="price">
+                <span>Total Booking Price</span>
+                <p id="bookingOutput">LKR 0.00</p>
+            </section>
+
+            <section class="adventurePrice">
+                <span>Total Adventure Price</span>
+                <p id="advbookingOutput">LKR 0.00</p>
+            </section>
         </section>
 
         <!-- Footer -->
