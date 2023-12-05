@@ -125,12 +125,8 @@ function personalInformation(){
     NameOutput.innerHTML = `${Fname} ${Lname}`;
     EmailOuput.innerHTML = `${Email}`;
     PhoneOutput.innerHTML = `${PhoneNumber}`;
-    CountryOutput.innerHTML = `${Country}`;
-
-    
-    
+    CountryOutput.innerHTML = `${Country}`;   
 }
-
 
 
 function bookingdetails(){
@@ -173,8 +169,8 @@ function bookingdetails(){
 
     //Output
     bookOutput.innerHTML = `<u>LKR</u> ${totalbookingCost}`;
-
 }
+
 
 function adventuredetails(){
     let localAdult = localAdultsInput.value;
