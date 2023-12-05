@@ -494,28 +494,17 @@ a{
 
 .price{
     position: fixed;
-    bottom: 150px;
+    bottom: 30px;
     right: 40px;
-    width: 200px;
+    width: 250px;
     background-color: var(--colormetallicgold);
     color: var(--color);
     padding: 10px 20px;
-    border-radius: 50px;
+    font-size: 14px;
+    border-radius: 20px;
     z-index: 99;
     pointer-events: none;
-}
-
-.adventurePrice{
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    width: 210px;
-    background-color: var(--colormetallicgold);
-    color: var(--color);
-    padding: 10px 20px;
-    border-radius: 50px;
-    z-index: 99;
-    pointer-events: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #output{
@@ -531,7 +520,7 @@ a{
 #bookingOutput{
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 20px;
     color: var(--color);
     width: 95%;
 }
@@ -539,9 +528,31 @@ a{
 #advbookingOutput{
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
+    font-size: 20px;
     color: var(--color);
     width: 95%;
 }
+
+#advbookingOutput u{
+    text-decoration: none;
+    font-size: 10px;
+
+}
+
+#bookingOutput u{
+    text-decoration: none;
+    font-size: 10px;
+}
+
+
+#advbookingOutput{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--color);
+    width: 95%;
+}
+
+
 
 .guestOutput{
     width: 30%;
@@ -617,6 +628,13 @@ a{
     flex-wrap: wrap;
 }
 
+#customerOutput{
+    color: #063d45;
+    font-size: 25px;
+    font-family: Synonym, Serif;
+    font-weight: 700;
+}
+
 .book_personal{
     color: var(--colormetallicgold);
     justify-content: center;
@@ -625,11 +643,6 @@ a{
     max-width: 100%;
     margin-top: 5rem;
     width: 100%;
-    border-radius: 5px;
-    background-color: var(--color);
-    background-image: var(--lineargreen);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
 .book_personal fieldset{
@@ -640,6 +653,11 @@ a{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    background-color: var(--color);
+    background-image: var(--lineargreen);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    border-radius: 5px;
 }
 
 .book_personal legend{
@@ -915,11 +933,7 @@ a{
     max-width: 100%;
     margin-top: 5rem;
     width: 100%;
-    border-radius: 5px;
-    background-color: var(--color);
-    background-image: var(--lineargreen);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    
 }
 
 .book_details fieldset{
@@ -930,6 +944,11 @@ a{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    border-radius: 5px;
+    background-color: var(--color);
+    background-image: var(--lineargreen);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 
 .book_details legend{
@@ -1436,6 +1455,34 @@ iframe{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.table-customer{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.table-customer tbody tr th{
+    background-color: #D4AF37;
+    text-align: center;
+    color: #063d45;
+    margin-left: 6rem;
+}
+
+.table-customer div{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: var(--color);
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.table-customer table{
+    margin: 0;
+}
+
 .table thead tr th{
     background-color: #D4AF37;
     color: #063d45;
@@ -1936,7 +1983,7 @@ iframe{
 
     .addonsChecks{
         flex-direction: row;
-        
+
     }
 }
 
@@ -2051,6 +2098,7 @@ iframe{
 
     .book_title{
         font-size: 90px;
+
     }
 
     .book_title::before{
@@ -2060,12 +2108,30 @@ iframe{
 
     .book_personal{
         display: flex;
+        width: 100%;
         flex-wrap: wrap;
+        justify-content: center;
         margin-top: 7rem;
+    }
+
+    .book_personal fieldset{
+        width: 60%;
     }
 
     .book_personal legend{
         font-size: 35px;
+    }
+
+    .book_details{
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 7rem;
+    }
+
+    .book_details fieldset{
+        width: 60%;
     }
 
     .book_details legend{
@@ -2928,8 +2994,17 @@ iframe{
         font-size: 20px;
     }
 
+    .table-customer{
+        width: 100%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+    }
+
     .table{
-        margin: 180px auto;
+        width: 80%;
     }
 
     .table thead tr th{

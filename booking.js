@@ -52,6 +52,14 @@ const favBookBtn = document.getElementById("book_fav_btn")
 //Output
 const bookOutput = document.getElementById("bookingOutput");
 const advOutput = document.getElementById("advbookingOutput");
+const customerOutput = document.getElementById("customerOutput");
+
+//customerOutput
+const NameOutput = document.getElementById("nameOutput");
+const EmailOuput = document.getElementById("emailOutput");
+const PhoneOutput = document.getElementById("phonenumberOuput");
+const CountryOutput = document.getElementById("countryOutput");
+
 
 let total;
 //Room Prices
@@ -92,6 +100,14 @@ foreignKidsInput.addEventListener('input',adventuredetails)
 diveAdultscheck.addEventListener('change',adventuredetails)
 diveKidscheck.addEventListener('change',adventuredetails)
 
+//Customer Information
+fnameInput.addEventListener('input',personalInformation)
+lnameInput.addEventListener('input',personalInformation)
+emailInput.addEventListener('input',personalInformation)
+phoneNumberInput.addEventListener('input',personalInformation)
+countryInput.addEventListener('input',personalInformation)
+
+
 //Check in and Out
 checkinInput.addEventListener('input',bookingdetails)
 checkoutInput.addEventListener('input',bookingdetails)
@@ -99,21 +115,21 @@ checkoutInput.addEventListener('input',bookingdetails)
 
 
 
+function personalInformation(){
+    let Fname = fnameInput.value;
+    let Lname = lnameInput.value;
+    let Email = emailInput.value;
+    let PhoneNumber = phoneNumberInput.value;
+    let Country = countryInput.value;
 
-// function personalInformation(){
-//     let Fname = fname.value;
-//     let Lname = lname.value;
-//     let Email = email.value;
-//     let PhoneNumber = phoneNumber.value;
-//     let Country = country.value;
+    NameOutput.innerHTML = `${Fname} ${Lname}`;
+    EmailOuput.innerHTML = `${Email}`;
+    PhoneOutput.innerHTML = `${PhoneNumber}`;
+    CountryOutput.innerHTML = `${Country}`;
 
-//     outputText.innerHTML = `
-// FIRST NAME   : ${Fname} <br><br>
-// LAST NAME    : ${Lname} <br><br>
-// EMAIL        : ${Email} <br><br>
-// PHONE NUMBER : ${PhoneNumber} <br><br>
-// COUNTRY      : ${Country} `;
-// }
+    
+    
+}
 
 
 
@@ -152,12 +168,11 @@ function bookingdetails(){
     let discountedvalue = totalbookingCost * 0.05;
 
     if (promocode == "Promo123"){
-
         totalbookingCost -= discountedvalue;
     }
 
     //Output
-    bookOutput.innerText = `LKR ${totalbookingCost}`;
+    bookOutput.innerHTML = `<u>LKR</u> ${totalbookingCost}`;
 
 }
 
@@ -175,6 +190,6 @@ function adventuredetails(){
         totaladventurecost += 500;
     }
 
-    advOutput.innerText = `LKR ${totaladventurecost}`;
+    advOutput.innerHTML = `<u>LKR</u> ${totaladventurecost}`;
 }
 
