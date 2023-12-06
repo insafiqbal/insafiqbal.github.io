@@ -27,6 +27,7 @@ const extrabedCheck = document.getElementById("extrabed")
 
 
 //Adventures
+const AdvDropDown = document.getElementById("AdvdropDown")
 const advNoneInput = document.getElementById("advNone")
 const advSkyInput = document.getElementById("advSky")
 const advCulInput = document.getElementById("advCul")
@@ -86,27 +87,6 @@ const BookTable = document.getElementById("booktable");
 //Adventure Table
 const AdvBookTable = document.getElementById("advbooktable");
 
-let total;
-//Room Prices
-let singleroom = 25000;
-let doubleroom = 35000;
-let tripleroom = 40000;
-
-//Extra Bed
-let extrabed = 8000;
-
-//Kids Meal
-let kidsmealvalue = 5000;
-
-//Adventure Rates
-let localadultrate = 5000;
-let localkidrate = 2000;
-let foreignadultrate = 10000;
-let foreignkidrate = 5000;
-
-//Guide Rates
-let adultguiderate = 1000;
-let kidguiderate = 500;
 
 
 //Booking Input
@@ -131,8 +111,6 @@ diveKidscheck.addEventListener('change',adventuredetails)
 // phoneNumberInput.addEventListener('input',personalInformation)
 // countryInput.addEventListener('input',personalInformation)
 
-
-
 //Check in and out current bookinh
 checkinInput.addEventListener('input',bookingdetails)
 checkoutInput.addEventListener('input',bookingdetails)
@@ -151,23 +129,35 @@ bookBtn.addEventListener('click', () => {2
     resetbooking();
 })
 
-// function personalInformation(){
-//     let Fname = fnameInput.value;
-//     let Lname = lnameInput.value;
-//     let Email = emailInput.value;
-//     let PhoneNumber = phoneNumberInput.value;
-//     let Country = countryInput.value;
+let total;
+//Room Prices
+let singleroom = 25000;
+let doubleroom = 35000;
+let tripleroom = 40000;
 
-//     NameOutput.innerHTML = `${Fname} ${Lname}`;
-//     EmailOuput.innerHTML = `${Email}`;
-//     PhoneOutput.innerHTML = `${PhoneNumber}`;
-//     CountryOutput.innerHTML = `${Country}`;   
-// }
+//Extra Bed
+let extrabed = 8000;
+
+//Kids Meal
+let kidsmealvalue = 5000;
+
+//Adventure Rates
+let localadultrate = 5000;
+let localkidrate = 2000;
+let foreignadultrate = 10000;
+let foreignkidrate = 5000;
+
+//Guide Rates
+let adultguiderate = 1000;
+let kidguiderate = 500;
 
 
+//FUNCTIONS
+
+//Booking Details
 function bookingdetails(){
     let totalprice = 0;
-
+    
     //Value for Rooms
     let Sroom = singleInput.value;
     let Droom = doubleInput.value;
@@ -195,135 +185,21 @@ function bookingdetails(){
     if (extrabedCheck.checked){
         totalbookingCost += 8000;
     }
-    
-    //Promo code 
-    let discountedvalue = totalbookingCost * 0.05;
 
+    //Promo Code
+    let discountedvalue = totalbookingCost * 0.05;
+    
     if (promocode == "Promo123"){
         totalbookingCost -= discountedvalue;
-    }
-
+    }  
+    
     //Output
     bookOutput.innerHTML = `<u>LKR</u> ${totalbookingCost}`;
 }
 
-//Reset Booking
-function resetbooking(){
-    document.getElementById('booking-form').reset();
 
-    bookOutput.innerHTML = `<u>LKR</u> 0.00`;
-    advOutput.innerHTML = `<u>LKR</u> 0.00`;
-}
 
-//Table Check in and Out Details
-// function CheckInOut(){
-//     let checkin = checkinInput.value;
-//     let checkout = checkoutInput.value;
-
-//     CheckInOutput.innerHTML = `${checkin}`;
-//     CheckoutOutput.innerHTML = `${checkout}`;
-// }
-
-// //Table Guest details
-// function guestdetails(){
-//      let adultsInput = noAdultsInput.value;
-//      let childrenInput = noChildrenInput.value;
-//      let kidsInput = kidsMealInput.value;
-
-//      AdultsOutput.innerHTML = `${adultsInput}`;
-//      ChildrenOutput.innerHTML = `${childrenInput}`;
-//      KidsMealOutput.innerHTML = `${kidsInput}`;
-// }
-
-// //Table Room Details
-// function roomdetails(){
-//     let SingleInput = singleInput.value;
-//     let DoubleInput = doubleInput.value;
-//     let TripleInput = tripleInput.value;
-
-//     SingleOutput.innerHTML = `${SingleInput}`;
-//     DoubleOutput.innerHTML = `${DoubleInput}`;
-//     TripleOutput.innerHTML = `${TripleInput}`;
-// }
-
-// //Table Addons Details
-// function addons(){
-//     if (wifiCheck.checked){
-//         WifiOutput.innerText = `Yes`;
-//     }else{
-//         WifiOutput.innerText = `No`;
-//     }
-
-//     if (poolCheck.checked){
-//         PoolOutput.innerText = `Yes`;
-//     }else{
-//         PoolOutput.innerText = `No`;
-//     }
-
-//     if (gardenCheck.checked){
-//         GardenOutput.innerText = `Yes`;
-//     }else{
-//         GardenOutput.innerText = `No`;
-//     }
-
-//     if (extrabedCheck.checked){
-//         BedOutput.innerText = `Yes`;
-//     }else{
-//         BedOutput.innerText = `No`;
-//     }
-// }
-
-function addbook(){
-
-    const overalbookingDetails = {
-
-        name: `${fnameInput.value} ${lnameInput.value}`,
-        checkInDate: checkinInput.value,
-        checkOutDate: checkoutInput.value,
-        AdultsInput: noAdultsInput.value,
-        ChildrenInput: noChildrenInput.value,
-        KidsInput: kidsMealInput.value,
-        singleinput: singleInput.value,
-        doubleinput: doubleInput.value,
-        triple: tripleInput.value,
-        wifi: wifiCheck.checked ? 'Yes' : 'No',
-        pool: poolCheck.checked ? 'Yes' : 'No',
-        garden: gardenCheck.checked ? 'Yes' : 'No',
-        extrabed: extrabedCheck.checked ? 'Yes' : 'No',
-        totalcost: bookOutput.innerHTML,
-    };
-
-    const newRow = BookTable.insertRow(-1);
-    for (const detail in overalbookingDetails) {
-        const newCell = newRow.insertCell();
-        newCell.textContent = overalbookingDetails[detail];
-    }
-}
-
-function advaddbook(){
-
-    const averagebookingdetails = {
-
-        name: `${fnameInput.value} ${lnameInput.value}`,
-        localadults: localAdultsInput.value,
-        localkids: localKidsInput.value,
-        foreignadults: foreignAdultsInput.value,
-        foreignkids: foreignKidsInput.value,
-        DiveAdult: diveAdultscheck.checked ? 'Yes' : 'No',
-        DiveKids: diveKidscheck.checked ? 'Yes' : 'No',
-        totalcost: advOutput.innerHTML,
-    };
-
-    const newRow = AdvBookTable.insertRow(-1);
-    for (const detail in averagebookingdetails) {
-        const newCell = newRow.insertCell();
-        newCell.textContent = averagebookingdetails[detail];
-    }
-}
-
-//Reset Booking
-bookBtn.addEventListener('click',resetbooking)
-
+//Adventure Booking
 function adventuredetails(){
     let localAdult = localAdultsInput.value;
     let localKid = localKidsInput.value;
@@ -340,4 +216,69 @@ function adventuredetails(){
 
     advOutput.innerHTML = `<u>LKR</u> ${totaladventurecost}`;
 }
+
+//Reset Booking
+function resetbooking(){
+    document.getElementById('booking-form').reset();
+    
+    bookOutput.innerHTML = `<u>LKR</u> 0.00`;
+    advOutput.innerHTML = `<u>LKR</u> 0.00`;
+}
+
+
+function addbook(){
+    
+    const overalbookingDetails = {
+        
+        name: `${fnameInput.value} ${lnameInput.value}`,
+        checkInDate: checkinInput.value,
+        checkOutDate: checkoutInput.value,
+        AdultsInput: noAdultsInput.value,
+        ChildrenInput: noChildrenInput.value,
+        KidsInput: kidsMealInput.value,
+        singleinput: singleInput.value,
+        doubleinput: doubleInput.value,
+        triple: tripleInput.value,
+        wifi: wifiCheck.checked ? 'Yes' : 'No',
+        pool: poolCheck.checked ? 'Yes' : 'No',
+        garden: gardenCheck.checked ? 'Yes' : 'No',
+        extrabed: extrabedCheck.checked ? 'Yes' : 'No',
+        totalcost: bookOutput.innerText,
+    };
+
+    const newRow = BookTable.insertRow(-1);
+    for (const detail in overalbookingDetails) {
+        const newCell = newRow.insertCell();
+        newCell.textContent = overalbookingDetails[detail];
+    }
+}
+
+function advaddbook(){
+
+    const averagebookingdetails = {
+
+        name: `${fnameInput.value} ${lnameInput.value}`,
+        dropdown: selectedValue = AdvDropDown.value,
+        localadults: localAdultsInput.value,
+        localkids: localKidsInput.value,
+        foreignadults: foreignAdultsInput.value,
+        foreignkids: foreignKidsInput.value,
+        DiveAdult: diveAdultscheck.checked ? 'Yes' : 'No',
+        DiveKids: diveKidscheck.checked ? 'Yes' : 'No',
+        totalcost: advOutput.innerText,
+    };
+
+    const newRow = AdvBookTable.insertRow(-1);
+    for (const detail in averagebookingdetails) {
+        const newCell = newRow.insertCell();
+        newCell.textContent = averagebookingdetails[detail];
+    }
+}
+
+//Reset Booking
+bookBtn.addEventListener('click',resetbooking)
+advBookBtn.addEventListener('click',resetbooking)
+
+
+
 
