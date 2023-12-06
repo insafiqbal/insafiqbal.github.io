@@ -1453,6 +1453,7 @@ iframe{
     margin: 180px auto;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
 }
 
 .table-customer{
@@ -1460,18 +1461,28 @@ iframe{
     flex-direction: column;
 }
 
+.table-customer table{
+    width: 95%;
+}
+
 
 .table-customer tbody tr th{
     background-color: #D4AF37;
     text-align: center;
+    font-weight: 500;
+    font-size: 13px;
     color: #063d45;
     margin-left: 6rem;
+}
+
+.table-data{
+    color: #000;
 }
 
 .table-customer div{
     display: flex;
     justify-content: center;
-    font-size: 30px;
+    /* font-size: 30px; */
     text-transform: uppercase;
     color: var(--color);
     font-weight: 600;
@@ -1496,7 +1507,6 @@ iframe{
     background-color: #063d45;
     color: aliceblue;
     padding: 10px;
-    font-size: 13px;
     text-transform: uppercase;
 }
 
@@ -1970,7 +1980,7 @@ iframe{
 
     .table tbody tr td{
         padding: 15px;
-        font-size: 18px;
+        font-size: 10px;
     } 
 
     .restaurant_title{
@@ -1989,6 +1999,8 @@ iframe{
 
 /* Medium */
 @media (min-width:856px){
+
+    
 
     .output_align{
         width: 100%;
@@ -2275,6 +2287,7 @@ iframe{
     .table tbody tr td{
         background-color: #063d45;
         color: aliceblue;
+        font-size: 5px;
         padding: 20px;
     }
 
@@ -2338,6 +2351,10 @@ iframe{
 
     .meetingstext{
         padding: 200px 200px;
+    }
+
+    .table-customer tbody tr td{
+        font-size: 2px;
     }
 }
 
@@ -3000,8 +3017,9 @@ iframe{
         text-align: center;
         align-items: center;
         justify-content: center;
-
     }
+
+
 
     .table{
         width: 80%;
@@ -3019,7 +3037,7 @@ iframe{
         background-color: #063d45;
         color: aliceblue;
         padding: 15px;
-        font-size: 15px;
+        font-size: 10px;
         text-transform: uppercase;
     }
 
