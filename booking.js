@@ -119,15 +119,14 @@ checkoutInput.addEventListener('input',bookingdetails)
 bookBtn.addEventListener('click', addbook)
 advBookBtn.addEventListener('click', advaddbook)
 
+//Validation
+// bookBtn.addEventListener('click',validateForm)
+
 
 //Check in and Out
-bookBtn.addEventListener('click', () => {2
-    CheckInOut();
-    guestdetails();
-    roomdetails();
-    addons();
+bookBtn.addEventListener('click', () => {
     resetbooking();
-})
+});
 
 let total;
 //Room Prices
@@ -227,9 +226,9 @@ function resetbooking(){
 
 
 function addbook(){
+    let validation = validateForm();
     
     const overalbookingDetails = {
-        
         name: `${fnameInput.value} ${lnameInput.value}`,
         checkInDate: checkinInput.value,
         checkOutDate: checkoutInput.value,
@@ -246,10 +245,12 @@ function addbook(){
         totalcost: bookOutput.innerText,
     };
 
-    const newRow = BookTable.insertRow(-1);
-    for (const detail in overalbookingDetails) {
-        const newCell = newRow.insertCell();
-        newCell.textContent = overalbookingDetails[detail];
+    if (validation == true) {
+        const newRow = BookTable.insertRow(-1);
+        for (const detail in overalbookingDetails) {
+            const newCell = newRow.insertCell();
+            newCell.textContent = overalbookingDetails[detail];
+        }
     }
 }
 
@@ -274,6 +275,53 @@ function advaddbook(){
         newCell.textContent = averagebookingdetails[detail];
     }
 }
+
+//Validation
+
+function validateForm() {
+    const fnameInput = document.getElementById("firstName").value.trim();
+    const lnameInput = document.getElementById("lastName").value.trim();
+    const emailInput = document.getElementById("email").value.trim();
+    const phoneNumberInput = document.getElementById("phoneNumber").value.trim();
+    const countryInput = document.getElementById("country").value.trim();
+  
+    // Check if any of the required fields are empty
+    if (fnameInput === '') {
+      alert("Please Enter First Name");
+      return false;
+    } if (lnameInput === '') {
+        alert("Please Enter Last Name");
+        return false;
+    } if (emailInput === ''){
+        alert("Please Enter Your Email");
+        return false;
+    } if (phoneNumberInput === ''){
+        alert("Please Enter Your Phone Number");
+        return false;
+    } if (countryInput === ''){
+        alert("Please Enter Your Country");
+        return false;
+    }
+  
+    // Validation for email format (optional)
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailInput)) {
+      alert("Please enter a valid email address.");
+      return false; // Prevent form submission
+    }
+  
+    // Validation for phone number format (optional)
+    const phonePattern = /^\d{10}$/; // Assuming a 10-digit phone number
+    if (!phonePattern.test(phoneNumberInput)) {
+      alert("Please enter a valid 10-digit phone number.");
+      return false; // Prevent form submission
+    }
+  
+    // Additional validations for other fields can be added here if needed
+  
+    return true; // Allow form submission if all validations pass
+  }
+  
 
 //Reset Booking
 bookBtn.addEventListener('click',resetbooking)
