@@ -492,6 +492,18 @@ a{
 
 /*Book Page*/
 
+#loyaltyOutput{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--colormetallicgold);
+    min-height: 2.4rem;
+    background-color: aliceblue;
+    border-radius: 10px;
+    width: 50%;    
+    padding: 7px 10px;
+}
+
 .price{
     position: fixed;
     bottom: 30px;

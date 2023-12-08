@@ -48,18 +48,20 @@ const loyalpointsInput = document.getElementById("loyalpoints")
 const advBookBtn = document.getElementById("book_adv_btn")
 const bookBtn = document.getElementById("book_btn")
 const favBookBtn = document.getElementById("book_fav_btn")
+const LoyalBtn = document.getElementById("loyalBtn")
 
 
 //Output
 const bookOutput = document.getElementById("bookingOutput");
 const advOutput = document.getElementById("advbookingOutput");
 const customerOutput = document.getElementById("customerOutput");
+const LoyaltyOutput = document.getElementById("loyaltyOutput");
 
 //customerOutput
-const NameOutput = document.getElementById("nameOutput");
-const EmailOuput = document.getElementById("emailOutput");
-const PhoneOutput = document.getElementById("phonenumberOuput");
-const CountryOutput = document.getElementById("countryOutput");
+// const NameOutput = document.getElementById("nameOutput");
+// const EmailOuput = document.getElementById("emailOutput");
+// const PhoneOutput = document.getElementById("phonenumberOuput");
+// const CountryOutput = document.getElementById("countryOutput");
 
 //Check in and out Output
 const CheckInOutput = document.getElementById("checkinOutput");
@@ -96,6 +98,7 @@ tripleInput.addEventListener('input',bookingdetails);
 kidsMealInput.addEventListener('input',bookingdetails);
 extrabedCheck.addEventListener('change',bookingdetails);
 bookBtn.addEventListener('click',bookingdetails);
+LoyalBtn.addEventListener('click',checkLoyalty);
 
 //Adventure Booking Input
 localAdultsInput.addEventListener('input',adventuredetails)
@@ -125,10 +128,9 @@ advBookBtn.addEventListener('click', advaddbook)
 
 //Check in and Out
 bookBtn.addEventListener('click', () => {
-    resetbooking();
+    resetbooking(); 
 });
 
-let total;
 //Room Prices
 let singleroom = 25000;
 let doubleroom = 35000;
@@ -152,6 +154,8 @@ let kidguiderate = 500;
 
 
 //FUNCTIONS
+//global variables
+
 
 //Booking Details
 function bookingdetails(){
@@ -196,6 +200,32 @@ function bookingdetails(){
     bookOutput.innerHTML = `<u>LKR</u> ${totalbookingCost}`;
 }
 
+//Loyalty 
+function checkLoyalty(){
+
+
+    const Sroom = parseInt(singleInput.value);
+    const Droom = parseInt(doubleInput.value);
+    const Troom = parseInt(tripleInput.value);
+
+    let totalRooms = 0;
+
+    if ((!isNaN(Sroom) && Sroom > 0)){
+        totalRooms += Sroom;
+    }if ((!isNaN(Droom) && Droom > 0)){
+        totalRooms += Droom;
+    }if ((!isNaN(Troom) && Troom > 0)){
+        totalRooms += Troom;
+    };
+    
+
+    if(totalRooms > 3){
+        points = totalRooms*20;
+    }
+
+    LoyaltyOutput.innerHTML = `${points} points`;
+    
+}
 
 
 //Adventure Booking
@@ -279,15 +309,16 @@ function advaddbook(){
 //Validation
 
 function validateForm() {
-    const fnameInput = document.getElementById("firstName").value.trim();
+    const fname = document.getElementById("firstName").value.trim();
     const lnameInput = document.getElementById("lastName").value.trim();
     const emailInput = document.getElementById("email").value.trim();
     const phoneNumberInput = document.getElementById("phoneNumber").value.trim();
     const countryInput = document.getElementById("country").value.trim();
   
     // Check if any of the required fields are empty
-    if (fnameInput === '') {
+    if (fname === '') {
       alert("Please Enter First Name");
+      fnameInput.scrollIntoView({ behavior: 'smooth', block: 'center'});
       return false;
     } if (lnameInput === '') {
         alert("Please Enter Last Name");
