@@ -545,6 +545,20 @@ a{
     width: 95%;
 }
 
+#totalcostOutput{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--color);
+    width: 95%;
+}
+
+#totalcostOutput u{
+    text-decoration: none;
+    font-size: 10px;
+}
+
+
 #advbookingOutput u{
     text-decoration: none;
     font-size: 10px;
@@ -1093,8 +1107,6 @@ a{
     color: var(--colormetallicgold);
 }
 
-
-
 /*Book Page End*/
 
 /*Adventures Page*/
@@ -1475,16 +1487,15 @@ iframe{
 
 .table-customer table{
     width: 95%;
+    font-size: 8.5px;
+
 }
 
-
-.table-customer tbody tr th{
+.table-customer thead tr td{
     background-color: #D4AF37;
     text-align: center;
     font-weight: 500;
-    font-size: 13px;
     color: #063d45;
-    margin-left: 6rem;
 }
 
 .table-data{
@@ -1494,23 +1505,22 @@ iframe{
 .table-customer div{
     display: flex;
     justify-content: center;
-    /* font-size: 30px; */
     text-transform: uppercase;
     color: var(--color);
     font-weight: 600;
     margin-top: 100px;
     margin-bottom: 20px;
-}
+} 
 
 .table-customer table{
     margin: 0;
-}
+} 
 
-.table thead tr th{
+.table thead tr td{
     background-color: #D4AF37;
     color: #063d45;
     padding: 10px;
-    font-size: 13px;
+    font-size: 5px;
     font-weight: 800;
     text-transform: uppercase;
 }
@@ -2293,7 +2303,7 @@ iframe{
 
     .table thead tr th{
         background-color: #D4AF37;
-        padding: 20px;
+        padding: 15px;
     }
 
     .table tbody tr td{
@@ -2365,8 +2375,10 @@ iframe{
         padding: 200px 200px;
     }
 
-    .table-customer tbody tr td{
-        font-size: 2px;
+    .table-customer thead tr td{
+        font-size: 13px;
+        font-weight: 600;
+        border: 1px solid #063d45;
     }
 }
 
@@ -3030,9 +3042,7 @@ iframe{
         align-items: center;
         justify-content: center;
     }
-
-
-
+    
     .table{
         width: 80%;
     }
@@ -3040,14 +3050,16 @@ iframe{
     .table thead tr th{
         background-color: #D4AF37;
         padding: 10px;
-        font-size: 20px;
-        font-weight: 800;
+        font-size: 10px;
+        border: 1px solid white;
+        font-weight: 600;
         text-transform: uppercase;
     }
 
     .table tbody tr td{
         background-color: #063d45;
-        color: aliceblue;
+        color: var(--colormetallicgold);
+        border: 1px solid var(--colorgold);
         padding: 15px;
         font-size: 10px;
         text-transform: uppercase;

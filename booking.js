@@ -11,8 +11,6 @@ const checkoutInput = document.getElementById("checkout")
 const noAdultsInput = document.getElementById("noAdults")
 const noChildrenInput = document.getElementById("noChildren")
 const kidsMealInput = document.getElementById("kidsMeal")
-const noRoomsInput = document.getElementById("noRooms")
-
 
 //Room Type
 const singleInput = document.getElementById("single")
@@ -56,6 +54,7 @@ const bookOutput = document.getElementById("bookingOutput");
 const advOutput = document.getElementById("advbookingOutput");
 const customerOutput = document.getElementById("customerOutput");
 const LoyaltyOutput = document.getElementById("loyaltyOutput");
+const TotalcostOutput = document.getElementById("totalcostOutput");
 
 //customerOutput
 // const NameOutput = document.getElementById("nameOutput");
@@ -63,28 +62,31 @@ const LoyaltyOutput = document.getElementById("loyaltyOutput");
 // const PhoneOutput = document.getElementById("phonenumberOuput");
 // const CountryOutput = document.getElementById("countryOutput");
 
-//Check in and out Output
-const CheckInOutput = document.getElementById("checkinOutput");
-const CheckoutOutput = document.getElementById("checkoutOuput");
+// //Check in and out Output
+// const CheckInOutput = document.getElementById("checkinOutput");
+// const CheckoutOutput = document.getElementById("checkoutOuput");
 
-//Guest Output
-const AdultsOutput = document.getElementById("noAdultsOutput");
-const ChildrenOutput = document.getElementById("noChildrenOutput");
-const KidsMealOutput = document.getElementById("kidsMealOutput");
+// //Guest Output
+// const AdultsOutput = document.getElementById("noAdultsOutput");
+// const ChildrenOutput = document.getElementById("noChildrenOutput");
+// const KidsMealOutput = document.getElementById("kidsMealOutput");
 
-//RoomType Output
-const SingleOutput = document.getElementById("singleroomOutput");
-const DoubleOutput = document.getElementById("doubleroomOutput");
-const TripleOutput = document.getElementById("tripleroomOutput");
+// //RoomType Output
+// const SingleOutput = document.getElementById("singleroomOutput");
+// const DoubleOutput = document.getElementById("doubleroomOutput");
+// const TripleOutput = document.getElementById("tripleroomOutput");
 
-//AddOns Output
-const WifiOutput = document.getElementById("wifiOutput");
-const PoolOutput = document.getElementById("poolOutput");
-const GardenOutput = document.getElementById("gardenOutput");
-const BedOutput = document.getElementById("bedOutput");
+// //AddOns Output
+// const WifiOutput = document.getElementById("wifiOutput");
+// const PoolOutput = document.getElementById("poolOutput");
+// const GardenOutput = document.getElementById("gardenOutput");
+// const BedOutput = document.getElementById("bedOutput");
+
+//Customer Table
+const CustomerTable = document.getElementById("customerbooktable");
 
 //Table
-const BookTable = document.getElementById("booktable");
+const RoomTable = document.getElementById("booktable");
 
 //Adventure Table
 const AdvBookTable = document.getElementById("advbooktable");
@@ -108,27 +110,45 @@ foreignKidsInput.addEventListener('input',adventuredetails)
 diveAdultscheck.addEventListener('change',adventuredetails)
 diveKidscheck.addEventListener('change',adventuredetails)
 
-//Customer Information
-// bookBtn.addEventListener('click',personalInformation)
-// emailInput.addEventListener('input',personalInformation)
-// phoneNumberInput.addEventListener('input',personalInformation)
-// countryInput.addEventListener('input',personalInformation)
+//Total Booking
+// singleInput.addEventListener('input',calculateTotalCost)
+// doubleInput.addEventListener('input',calculateTotalCost)
+// tripleInput.addEventListener('input',calculateTotalCost)
+// kidsMealInput.addEventListener('input',calculateTotalCost)
+// extrabedCheck.addEventListener('change',calculateTotalCost)
 
-//Check in and out current bookinh
+// localAdultsInput.addEventListener('input',calculateTotalCost)
+// localKidsInput.addEventListener('input',calculateTotalCost)
+// foreignAdultsInput.addEventListener('input',calculateTotalCost)
+// foreignKidsInput.addEventListener('input',calculateTotalCost)
+// diveAdultscheck.addEventListener('change',calculateTotalCost)
+// diveKidscheck.addEventListener('change',calculateTotalCost)
+
+//Customer Information
+// bookBtn.addEventListener('click',customerTable)
+// emailInput.addEventListener('input',customerTable)
+// phoneNumberInput.addEventListener('input',customerTable)
+// countryInput.addEventListener('input',customerTable)
+
+//Check in and out current booking
 checkinInput.addEventListener('input',bookingdetails)
 checkoutInput.addEventListener('input',bookingdetails)
 
 //Table Additon
-bookBtn.addEventListener('click', addbook)
-advBookBtn.addEventListener('click', advaddbook)
 
-//Validation
-// bookBtn.addEventListener('click',validateForm)
-
-
-//Check in and Out
 bookBtn.addEventListener('click', () => {
-    resetbooking(); 
+    if (validateForm()) {
+        customerTable();
+        addbook();
+        resetbooking(); 
+    }
+});
+
+advBookBtn.addEventListener('click', () => {
+    if (advvalidateForm()){
+        advaddbook();
+        resetbooking(); 
+    }
 });
 
 //Room Prices
@@ -153,9 +173,7 @@ let adultguiderate = 1000;
 let kidguiderate = 500;
 
 
-//FUNCTIONS
-//global variables
-
+//Side POP UP
 
 //Booking Details
 function bookingdetails(){
@@ -186,7 +204,7 @@ function bookingdetails(){
 
     //Extra Bed checking
     if (extrabedCheck.checked){
-        totalbookingCost += 8000;
+        totalbookingCost += (8000*Sroom) + (8000*Droom) + (8000*Troom);
     }
 
     //Promo Code
@@ -198,38 +216,13 @@ function bookingdetails(){
     
     //Output
     bookOutput.innerHTML = `<u>LKR</u> ${totalbookingCost}`;
+
+    return totalbookingCost;
 }
-
-//Loyalty 
-function checkLoyalty(){
-
-
-    const Sroom = parseInt(singleInput.value);
-    const Droom = parseInt(doubleInput.value);
-    const Troom = parseInt(tripleInput.value);
-
-    let totalRooms = 0;
-
-    if ((!isNaN(Sroom) && Sroom > 0)){
-        totalRooms += Sroom;
-    }if ((!isNaN(Droom) && Droom > 0)){
-        totalRooms += Droom;
-    }if ((!isNaN(Troom) && Troom > 0)){
-        totalRooms += Troom;
-    };
-    
-
-    if(totalRooms > 3){
-        points = totalRooms*20;
-    }
-
-    LoyaltyOutput.innerHTML = `${points} points`;
-    
-}
-
 
 //Adventure Booking
 function adventuredetails(){
+
     let localAdult = localAdultsInput.value;
     let localKid = localKidsInput.value;
     let foreignAdult = foreignAdultsInput.value;
@@ -244,6 +237,33 @@ function adventuredetails(){
     }
 
     advOutput.innerHTML = `<u>LKR</u> ${totaladventurecost}`;
+
+    return totaladventurecost;
+}
+
+//Loyalty 
+function checkLoyalty(){
+
+    const Sroom = parseInt(singleInput.value);
+    const Droom = parseInt(doubleInput.value);
+    const Troom = parseInt(tripleInput.value);
+
+    let totalRooms = 0;
+
+    if ((!isNaN(Sroom) && Sroom > 0)){
+        totalRooms += Sroom;
+    }if ((!isNaN(Droom) && Droom > 0)){
+        totalRooms += Droom;
+    }if ((!isNaN(Troom) && Troom > 0)){
+        totalRooms += Troom;
+    };
+
+    if(totalRooms > 3){
+        points = totalRooms*20;
+    }
+
+    LoyaltyOutput.innerHTML = `${points} points`;
+
 }
 
 //Reset Booking
@@ -254,109 +274,254 @@ function resetbooking(){
     advOutput.innerHTML = `<u>LKR</u> 0.00`;
 }
 
+//TABLES
 
-function addbook(){
-    let validation = validateForm();
-    
-    const overalbookingDetails = {
+//Customer Table 
+function customerTable(){
+
+    const customerdetails = {
         name: `${fnameInput.value} ${lnameInput.value}`,
-        checkInDate: checkinInput.value,
-        checkOutDate: checkoutInput.value,
-        AdultsInput: noAdultsInput.value,
-        ChildrenInput: noChildrenInput.value,
-        KidsInput: kidsMealInput.value,
-        singleinput: singleInput.value,
-        doubleinput: doubleInput.value,
-        triple: tripleInput.value,
-        wifi: wifiCheck.checked ? 'Yes' : 'No',
-        pool: poolCheck.checked ? 'Yes' : 'No',
-        garden: gardenCheck.checked ? 'Yes' : 'No',
-        extrabed: extrabedCheck.checked ? 'Yes' : 'No',
-        totalcost: bookOutput.innerText,
+        Email: emailInput.value,
+        PhoneNumber: phoneNumberInput.value,
+        country: countryInput.value,
     };
 
-    if (validation == true) {
-        const newRow = BookTable.insertRow(-1);
-        for (const detail in overalbookingDetails) {
-            const newCell = newRow.insertCell();
-            newCell.textContent = overalbookingDetails[detail];
-        }
+    const newRow = CustomerTable.insertRow(-1);
+    for (const detail in customerdetails) {
+        const newCell = newRow.insertCell();
+        newCell.textContent = customerdetails[detail];
     }
+
+
 }
 
+//Booking Table
+function addbook(){
+    const name = `${fnameInput.value} ${lnameInput.value}`;
+    const checkInDate = checkinInput.value;
+    const checkOutDate = checkoutInput.value;
+    const AdultsInput = noAdultsInput.value || 0;
+    const ChildrenInput = noChildrenInput.value || 0;
+    const KidsInput = kidsMealInput.value || 0;
+    const singleinput = singleInput.value || 0;
+    const doubleinput = doubleInput.value || 0;
+    const triple = tripleInput.value || 0;
+    const wifi = wifiCheck.checked ? 'Yes' : 'No';
+    const pool = poolCheck.checked ? 'Yes' : 'No';
+    const garden = gardenCheck.checked ? 'Yes' : 'No';
+    const extrabed = extrabedCheck.checked ? 'Yes' : 'No';
+    const promocode = promocodeInput.value ? 'Yes' : 'No';
+    const totalcost = bookingdetails();
+
+    const newRow = RoomTable.insertRow(-1);
+
+    const cells = [
+        name,
+        checkInDate,
+        checkOutDate,
+        AdultsInput,
+        ChildrenInput,
+        KidsInput,
+        singleinput,
+        doubleinput,
+        triple,
+        wifi,
+        pool,
+        garden,
+        extrabed,
+        promocode,
+        `LKR ${totalcost}`
+    ];
+
+    cells.forEach((cellData, index) => {
+        const cell = newRow.insertCell(index);
+        cell.textContent = cellData;
+    });
+
+    alert(`You Have Placed Your Booking`);
+    
+}
+
+//Adventure Booking Table
 function advaddbook(){
-
-    const averagebookingdetails = {
-
-        name: `${fnameInput.value} ${lnameInput.value}`,
-        dropdown: selectedValue = AdvDropDown.value,
-        localadults: localAdultsInput.value,
-        localkids: localKidsInput.value,
-        foreignadults: foreignAdultsInput.value,
-        foreignkids: foreignKidsInput.value,
-        DiveAdult: diveAdultscheck.checked ? 'Yes' : 'No',
-        DiveKids: diveKidscheck.checked ? 'Yes' : 'No',
-        totalcost: advOutput.innerText,
-    };
+    
+    const name = `${fnameInput.value} ${lnameInput.value}`;
+    const dropdown =  AdvDropDown.value;
+    const localadults = localAdultsInput.value || 0;
+    const localkids = localKidsInput.value || 0;
+    const foreignadults = foreignAdultsInput.value || 0;
+    const foreignkids = foreignKidsInput.value || 0;
+    const DiveAdult = diveAdultscheck.checked ? 'Yes' : 'No';
+    const DiveKids = diveKidscheck.checked ? 'Yes' : 'No';
+    const totalcost = adventuredetails();
 
     const newRow = AdvBookTable.insertRow(-1);
-    for (const detail in averagebookingdetails) {
-        const newCell = newRow.insertCell();
-        newCell.textContent = averagebookingdetails[detail];
-    }
+    
+    const cells = [
+        name,
+        dropdown,
+        localadults,
+        localkids,
+        foreignadults,
+        foreignkids,
+        DiveAdult,
+        DiveKids,
+        `LKR ${totalcost}`
+    ];
+
+    cells.forEach((cellData, index) => {
+        const cell = newRow.insertCell(index);
+        cell.textContent = cellData;
+    });
+
+    alert(`You have successfully booked ${dropdown}`);
 }
 
-//Validation
-
 function validateForm() {
-    const fname = document.getElementById("firstName").value.trim();
+
+    //Customer Details
+    const fnameInput = document.getElementById("firstName").value.trim();
     const lnameInput = document.getElementById("lastName").value.trim();
     const emailInput = document.getElementById("email").value.trim();
     const phoneNumberInput = document.getElementById("phoneNumber").value.trim();
     const countryInput = document.getElementById("country").value.trim();
-  
+
+    //Booking Details
+    const checkIn = checkinInput.value.trim();
+    const checkOut = checkoutInput.value.trim();
+    const adults = noAdultsInput.value.trim();
+    const singleRooms = parseInt(singleInput.value) || 0;
+    const doubleRooms = parseInt(doubleInput.value) || 0;
+    const tripleRooms = parseInt(tripleInput.value) || 0;
+    
     // Check if any of the required fields are empty
-    if (fname === '') {
+    if (fnameInput === '') {
       alert("Please Enter First Name");
-      fnameInput.scrollIntoView({ behavior: 'smooth', block: 'center'});
+      document.getElementById("firstName").scrollIntoView({ behavior: 'smooth', block: 'center' });
       return false;
-    } if (lnameInput === '') {
-        alert("Please Enter Last Name");
-        return false;
-    } if (emailInput === ''){
-        alert("Please Enter Your Email");
-        return false;
-    } if (phoneNumberInput === ''){
+    }
+
+    if (lnameInput === '') {
+      alert("Please Enter Last Name");
+      return false;
+    }
+
+    if (emailInput === '') {
+      alert("Please Enter Your Email");
+      return false;
+    }
+    
+    if (phoneNumberInput === '') {
         alert("Please Enter Your Phone Number");
         return false;
-    } if (countryInput === ''){
+    }
+    
+    if (countryInput === '') {
         alert("Please Enter Your Country");
         return false;
     }
-  
-    // Validation for email format (optional)
+
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(emailInput)) {
       alert("Please enter a valid email address.");
-      return false; // Prevent form submission
+      return false; 
     }
   
-    // Validation for phone number format (optional)
-    const phonePattern = /^\d{10}$/; // Assuming a 10-digit phone number
+    const phonePattern = /^\d{10}$/; 
     if (!phonePattern.test(phoneNumberInput)) {
       alert("Please enter a valid 10-digit phone number.");
-      return false; // Prevent form submission
+      return false; 
+    }
+
+    if (checkIn === '') {
+        alert('Please select the Check-In Date.');
+        return false;
+    }
+
+    if (checkOut === '') {
+        alert('Please select the Check-Out Date.');
+        return false;
+    }
+
+    if (!adults > 0){
+        alert('Please enter at least one adult.');
+        return false;
+    }
+
+    if (!(singleRooms > 0 || doubleRooms > 0 || tripleRooms > 0)) {
+        alert('Please select atleast one room.');
+        return false;
     }
   
-    // Additional validations for other fields can be added here if needed
-  
-    return true; // Allow form submission if all validations pass
-  }
+    return true;
+}
   
 
-//Reset Booking
-bookBtn.addEventListener('click',resetbooking)
-advBookBtn.addEventListener('click',resetbooking)
+function advvalidateForm() {
+
+    //Customer Details
+    const fnameInput = document.getElementById("firstName").value.trim();
+    const lnameInput = document.getElementById("lastName").value.trim();
+    const emailInput = document.getElementById("email").value.trim();
+    const phoneNumberInput = document.getElementById("phoneNumber").value.trim();
+    const countryInput = document.getElementById("country").value.trim();
+
+    //Adventure Booking
+    const advType = AdvDropDown.value
+    const localAdultsInput = document.getElementById("localadults")
+    const localKidsInput = document.getElementById("localkids")
+    const foreignAdultsInput = document.getElementById("foreignadults")
+    const foreignKidsInput = document.getElementById("foreignkids")
+
+    if (fnameInput === '') {
+        alert("Please Enter First Name");
+        document.getElementById("firstName").scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return false;
+    }
+  
+      if (lnameInput === '') {
+        alert("Please Enter Last Name");
+        return false;
+      }
+  
+      if (emailInput === '') {
+        alert("Please Enter Your Email");
+        return false;
+      }
+      
+      if (phoneNumberInput === '') {
+          alert("Please Enter Your Phone Number");
+          return false;
+      }
+      
+      if (countryInput === '') {
+          alert("Please Enter Your Country");
+          return false;
+      }
+  
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(emailInput)) {
+        alert("Please enter a valid email address.");
+        return false; 
+      }
+    
+      const phonePattern = /^\d{10}$/; 
+      if (!phonePattern.test(phoneNumberInput)) {
+        alert("Please enter a valid 10-digit phone number.");
+        return false; 
+      }
+
+      if (advType === 'none') {
+        alert('Please select an Adventure Type.');
+        return false;
+    }
+
+    // if (!(localAdultsInput > 0 || localKidsInput > 0 || foreignAdultsInput > 0 || foreignKidsInput > 0 ))  {
+    //     alert(`Please enter atleast one person for ${advType}`);
+    //     return false;
+    // }
+    return true
+}
 
 
 

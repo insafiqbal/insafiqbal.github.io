@@ -161,7 +161,7 @@
                             <div class="book_buttons">
 
                                 <div class="book_adv_btn">
-                                    <input type="submit" id="book_adv_btn" value="book adventure" name="book">
+                                    <input type="button" id="book_adv_btn" value="book adventure" name="book">
                                 </div>
                             </div>
 
@@ -300,26 +300,6 @@
                 </div>
             </form>
 
-            <!-- <div class="output">
-                    <div class="output_align">
-                        
-                        <div class="guestOutput">
-                            <h1>Guest Details</h1>
-                            <p id="output"></p>
-                        </div>
-
-                        <div class="bookOutput">
-                            <h1>Booking Information</h1>
-                            <p id="bookingOutput"></p>
-                        </div>
-
-                        <div class="advOutput">     
-                            <h1>adventure Booking</h1>
-                            <p id="advbookingOutput"></p>
-                        </div>
-                    </div>
-            </div> -->
-
 
             <!-- Current Ouptut  -->
             <section class="price">
@@ -330,49 +310,72 @@
 
                 <span>Total Adventure Price</span><br>
                 <p id="advbookingOutput"><u>LKR</u> 0.00</p>
+                
+
+
             </section>
         </section>
 
         <section class="table-customer">
-            <div>Overall Booking</div>
-                <table class="table" id="booktable">
-                    <tbody id="booklist">
+            <div>Customer Details</div>
+                <table class="table">
+                    <thead id="booklist">
                         <tr>
-                            <th>Name</th>
-                            <th>Check-In</th>
-                            <th>Check-Out</th>
-                            <th>Adults</th>
-                            <th>Children</th>
-                            <th>Above 5 years</th>
-                            <th>Single Room</th>
-                            <th>Double Rooms</th>
-                            <th>Triple Rooms</th>
-                            <th>WI-FI</th>
-                            <th>Pool View</th>
-                            <th>Garden View</th>
-                            <th>Extra Bed</th>
-                            <th>Total Cost</th>
+                            <td>Name</td>
+                            <td>E-Mail</td>
+                            <td>Phone Number</td>
+                            <td>Country</td>
                         </tr>
+                    </thead>
+                    <tbody id="customerbooktable">
                     </tbody>
-                
+                </table>     
+        </section>
+
+        <section class="table-customer">
+            <div>Reservation</div>
+                <table class="table">
+                    <thead id="booklist">
+                        <tr>
+                            <td>Name</td>
+                            <td>Check-In</td>
+                            <td>Check-Out</td>
+                            <td>Adults</td>
+                            <td>Children</td>
+                            <td>Above 5 years</td>
+                            <td>Single Room</td>
+                            <td>Double Rooms</td>
+                            <td>Triple Rooms</td>
+                            <td>WI-FI</td>
+                            <td>Pool View</td>
+                            <td>Garden View</td>
+                            <td>Extra Bed</td>
+                            <td>Promo Code</td>
+                            <td>Total Cost</td>
+                        </tr>
+                    </thead>
+                    <tbody id="booktable">
+                    </tbody>
                 </table>     
         </section>
 
         <section class="table-customer">
             <div>Adventure Booking</div>
-                <table class="table" id="advbooktable">
-                    <tbody>
+                <table class="table">
+                    <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>ADVENTURES</th>
-                            <th>LOCAL ADULTS</th>
-                            <th>LOCAL KIDS</th>
-                            <th>FOREIGN ADULTS</th>
-                            <th>FOREIGN KIDS</th>
-                            <th>GUIDE FOR DIVING (Adults)</th>
-                            <th>GUIDE FOR DIVING (Kids)</th>.
-                            <th>Total Cost</th>.
+                            <td>Name</td>
+                            <td>ADVENTURES</td>
+                            <td>LOCAL ADULTS</td>
+                            <td>LOCAL KIDS</td>
+                            <td>FOREIGN ADULTS</td>
+                            <td>FOREIGN KIDS</td>
+                            <td>GUIDE FOR DIVING (Adults)</td>
+                            <td>GUIDE FOR DIVING (Kids)</td>.
+                            <td>Total Cost</td>.
                         </tr>
+                    </thead>
+                    <tbody id="advbooktable">
                     </tbody>
                 
                 </table>     
