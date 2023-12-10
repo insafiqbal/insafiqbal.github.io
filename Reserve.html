@@ -90,15 +90,6 @@
                     </fieldset>
                 </div>
 
-                            <!-- <div class="output_book_personal">
-                                <fieldset>
-                                    <legend>Customer Information</legend>
-
-                                    <p id="customerOutput"></p>
-                                </fieldset>
-                            </div> -->
-                        
-
                 
                     <div class="book_personal">
                         
@@ -168,16 +159,6 @@
                         </fieldset>
                         
                     </div>
-
-                    <!-- <div class="output_book_personal">
-                        <fieldset>
-                            <legend>Current Adventure Booking</legend>
-
-                            <p id="advbookingOutput">LKR 0.00</p>
-                        </fieldset>
-                    </div> -->
-               
-
 
                 <div class="book_details">
 
@@ -311,14 +292,12 @@
                 <span>Total Adventure Price</span><br>
                 <p id="advbookingOutput"><u>LKR</u> 0.00</p>
                 
-
-
             </section>
         </section>
 
         <section class="table-customer">
             <div>Customer Details</div>
-                <table class="table">
+                <table class="table overallTable">
                     <thead id="booklist">
                         <tr>
                             <td>Name</td>
@@ -334,7 +313,7 @@
 
         <section class="table-customer">
             <div>Reservation</div>
-                <table class="table">
+                <table class="table overallTable">
                     <thead id="booklist">
                         <tr>
                             <td>Name</td>
@@ -361,7 +340,7 @@
 
         <section class="table-customer">
             <div>Adventure Booking</div>
-                <table class="table">
+                <table class="table overallTable">
                     <thead>
                         <tr>
                             <td>Name</td>
@@ -380,6 +359,22 @@
                 
                 </table>     
         </section>
+
+        <div class="room-popup">
+            <div class="roompop-content">
+                <img src="Image/tick.png" alt="Confirmation">
+                <p id="popupName"></p>
+                <button id="okBtn">close</button>
+            </div>
+        </div>
+
+        <div class="adv-popup">
+            <div class="advpop-content">
+                <img src="Image/tick.png" alt="Confirmation">
+                <p id="popupadv"></p>
+                <button id="okBtnadv">close</button>
+            </div>
+        </div>
 
         <!-- Footer -->
         <footer class="footer">
