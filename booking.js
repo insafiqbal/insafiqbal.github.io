@@ -45,7 +45,8 @@ const loyalpointsInput = document.getElementById("loyalpoints")
 //Buttons
 const advBookBtn = document.getElementById("book_adv_btn")
 const bookBtn = document.getElementById("book_btn")
-const favBookBtn = document.getElementById("book_fav_btn")
+const favRoomBtn = document.getElementById("book_fav_room_btn")
+const favAdvBtn = document.getElementById("book_fav_adv_btn")
 const LoyalBtn = document.getElementById("loyalBtn")
 
 //Output
@@ -71,6 +72,7 @@ const popupName = document.getElementById('popupName');
 
 closebtnPopup.addEventListener('click', () => {
     popup.style.display = 'none';
+    RoomTable.scrollIntoView({ behavior : 'smooth', block : 'center'});
 });
 
 window.addEventListener('click', (event) => {
@@ -87,11 +89,14 @@ const advclosebtnPopup = document.getElementById('okBtnadv');
 
 advclosebtnPopup.addEventListener('click', () => {
     advPopup.style.display = 'none';
+    RoomTable.scrollIntoView({ behavior : 'smooth', block : 'center'});
 });
 
 window.addEventListener('click', (event) => {
     if (event.target === advPopup) {
         advPopup.style.display = 'none'
+        RoomTable.scrollIntoView({ behavior : 'smooth', block : 'center'});
+
     }
 });
 
@@ -104,7 +109,7 @@ tripleInput.addEventListener('input',bookingdetails);
 kidsMealInput.addEventListener('input',bookingdetails);
 extrabedCheck.addEventListener('change',bookingdetails);
 bookBtn.addEventListener('click',bookingdetails);
-LoyalBtn.addEventListener('click',checkLoyalty);
+LoyalBtn.addEventListener('click',displayLoyaltyPoints);
 
 //Adventure Booking Input
 localAdultsInput.addEventListener('input',adventuredetails)
@@ -144,7 +149,9 @@ bookBtn.addEventListener('click', () => {
     if (validateForm()) {
         customerTable();
         addbook();
-        resetbooking(); 
+        calculateTotalCost();
+        resetbooking();
+        checkLoyalty();
         popupName.textContent = `Your Booking has been confirmed, ${name}`;
         popup.style.display = 'flex';
     }
@@ -159,6 +166,9 @@ advBookBtn.addEventListener('click', () => {
         advPopup.style.display = 'flex';
     }
 });
+
+favRoomBtn.addEventListener('click', saveRoomFavDetails);
+favAdvBtn.addEventListener('click', saveAdvFavDetails);
 
 //Room Prices
 let singleroom = 25000;
@@ -227,7 +237,7 @@ function bookingdetails(){
     bookOutput.innerHTML = `<u>LKR</u> ${totalbookingCost}`;
 
     return totalbookingCost;
-}
+} 
 
 //Adventure Booking
 function adventuredetails(){
@@ -252,29 +262,38 @@ function adventuredetails(){
 
 //Loyalty 
 function checkLoyalty(){
+    const table = document.getElementById('booklist');
+    const lastRow = RoomTable.rows[RoomTable.rows.length - 1];
 
-    const Sroom = parseInt(singleInput.value);
-    const Droom = parseInt(doubleInput.value);
-    const Troom = parseInt(tripleInput.value);
+    // Extract the values from the last row
+    const Sroom = parseInt(lastRow.cells[6].textContent) || 0;
+    const Droom = parseInt(lastRow.cells[7].textContent) || 0;
+    const Troom = parseInt(lastRow.cells[8].textContent) || 0;
 
-    let totalRooms = 0;
+  
 
-    if ((!isNaN(Sroom) && Sroom > 0)){
-        totalRooms += Sroom;
-    }if ((!isNaN(Droom) && Droom > 0)){
-        totalRooms += Droom;
-    }if ((!isNaN(Troom) && Troom > 0)){
-        totalRooms += Troom;
-    };
-    
-    let points;
+    const totalRooms = Sroom + Droom + Troom;
 
-    if(totalRooms > 3){
-        points = totalRooms*20;
-    }
+    const existingLoyaltyPoints = parseInt(localStorage.getItem('loyaltyPoints')) || 0;
+    let loyaltyPoints = 0;
 
-    LoyaltyOutput.innerHTML = `${points} points`;
 
+    if (totalRooms > 3) {
+        loyaltyPoints = totalRooms * 20;
+        loyaltyPoints += existingLoyaltyPoints;
+
+        // Store loyalty points in local storage
+        localStorage.setItem('loyaltyPoints', loyaltyPoints);
+    }
+}
+
+function displayLoyaltyPoints() {
+    const storedLoyaltyPoints = localStorage.getItem('loyaltyPoints') || 0;
+
+    if (storedLoyaltyPoints) {
+        const loyaltyOutput = document.getElementById('loyaltyOutput');
+        loyaltyOutput.textContent = `${storedLoyaltyPoints} Points`;
+    }
 }
 
 //Reset Booking
@@ -297,10 +316,18 @@ function customerTable(){
         country: countryInput.value,
     };
 
+    const labels = {
+        name: 'Name',
+        Email: 'Email',
+        PhoneNumber: 'Phone Number',
+        country: 'Country',
+    };
+
     const newRow = CustomerTable.insertRow(-1);
     for (const detail in customerdetails) {
         const newCell = newRow.insertCell();
         newCell.textContent = customerdetails[detail];
+        newCell.setAttribute('data-label', labels[detail]);
     }
 
 
@@ -441,33 +468,39 @@ function validateForm() {
 
     if (lnameInput === '') {
       alert("Please Enter Last Name");
+      document.getElementById("lastName").scrollIntoView({ behavior: 'smooth', block: 'center' });
       return false;
     }
 
     if (emailInput === '') {
       alert("Please Enter Your Email");
+      document.getElementById("email").scrollIntoView({ behavior: 'smooth', block: 'center' });
       return false;
     }
     
     if (phoneNumberInput === '') {
         alert("Please Enter Your Phone Number");
+        document.getElementById("phoneNumber").scrollIntoView({ behavior: 'smooth', block: 'center' });
         return false;
     }
     
     if (countryInput === '') {
         alert("Please Enter Your Country");
+        document.getElementById("country").scrollIntoView({ behavior: 'smooth', block: 'center' });
         return false;
     }
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(emailInput)) {
       alert("Please enter a valid email address.");
+      document.getElementById("email").scrollIntoView({ behavior: 'smooth', block: 'center' });
       return false; 
     }
   
     const phonePattern = /^\d{10}$/; 
     if (!phonePattern.test(phoneNumberInput)) {
       alert("Please enter a valid 10-digit phone number.");
+      document.getElementById("phoneNumber").scrollIntoView({ behavior: 'smooth', block: 'center' });
       return false; 
     }
 
@@ -560,6 +593,37 @@ function advvalidateForm() {
     return true
 }
 
+function saveRoomFavDetails(){
+    const roomBookingDetails = {
+        checkInDate: checkinInput.value,
+        checkOutDate: checkoutInput.value,
+        singleRooms: singleInput.value || 0,
+        doubleRooms: doubleInput.value || 0,
+        tripleRooms: tripleInput.value || 0,
+        adults: noAdultsInput.value || 0,
+        children: noChildrenInput.value || 0,
+        kidsmeal: kidsMealInput.value || 0,
+        wifi: wifiCheck.checked ? 'Yes' : 'No',
+        extraBed: extrabedCheck.checked ? 'Yes' : 'No',
+        poolView: poolCheck.checked ? 'Yes' : 'No',
+        gardenView: gardenCheck.checked ? 'Yes' : 'No',
+        promoCode: promocodeInput.value,
+    }
+    alert("Your choices for rooms have been favourited!");
+    localStorage.setItem('favouriteRoomBooking', JSON.stringify(roomBookingDetails));
+};
 
+function saveAdvFavDetails(){
+    const advBookingDetails = {
+        localAdults: localAdultsInput.value || 0,
+        localKids: localKidsInput.value || 0,
+        foreignAdults: foreignAdultsInput.value || 0,   
+        foreignKids: foreignKidsInput.value || 0,
+        DiveAdult: diveAdultscheck.checked ? 'Yes' : 'No',
+        DiveKids: diveKidscheck.checked ? 'Yes' : 'No',
+    }
+    alert("Your choices for adventure have been favourited!");
+    localStorage.setItem('favouriteAdvBooking', JSON.stringify(advBookingDetails));
+};
 
 

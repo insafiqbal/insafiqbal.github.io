@@ -154,6 +154,10 @@
                                 <div class="book_adv_btn">
                                     <input type="button" id="book_adv_btn" value="book adventure" name="book">
                                 </div>
+
+                                <div class="book_fav_btn">
+                                    <input type="button" id="book_fav_room_btn" value="Add to favourites" name="book">
+                                </div>
                             </div>
 
                         </fieldset>
@@ -271,7 +275,7 @@
                 <div class="book_buttons">
 
                     <div class="book_fav_btn">
-                        <input type="button" id="book_fav_btn" value="Add to favourites" name="book">
+                        <input type="button" id="book_fav_adv_btn" value="Add to favourites" name="book">
                     </div>
                     
                     <div class="book_btn">
@@ -350,14 +354,20 @@
                             <td>FOREIGN ADULTS</td>
                             <td>FOREIGN KIDS</td>
                             <td>GUIDE FOR DIVING (Adults)</td>
-                            <td>GUIDE FOR DIVING (Kids)</td>.
-                            <td>Total Cost</td>.
+                            <td>GUIDE FOR DIVING (Kids)</td>
+                            <td>Total Cost</td>
                         </tr>
                     </thead>
                     <tbody id="advbooktable">
                     </tbody>
                 
                 </table>     
+        </section>
+
+        <section class="totalcostcontainer">
+            <div>
+                <p id="overalltotalcostOutput">Total Cost</p>
+            </div>
         </section>
 
         <div class="room-popup">

@@ -1260,6 +1260,23 @@ a{
 
 }
 
+.totalcostcontainer div{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#overalltotalcostOutput{
+    width: 30%;
+    border-radius: 10px;
+    border: 2px solid #D4AF37;
+    min-height: 10rem;
+    margin-top: 5rem;
+    background-color: #D4AF37;
+}
+
 
 /*Book Page End*/
 
@@ -2875,7 +2892,10 @@ iframe{
         text-align: right;
         padding-left: 50%;
         position: relative;
-        border: 1px solid var(--clr-blue950);
+    }
+
+    .overallTable tbody tr{
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -3217,7 +3237,7 @@ iframe{
         color: var(--colormetallicgold);
         border: 1px solid var(--colorgold);
         padding: 15px;
-        font-size: 18px;
+        font-size: 10px;
         text-transform: uppercase;
     }
 
