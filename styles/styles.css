@@ -891,7 +891,7 @@ a{
     border: 1px solid #ccc;
     outline: none;
     padding-left: 15px;
-    font-size: x;
+    font-size: 15px;
     color: var(--color);
     font-weight: 400;
     background: aliceblue;
@@ -905,7 +905,7 @@ a{
     outline: none;
     border: 1px solid #ccc;
     padding-left: 15px;
-    font-size: x;
+    font-size: 15px;
     color: var(--color);
     font-weight: 400;
     background: aliceblue;
