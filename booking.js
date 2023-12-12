@@ -73,6 +73,7 @@ const today = new Date().toISOString().split('T')[0];
 
 //Set the minimum Date
 checkinInput.min = today;
+// checkoutInput.min = checkinInput.min;
 
 
 //Pop Up Room
@@ -110,8 +111,6 @@ window.addEventListener('click', (event) => {
     }
 });
 
-
-
 //Booking Input
 singleInput.addEventListener('input',bookingdetails);
 doubleInput.addEventListener('input',bookingdetails);
@@ -129,32 +128,23 @@ foreignKidsInput.addEventListener('input',adventuredetails)
 diveAdultscheck.addEventListener('change',adventuredetails)
 diveKidscheck.addEventListener('change',adventuredetails)
 
-//Total Booking
-// singleInput.addEventListener('input',calculateTotalCost)
-// doubleInput.addEventListener('input',calculateTotalCost)
-// tripleInput.addEventListener('input',calculateTotalCost)
-// kidsMealInput.addEventListener('input',calculateTotalCost)
-// extrabedCheck.addEventListener('change',calculateTotalCost)
-
-// localAdultsInput.addEventListener('input',calculateTotalCost)
-// localKidsInput.addEventListener('input',calculateTotalCost)
-// foreignAdultsInput.addEventListener('input',calculateTotalCost)
-// foreignKidsInput.addEventListener('input',calculateTotalCost)
-// diveAdultscheck.addEventListener('change',calculateTotalCost)
-// diveKidscheck.addEventListener('change',calculateTotalCost)
-
-//Customer Information
-// bookBtn.addEventListener('click',customerTable)
-// emailInput.addEventListener('input',customerTable)
-// phoneNumberInput.addEventListener('input',customerTable)
-// countryInput.addEventListener('input',customerTable)
-
 //Check in and out current booking
 checkinInput.addEventListener('change', () => {
-    bookingdetails();
     minimumCheckOutDate();
+    bookingdetails();
+
+    if (checkoutInput.value < this.value){
+        checkoutInput.value = this.value;
+    }
 })
-checkoutInput.addEventListener('input',bookingdetails)
+
+checkoutInput.addEventListener('change', () => {
+    bookingdetails();
+
+    if (this.value < checkinInput.value) {
+        checkoutInput.value = checkinInput.value;
+    }
+})
 
 //Table Additon
 bookBtn.addEventListener('click', () => {
