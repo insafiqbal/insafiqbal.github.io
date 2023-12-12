@@ -451,7 +451,7 @@ function advaddbook(){
 
 }
 
-function calculateTotalPrices() {
+function calculateTotalPrices() { 
     // Get all rows from overallTable and advOverallTable
     const totalRoom = document.querySelectorAll('#overallTable tbody tr');
     const totaladventure = document.querySelectorAll('#overallTableadv tbody tr');
