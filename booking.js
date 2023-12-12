@@ -68,6 +68,12 @@ const AdvBookTable = document.getElementById("advbooktable");
 //Overall Table
 const totalOveralOutput = document.getElementById("totalOverallPrice");
 
+//Date
+const today = new Date().toISOString().split('T')[0];
+
+//Set the minimum Date
+checkinInput.min = today;
+
 
 //Pop Up Room
 const popup = document.querySelector('.room-popup');
@@ -144,7 +150,10 @@ diveKidscheck.addEventListener('change',adventuredetails)
 // countryInput.addEventListener('input',customerTable)
 
 //Check in and out current booking
-checkinInput.addEventListener('input',bookingdetails)
+checkinInput.addEventListener('change', () => {
+    bookingdetails();
+    minimumCheckOutDate();
+})
 checkoutInput.addEventListener('input',bookingdetails)
 
 //Table Additon
@@ -197,7 +206,12 @@ let adultguiderate = 1000;
 let kidguiderate = 500;
 
 
-//Side POP UP
+function minimumCheckOutDate(){
+    const selectedDate = new Date(checkinInput.value);
+    selectedDate.setDate(selectedDate.getDate() + 1);
+    const minimumcheckOut = selectedDate.toISOString().split('T')[0];
+    checkoutInput.min = minimumcheckOut;
+}
 
 //Booking Details
 function bookingdetails(){
