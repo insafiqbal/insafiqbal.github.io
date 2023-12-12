@@ -172,8 +172,8 @@ advBookBtn.addEventListener('click', () => {
     }
 });
 
-favRoomBtn.addEventListener('click', saveRoomFavDetails);
-favAdvBtn.addEventListener('click', saveAdvFavDetails);
+favAdvBtn.addEventListener('click', saveRoomFavDetails);
+favRoomBtn.addEventListener('click', saveAdvFavDetails);
 
 //Room Prices
 let singleroom = 25000;
@@ -651,7 +651,7 @@ function saveRoomFavDetails(){
         gardenView: gardenCheck.checked ? 'Yes' : 'No',
         promoCode: promocodeInput.value,
     }
-    alert("Your choices for rooms have been favourited!");
+    alert("Room Booking has been added to Favourites!");
     localStorage.setItem('favouriteRoomBooking', JSON.stringify(roomBookingDetails));
 };
 
@@ -664,7 +664,7 @@ function saveAdvFavDetails(){
         DiveAdult: diveAdultscheck.checked ? 'Yes' : 'No',
         DiveKids: diveKidscheck.checked ? 'Yes' : 'No',
     }
-    alert("Your choices for adventure have been favourited!");
+    alert("Adventure Booking has been added to Favourites!");
     localStorage.setItem('favouriteAdvBooking', JSON.stringify(advBookingDetails));
 };
 
