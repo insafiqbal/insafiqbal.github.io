@@ -171,8 +171,19 @@ advBookBtn.addEventListener('click', () => {
     }
 });
 
-favAdvBtn.addEventListener('click', saveRoomFavDetails);
-favRoomBtn.addEventListener('click', saveAdvFavDetails);
+favAdvBtn.addEventListener('click', () => {
+    if (validateForm()){
+        saveRoomFavDetails();
+        favAdvBtn();
+    }
+});
+
+favRoomBtn.addEventListener('click', () => {
+    if (validateForm()){
+        saveAdvFavDetails();
+        favRoomBtn();
+    }
+});
 
 //Room Prices
 let singleroom = 25000;
