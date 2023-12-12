@@ -463,38 +463,38 @@ function advaddbook(){
 
 function calculateTotalPrices() {
     // Get all rows from overallTable and advOverallTable
-    const overallRows = document.querySelectorAll('#overallTable tbody tr');
-    const advOverallRows = document.querySelectorAll('#overallTableadv tbody tr');
+    const totalRoom = document.querySelectorAll('#overallTable tbody tr');
+    const totaladventure = document.querySelectorAll('#overallTableadv tbody tr');
 
-    let totalRoomPrice = 0;
-    let totalAdvPrice = 0;
+    let roomPrice = 0;
+    let adventurePrice = 0;
 
     // Calculate total price from overallTable
-    overallRows.forEach(row => {
+    totalRoom.forEach(row => {
         const totalCostCell = row.querySelector('[data-label="Total Cost"]');
         const totalPriceText = totalCostCell.textContent.trim().replace('LKR', '').trim();
         const totalPrice = parseFloat(totalPriceText.replace(',', '')); // Remove commas and convert to float
         if (!isNaN(totalPrice)) {
-            totalRoomPrice += totalPrice;
+            roomPrice += totalPrice;
         }
     });
 
     // Calculate total price from advOverallTable
-    advOverallRows.forEach(row => {
+    totaladventure.forEach(row => {
         const totalCostCell = row.querySelector('[data-label="Total Cost"]');
         const totalPriceText = totalCostCell.textContent.trim().replace('LKR', '').trim();
         const totalPrice = parseFloat(totalPriceText.replace(',', '')); // Remove commas and convert to float
         if (!isNaN(totalPrice)) {
-            totalAdvPrice += totalPrice;
+            adventurePrice += totalPrice;
         }
     });
 
     // Calculate total of both prices
-    const totalBothPrices = totalRoomPrice + totalAdvPrice;
+    const OverallTotalAmount = roomPrice + adventurePrice;
 
-    totalOveralOutput.textContent = `LKR ${totalBothPrices}.00`;
+    totalOveralOutput.textContent = `LKR ${OverallTotalAmount}.00`;
 
-    return totalBothPrices;
+    return OverallTotalAmount;
 
 }
 
@@ -650,7 +650,7 @@ function advvalidateForm() {
 }
 
 function saveRoomFavDetails(){
-    const roomBookingDetails = {
+    const roomInformation = {
         checkInDate: checkinInput.value,
         checkOutDate: checkoutInput.value,
         singleRooms: singleInput.value || 0,
@@ -666,11 +666,11 @@ function saveRoomFavDetails(){
         promoCode: promocodeInput.value,
     }
     alert("Room Booking has been added to Favourites!");
-    localStorage.setItem('favouriteRoomBooking', JSON.stringify(roomBookingDetails));
+    localStorage.setItem('favouriteRoomBooking', JSON.stringify(roomInformation));
 };
 
 function saveAdvFavDetails(){
-    const advBookingDetails = {
+    const adventureInformation = {
         localAdults: localAdultsInput.value || 0,
         localKids: localKidsInput.value || 0,
         foreignAdults: foreignAdultsInput.value || 0,   
@@ -679,7 +679,7 @@ function saveAdvFavDetails(){
         DiveKids: diveKidscheck.checked ? 'Yes' : 'No',
     }
     alert("Adventure Booking has been added to Favourites!");
-    localStorage.setItem('favouriteAdvBooking', JSON.stringify(advBookingDetails));
+    localStorage.setItem('favouriteAdvBooking', JSON.stringify(adventureInformation));
 };
 
 
