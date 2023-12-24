@@ -179,7 +179,7 @@ favAdvBtn.addEventListener('click', () => {
 });
 
 favRoomBtn.addEventListener('click', () => {
-    if (validateForm()){
+    if (advvalidateForm()){
         saveAdvFavDetails();
         favRoomBtn();
     }
@@ -595,10 +595,10 @@ function advvalidateForm() {
 
     //Adventure Booking
     const advType = AdvDropDown.value
-    const localAdultsInput = document.getElementById("localadults")
-    const localKidsInput = document.getElementById("localkids")
-    const foreignAdultsInput = document.getElementById("foreignadults")
-    const foreignKidsInput = document.getElementById("foreignkids")
+    // const localAdultsInput = document.getElementById("localadults")
+    // const localKidsInput = document.getElementById("localkids")
+    // const foreignAdultsInput = document.getElementById("foreignadults")
+    // const foreignKidsInput = document.getElementById("foreignkids")
 
     if (fnameInput === '') {
         alert("Please Enter First Name");
